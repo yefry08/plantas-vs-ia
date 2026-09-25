@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="RobotData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/robot_data.gd" id="1_jc0yk"]
+
+[resource]
+script = ExtResource("1_jc0yk")
+id = "emojibot"
+display_name = "Emojibot Multitarea"
+description = "Su cara lo dice todo."
+abilities = "Feliz: avanza. Enojado: muerde el doble de rápido. Dormido: aturdido."
+weakness = "Nuez Firewall + EMP para dormirlo."
+tier = 2
+behavior = "emoji"
+health = 300.0
+speed = 16.0
+params = {
+"angry_attack_mult": 2.0,
+"expr": "happy",
+"shape": "emoji"
+}
+body_color = Color(0.35, 0.6, 0.85, 1)
+accent_color = Color(1, 0.82, 0.22, 1)
+eye_color = Color(0.3, 0.2, 0.1, 1)

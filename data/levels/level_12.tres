@@ -1,0 +1,279 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/level_data.gd" id="1_2q2f3"]
+[ext_resource type="Script" path="res://scripts/data/wave_data.gd" id="2_versi"]
+
+[sub_resource type="Resource" id="Resource_lnfmo"]
+script = ExtResource("2_versi")
+duration = 27.15
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "razonador_serie_o"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}]
+
+[sub_resource type="Resource" id="Resource_jknkd"]
+script = ExtResource("2_versi")
+duration = 28.71
+groups = [{
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qilin_eficiente"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}]
+
+[sub_resource type="Resource" id="Resource_iv01l"]
+script = ExtResource("2_versi")
+duration = 30.270000000000003
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "razonador_serie_o"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}]
+
+[sub_resource type="Resource" id="Resource_642wf"]
+script = ExtResource("2_versi")
+duration = 38.0
+is_huge = true
+groups = [{
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "razonador_serie_o"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "razonador_serie_o"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}]
+
+[sub_resource type="Resource" id="Resource_e1gd7"]
+script = ExtResource("2_versi")
+duration = 33.39
+groups = [{
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "razonador_serie_o"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}]
+
+[sub_resource type="Resource" id="Resource_snmft"]
+script = ExtResource("2_versi")
+duration = 34.95
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qilin_eficiente"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "razonador_serie_o"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "razonador_serie_o"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}]
+
+[sub_resource type="Resource" id="Resource_1chg2"]
+script = ExtResource("2_versi")
+duration = 36.51
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "razonador_serie_o"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "razonador_serie_o"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}]
+
+[sub_resource type="Resource" id="Resource_4a6hi"]
+script = ExtResource("2_versi")
+duration = 38.0
+is_huge = true
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "razonador_serie_o"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "razonador_serie_o"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "razonador_serie_o"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "razonador_serie_o"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "razonador_serie_o"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "razonador_serie_o"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}]
+
+[resource]
+script = ExtResource("1_2q2f3")
+number = 12
+zone = 3
+display_name = "Pensamiento profundo"
+intro_text = "El Razonador busca tu carril más débil."
+active_lanes = PackedInt32Array(0, 1, 2, 3, 4)
+start_tokens = 3
+first_wave_delay = 18.0
+waves = Array[ExtResource("2_versi")]([SubResource("Resource_lnfmo"), SubResource("Resource_jknkd"), SubResource("Resource_iv01l"), SubResource("Resource_642wf"), SubResource("Resource_e1gd7"), SubResource("Resource_snmft"), SubResource("Resource_1chg2"), SubResource("Resource_4a6hi")])
+unlock_type = "card"
+unlock_id = "apagado_cadena"

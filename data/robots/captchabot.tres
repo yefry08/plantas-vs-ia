@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="RobotData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/robot_data.gd" id="1_7u8mi"]
+
+[resource]
+script = ExtResource("1_7u8mi")
+id = "captchabot"
+display_name = "Bot de Captcha"
+description = "Juraría que no es un robot."
+abilities = "Lleva un escudo de cartón que absorbe 300 de daño."
+weakness = "Bambú Pararrayos (doble daño a escudos)."
+shield_health = 300.0
+token_chance = 0.8
+params = {
+"shape": "captcha"
+}
+body_color = Color(0.6, 0.62, 0.55, 1)
+accent_color = Color(0.52, 0.55, 0.45, 1)
+eye_color = Color(0.5, 1, 0.5, 1)

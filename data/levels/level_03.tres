@@ -1,0 +1,208 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/level_data.gd" id="1_q8pf3"]
+[ext_resource type="Script" path="res://scripts/data/wave_data.gd" id="2_6nawd"]
+
+[sub_resource type="Resource" id="Resource_7aiuv"]
+script = ExtResource("2_6nawd")
+duration = 22.6
+groups = [{
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}]
+
+[sub_resource type="Resource" id="Resource_hij7b"]
+script = ExtResource("2_6nawd")
+duration = 23.51
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}]
+
+[sub_resource type="Resource" id="Resource_ilbil"]
+script = ExtResource("2_6nawd")
+duration = 24.42
+groups = [{
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}]
+
+[sub_resource type="Resource" id="Resource_0bqj5"]
+script = ExtResource("2_6nawd")
+duration = 25.33
+groups = [{
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}]
+
+[sub_resource type="Resource" id="Resource_ba1yj"]
+script = ExtResource("2_6nawd")
+duration = 26.240000000000002
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}]
+
+[sub_resource type="Resource" id="Resource_etu6v"]
+script = ExtResource("2_6nawd")
+duration = 35.6
+is_huge = true
+groups = [{
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}]
+
+[resource]
+script = ExtResource("1_q8pf3")
+number = 3
+display_name = "Tokens y aliados"
+intro_text = "Aparecen los Spambots. Gana tokens y llama a tu IA aliada."
+active_lanes = PackedInt32Array(0, 1, 2, 3, 4)
+start_tokens = 1
+first_wave_delay = 18.0
+waves = Array[ExtResource("2_6nawd")]([SubResource("Resource_7aiuv"), SubResource("Resource_hij7b"), SubResource("Resource_ilbil"), SubResource("Resource_0bqj5"), SubResource("Resource_ba1yj"), SubResource("Resource_etu6v")])
+unlock_type = "plant"
+unlock_id = "tokenizadora"
+skip_seed_select = true
+tutorial_steps = [{
+"text": "Destruir robots suelta Tokens (moneda simbólica del juego). Tu IA aliada los usa para ayudarte.",
+"until": "tokens:3"
+}, {
+"text": "¡Ya tienes 3 tokens! Toca la carta Autodestrucción y luego toca un robot.",
+"until": "card_used"
+}, {
+"text": "¡Tu IA aliada te ayudó! Las cartas tienen recarga. Pausa con Esc y acelera con el botón x1/x2.",
+"until": "time:9"
+}]

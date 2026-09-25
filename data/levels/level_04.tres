@@ -1,0 +1,218 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/level_data.gd" id="1_8yld6"]
+[ext_resource type="Script" path="res://scripts/data/wave_data.gd" id="2_ic28n"]
+
+[sub_resource type="Resource" id="Resource_jgec1"]
+script = ExtResource("2_ic28n")
+duration = 23.25
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}]
+
+[sub_resource type="Resource" id="Resource_om1gp"]
+script = ExtResource("2_ic28n")
+duration = 24.29
+groups = [{
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}]
+
+[sub_resource type="Resource" id="Resource_nfk8x"]
+script = ExtResource("2_ic28n")
+duration = 31.96
+is_huge = true
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}]
+
+[sub_resource type="Resource" id="Resource_e3sg4"]
+script = ExtResource("2_ic28n")
+duration = 26.37
+groups = [{
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}]
+
+[sub_resource type="Resource" id="Resource_fopq4"]
+script = ExtResource("2_ic28n")
+duration = 27.41
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}]
+
+[sub_resource type="Resource" id="Resource_v0rku"]
+script = ExtResource("2_ic28n")
+duration = 28.450000000000003
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}]
+
+[sub_resource type="Resource" id="Resource_mgs8d"]
+script = ExtResource("2_ic28n")
+duration = 38.0
+is_huge = true
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}]
+
+[resource]
+script = ExtResource("1_8yld6")
+number = 4
+display_name = "Muro de cartón"
+intro_text = "Los Bots de Captcha traen escudos de cartón."
+active_lanes = PackedInt32Array(0, 1, 2, 3, 4)
+start_tokens = 2
+first_wave_delay = 18.0
+waves = Array[ExtResource("2_ic28n")]([SubResource("Resource_jgec1"), SubResource("Resource_om1gp"), SubResource("Resource_nfk8x"), SubResource("Resource_e3sg4"), SubResource("Resource_fopq4"), SubResource("Resource_v0rku"), SubResource("Resource_mgs8d")])
+unlock_type = "plant"
+unlock_id = "enredadera_captcha"

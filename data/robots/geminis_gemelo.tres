@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="RobotData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/robot_data.gd" id="1_ohrd2"]
+
+[resource]
+script = ExtResource("1_ohrd2")
+id = "geminis_gemelo"
+display_name = "Géminis Gemelo"
+description = "Dos mentes, un cuerpo (por ahora)."
+abilities = "Al 50% de vida se divide en dos. Multimodal: se vuelve inmune al tipo de daño que más recibió."
+weakness = "Mezclar tipos de daño: semilla, espina, hielo y rayo."
+tier = 3
+behavior = "gemini"
+health = 600.0
+speed = 13.0
+token_reward = 3
+params = {
+"immune_check": 2.5,
+"shape": "twin",
+"split_ratio": 0.5
+}
+body_color = Color(0.3, 0.5, 0.95, 1)
+accent_color = Color(0.62, 0.4, 0.9, 1)
+eye_color = Color(1, 1, 1, 1)

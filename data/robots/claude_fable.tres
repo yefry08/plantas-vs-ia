@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="RobotData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/robot_data.gd" id="1_s3ulk"]
+
+[resource]
+script = ExtResource("1_s3ulk")
+id = "claude_fable"
+display_name = "Claude Fable"
+description = "Cuenta historias tan buenas que parecen reales."
+abilities = "Crea ilusiones de robots falsos que distraen a tus plantas. Cuenta una historia en 3 fases: avanza, cambia de carril, acelera."
+weakness = "Red Team revela las ilusiones. Rayos en cadena."
+tier = 4
+behavior = "fable"
+health = 700.0
+speed = 13.0
+token_reward = 4
+params = {
+"chapter_time": 5.0,
+"illusion_interval": 8.0,
+"illusions": 2,
+"shape": "book"
+}
+body_color = Color(0.82, 0.45, 0.3, 1)
+accent_color = Color(0.98, 0.8, 0.55, 1)
+eye_color = Color(1, 0.85, 0.5, 1)

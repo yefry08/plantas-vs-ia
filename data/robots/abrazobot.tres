@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="RobotData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/robot_data.gd" id="1_wva2h"]
+
+[resource]
+script = ExtResource("1_wva2h")
+id = "abrazobot"
+display_name = "Abrazobot"
+description = "Código abierto y brazos abiertos."
+abilities = "Al morir se forkea en 2 mini copias con 30% de vida."
+weakness = "Daño en área: Hongo EMP, Cactus, Mina Bug."
+tier = 2
+behavior = "forker"
+health = 260.0
+speed = 16.0
+params = {
+"expr": "hug",
+"fork_count": 2,
+"fork_ratio": 0.3,
+"shape": "emoji"
+}
+body_color = Color(0.95, 0.72, 0.25, 1)
+accent_color = Color(1, 0.82, 0.22, 1)
+eye_color = Color(0.3, 0.2, 0.1, 1)

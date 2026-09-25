@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PlantData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/plant_data.gd" id="1_boi6v"]
+
+[resource]
+script = ExtResource("1_boi6v")
+id = "doble_commit"
+display_name = "Doble Commit"
+description = "Dispara dos semillas por ráfaga."
+cost = 200
+shots_per_volley = 2

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/card_data.gd" id="1_d5cck"]
+
+[resource]
+script = ExtResource("1_d5cck")
+id = "apagado_cadena"
+display_name = "Apagado en Cadena"
+description = "Hackea un robot y apaga a todos los robots de su carril durante 8 s."
+cost = 6
+cooldown = 25.0
+effect = "chain_shutdown"
+duration = 8.0
+color = Color(0.9, 0.4, 0.9, 1)

@@ -1,0 +1,208 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/level_data.gd" id="1_4wqxk"]
+[ext_resource type="Script" path="res://scripts/data/wave_data.gd" id="2_kl7qu"]
+
+[sub_resource type="Resource" id="Resource_xe2ry"]
+script = ExtResource("2_kl7qu")
+duration = 24.55
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "emojibot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}]
+
+[sub_resource type="Resource" id="Resource_qb8ax"]
+script = ExtResource("2_kl7qu")
+duration = 25.85
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "abrazobot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}]
+
+[sub_resource type="Resource" id="Resource_sqkx4"]
+script = ExtResource("2_kl7qu")
+duration = 35.6
+is_huge = true
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "emojibot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "emojibot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}]
+
+[sub_resource type="Resource" id="Resource_pf5u6"]
+script = ExtResource("2_kl7qu")
+duration = 28.450000000000003
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "emojibot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "emojibot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}]
+
+[sub_resource type="Resource" id="Resource_08tal"]
+script = ExtResource("2_kl7qu")
+duration = 29.75
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "emojibot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}]
+
+[sub_resource type="Resource" id="Resource_op50a"]
+script = ExtResource("2_kl7qu")
+duration = 31.05
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "emojibot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "emojibot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}]
+
+[sub_resource type="Resource" id="Resource_bylyv"]
+script = ExtResource("2_kl7qu")
+duration = 38.0
+is_huge = true
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "emojibot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "abrazobot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "emojibot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "abrazobot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}]
+
+[resource]
+script = ExtResource("1_4wqxk")
+number = 7
+zone = 2
+display_name = "Emociones mixtas"
+intro_text = "El Emojibot cambia de humor... y de velocidad de mordida."
+active_lanes = PackedInt32Array(0, 1, 2, 3, 4)
+start_tokens = 2
+first_wave_delay = 18.0
+waves = Array[ExtResource("2_kl7qu")]([SubResource("Resource_xe2ry"), SubResource("Resource_qb8ax"), SubResource("Resource_sqkx4"), SubResource("Resource_pf5u6"), SubResource("Resource_08tal"), SubResource("Resource_op50a"), SubResource("Resource_bylyv")])
+unlock_type = "plant_slot"

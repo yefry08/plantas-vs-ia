@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="RobotData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/robot_data.gd" id="1_4wao1"]
+
+[resource]
+script = ExtResource("1_4wao1")
+id = "grokazo"
+display_name = "Grokazo"
+description = "Rebelde sin filtro."
+abilities = "Impredecible: cambia de carril al azar, a veces se burla (se detiene) o entra en modo doble ataque."
+weakness = "Aprovecha cuando se detiene a burlarse."
+tier = 3
+behavior = "grok"
+health = 380.0
+speed = 17.0
+bite_damage = 110.0
+token_reward = 2
+params = {
+"event_max": 7.0,
+"event_min": 4.0,
+"shape": "rebel"
+}
+body_color = Color(0.2, 0.2, 0.22, 1)
+accent_color = Color(0.95, 0.25, 0.2, 1)
+eye_color = Color(1, 0.4, 0.2, 1)

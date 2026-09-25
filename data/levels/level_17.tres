@@ -1,0 +1,224 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/level_data.gd" id="1_2ps6l"]
+[ext_resource type="Script" path="res://scripts/data/wave_data.gd" id="2_045or"]
+
+[sub_resource type="Resource" id="Resource_oko22"]
+script = ExtResource("2_045or")
+duration = 29.75
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "mythos"
+}]
+
+[sub_resource type="Resource" id="Resource_i6byv"]
+script = ExtResource("2_045or")
+duration = 31.83
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "mythos"
+}]
+
+[sub_resource type="Resource" id="Resource_mhlau"]
+script = ExtResource("2_045or")
+duration = 33.91
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "mythos"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}]
+
+[sub_resource type="Resource" id="Resource_0gjak"]
+script = ExtResource("2_045or")
+duration = 38.0
+is_huge = true
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grokazo"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "mythos"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grokazo"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grokazo"
+}]
+
+[sub_resource type="Resource" id="Resource_imcji"]
+script = ExtResource("2_045or")
+duration = 38.0
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grokazo"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "mythos"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}]
+
+[sub_resource type="Resource" id="Resource_donhq"]
+script = ExtResource("2_045or")
+duration = 38.0
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grokazo"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "geminis_gemelo"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}]
+
+[sub_resource type="Resource" id="Resource_pkn70"]
+script = ExtResource("2_045or")
+duration = 38.0
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "mythos"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grokazo"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}]
+
+[sub_resource type="Resource" id="Resource_om2p2"]
+script = ExtResource("2_045or")
+duration = 38.0
+is_huge = true
+groups = [{
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "emojibot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "geminis_gemelo"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "mythos"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "mythos"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grokazo"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}]
+
+[resource]
+script = ExtResource("1_2ps6l")
+number = 17
+zone = 4
+display_name = "Cerrojo total"
+intro_text = "Mythos hackea tus mejores plantas."
+active_lanes = PackedInt32Array(0, 1, 2, 3, 4)
+start_tokens = 4
+first_wave_delay = 18.0
+waves = Array[ExtResource("2_045or")]([SubResource("Resource_oko22"), SubResource("Resource_i6byv"), SubResource("Resource_mhlau"), SubResource("Resource_0gjak"), SubResource("Resource_imcji"), SubResource("Resource_donhq"), SubResource("Resource_pkn70"), SubResource("Resource_om2p2")])
+unlock_type = "card"
+unlock_id = "red_team"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PlantData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/plant_data.gd" id="1_15no7"]
+
+[resource]
+script = ExtResource("1_15no7")
+id = "mina_bug"
+display_name = "Mina Bug"
+description = "Tarda 12 s en armarse; luego explota al contacto (1800 de daño en su casilla)."
+cost = 25
+cooldown = 30.0
+behavior = "mine"
+damage = 1800.0
+damage_type = "explosion"
+arm_time = 12.0

@@ -1,0 +1,294 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/level_data.gd" id="1_2rmr0"]
+[ext_resource type="Script" path="res://scripts/data/wave_data.gd" id="2_cnbn7"]
+
+[sub_resource type="Resource" id="Resource_t0hhw"]
+script = ExtResource("2_cnbn7")
+duration = 29.1
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "opengarra"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qilin_eficiente"
+}]
+
+[sub_resource type="Resource" id="Resource_wyd5e"]
+script = ExtResource("2_cnbn7")
+duration = 31.05
+groups = [{
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qilin_eficiente"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "razonador_serie_o"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}]
+
+[sub_resource type="Resource" id="Resource_qhk78"]
+script = ExtResource("2_cnbn7")
+duration = 33.0
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "opengarra"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grokazo"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}]
+
+[sub_resource type="Resource" id="Resource_adkrn"]
+script = ExtResource("2_cnbn7")
+duration = 38.0
+is_huge = true
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "razonador_serie_o"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "opengarra"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "opengarra"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "opengarra"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "opengarra"
+}]
+
+[sub_resource type="Resource" id="Resource_2bqak"]
+script = ExtResource("2_cnbn7")
+duration = 36.900000000000006
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "geminis_gemelo"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grokazo"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qilin_eficiente"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}]
+
+[sub_resource type="Resource" id="Resource_qcss8"]
+script = ExtResource("2_cnbn7")
+duration = 38.0
+groups = [{
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qilin_eficiente"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "opengarra"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "opengarra"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}]
+
+[sub_resource type="Resource" id="Resource_3k2yf"]
+script = ExtResource("2_cnbn7")
+duration = 38.0
+groups = [{
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "razonador_serie_o"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "razonador_serie_o"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}]
+
+[sub_resource type="Resource" id="Resource_cwk4i"]
+script = ExtResource("2_cnbn7")
+duration = 38.0
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "razonador_serie_o"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qilin_eficiente"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "opengarra"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "opengarra"
+}]
+
+[sub_resource type="Resource" id="Resource_rstci"]
+script = ExtResource("2_cnbn7")
+duration = 38.0
+is_huge = true
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "opengarra"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "razonador_serie_o"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "razonador_serie_o"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "opengarra"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "geminis_gemelo"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "opengarra"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "razonador_serie_o"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qilin_eficiente"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}]
+
+[resource]
+script = ExtResource("1_2rmr0")
+number = 15
+zone = 3
+display_name = "Garra autónoma"
+intro_text = "OpenGarra arranca plantas y roba tokens."
+active_lanes = PackedInt32Array(0, 1, 2, 3, 4)
+start_tokens = 4
+first_wave_delay = 18.0
+waves = Array[ExtResource("2_cnbn7")]([SubResource("Resource_t0hhw"), SubResource("Resource_wyd5e"), SubResource("Resource_qhk78"), SubResource("Resource_adkrn"), SubResource("Resource_2bqak"), SubResource("Resource_qcss8"), SubResource("Resource_3k2yf"), SubResource("Resource_cwk4i"), SubResource("Resource_rstci")])
+unlock_type = "plant"
+unlock_id = "doble_commit"

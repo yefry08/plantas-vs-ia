@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PlantData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/plant_data.gd" id="1_dpgnt"]
+
+[resource]
+script = ExtResource("1_dpgnt")
+id = "cactus_antivirus"
+display_name = "Cactus Antivirus"
+description = "Dispara espinas que atraviesan hasta 3 robots."
+cost = 175
+damage_type = "spike"
+fire_interval = 1.5
+pierce = 3
+projectile_speed = 560.0

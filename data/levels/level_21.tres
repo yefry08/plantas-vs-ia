@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/level_data.gd" id="1_rnmb6"]
+[ext_resource type="Script" path="res://scripts/data/wave_data.gd" id="2_ge8ym"]
+
+[sub_resource type="Resource" id="Resource_kdoc8"]
+script = ExtResource("2_ge8ym")
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}]
+
+[sub_resource type="Resource" id="Resource_fglf3"]
+script = ExtResource("2_ge8ym")
+duration = 9999.0
+is_huge = true
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": 2,
+"robot": "agi"
+}]
+
+[resource]
+script = ExtResource("1_rnmb6")
+number = 21
+zone = 5
+display_name = "La AGI"
+intro_text = "La AGI ocupa tres carriles. Derrótala... o alinéala con 3 cartas de Alineamiento en su fase final."
+active_lanes = PackedInt32Array(0, 1, 2, 3, 4)
+start_sun = 400
+start_tokens = 8
+waves = Array[ExtResource("2_ge8ym")]([SubResource("Resource_kdoc8"), SubResource("Resource_fglf3")])
+is_boss = true

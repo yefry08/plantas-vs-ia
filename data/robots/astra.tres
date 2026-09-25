@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="RobotData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/robot_data.gd" id="1_dmy45"]
+
+[resource]
+script = ExtResource("1_dmy45")
+id = "astra"
+display_name = "Astra"
+description = "Veloz y estelar."
+abilities = "Se teletransporta 2 columnas cada 8 s y deja un campo que ralentiza tus disparos. Apagarla cuesta el doble."
+weakness = "Enredadera Captcha y Lanzasemillas Crio."
+tier = 4
+behavior = "astra"
+health = 520.0
+speed = 22.0
+token_reward = 4
+card_rules = {
+"apagado_cadena": "double_cost",
+"boton_apagado": "double_cost"
+}
+params = {
+"field_mult": 0.5,
+"field_time": 5.0,
+"shape": "star",
+"tp_cols": 2,
+"tp_interval": 8.0
+}
+body_color = Color(0.95, 0.97, 1, 1)
+accent_color = Color(0.4, 0.85, 1, 1)
+eye_color = Color(0.2, 0.3, 0.5, 1)

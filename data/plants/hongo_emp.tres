@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PlantData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/plant_data.gd" id="1_0ogwj"]
+
+[resource]
+script = ExtResource("1_0ogwj")
+id = "hongo_emp"
+display_name = "Hongo EMP"
+description = "Pulso EMP que aturde 3 s a los robots de un área 3x3 (se recarga en 10 s)."
+cost = 150
+cooldown = 20.0
+behavior = "emp"
+damage_type = "emp"
+fire_interval = 10.0
+stun_time = 3.0

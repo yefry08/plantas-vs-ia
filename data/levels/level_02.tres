@@ -1,0 +1,144 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/level_data.gd" id="1_tpd5n"]
+[ext_resource type="Script" path="res://scripts/data/wave_data.gd" id="2_aib7a"]
+
+[sub_resource type="Resource" id="Resource_2lq7d"]
+script = ExtResource("2_aib7a")
+duration = 22.0
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}]
+
+[sub_resource type="Resource" id="Resource_fqbei"]
+script = ExtResource("2_aib7a")
+duration = 22.73
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}]
+
+[sub_resource type="Resource" id="Resource_6wkqx"]
+script = ExtResource("2_aib7a")
+duration = 23.51
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}]
+
+[sub_resource type="Resource" id="Resource_xg06x"]
+script = ExtResource("2_aib7a")
+duration = 24.29
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}]
+
+[sub_resource type="Resource" id="Resource_bsgu1"]
+script = ExtResource("2_aib7a")
+duration = 31.44
+is_huge = true
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}]
+
+[resource]
+script = ExtResource("1_tpd5n")
+number = 2
+display_name = "Sol de mañana"
+intro_text = "Más carriles, más robots. Los Girasolares te darán energía."
+active_lanes = PackedInt32Array(1, 2, 3)
+first_wave_delay = 24.0
+waves = Array[ExtResource("2_aib7a")]([SubResource("Resource_2lq7d"), SubResource("Resource_fqbei"), SubResource("Resource_6wkqx"), SubResource("Resource_xg06x"), SubResource("Resource_bsgu1")])
+unlock_type = "plant"
+unlock_id = "nuez_firewall"
+skip_seed_select = true
+tutorial_steps = [{
+"text": "Planta Girasolares: generan energía extra cada 24 s. ¡Planta varios al principio!",
+"until": "place:girasolar"
+}, {
+"text": "Más energía = más defensas. Recoge la energía que sueltan. Si te equivocas, usa la pala para quitar plantas.",
+"until": "time:10"
+}]

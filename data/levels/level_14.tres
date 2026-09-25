@@ -1,0 +1,253 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/level_data.gd" id="1_2ecew"]
+[ext_resource type="Script" path="res://scripts/data/wave_data.gd" id="2_5kttt"]
+
+[sub_resource type="Resource" id="Resource_sehm2"]
+script = ExtResource("2_5kttt")
+duration = 28.450000000000003
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "geminis_gemelo"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}]
+
+[sub_resource type="Resource" id="Resource_w47rq"]
+script = ExtResource("2_5kttt")
+duration = 30.270000000000003
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "geminis_gemelo"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}]
+
+[sub_resource type="Resource" id="Resource_gcqu2"]
+script = ExtResource("2_5kttt")
+duration = 32.09
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "geminis_gemelo"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qilin_eficiente"
+}]
+
+[sub_resource type="Resource" id="Resource_fm5p5"]
+script = ExtResource("2_5kttt")
+duration = 38.0
+is_huge = true
+groups = [{
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qilin_eficiente"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "emojibot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "razonador_serie_o"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grokazo"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grokazo"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "razonador_serie_o"
+}]
+
+[sub_resource type="Resource" id="Resource_gf10t"]
+script = ExtResource("2_5kttt")
+duration = 35.730000000000004
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grokazo"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "razonador_serie_o"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qilin_eficiente"
+}]
+
+[sub_resource type="Resource" id="Resource_0sde4"]
+script = ExtResource("2_5kttt")
+duration = 37.55
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "emojibot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "geminis_gemelo"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}]
+
+[sub_resource type="Resource" id="Resource_6clwk"]
+script = ExtResource("2_5kttt")
+duration = 38.0
+groups = [{
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grokazo"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "geminis_gemelo"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qilin_eficiente"
+}]
+
+[sub_resource type="Resource" id="Resource_ydsts"]
+script = ExtResource("2_5kttt")
+duration = 38.0
+is_huge = true
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grokazo"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grokazo"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "razonador_serie_o"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qilin_eficiente"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "emojibot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "geminis_gemelo"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "geminis_gemelo"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}]
+
+[resource]
+script = ExtResource("1_2ecew")
+number = 14
+zone = 3
+display_name = "Doble personalidad"
+intro_text = "Géminis se divide y se adapta a tu daño."
+active_lanes = PackedInt32Array(0, 1, 2, 3, 4)
+start_tokens = 3
+first_wave_delay = 18.0
+waves = Array[ExtResource("2_5kttt")]([SubResource("Resource_sehm2"), SubResource("Resource_w47rq"), SubResource("Resource_gcqu2"), SubResource("Resource_fm5p5"), SubResource("Resource_gf10t"), SubResource("Resource_0sde4"), SubResource("Resource_6clwk"), SubResource("Resource_ydsts")])
+unlock_type = "plant_slot"

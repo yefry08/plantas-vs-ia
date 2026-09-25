@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/card_data.gd" id="1_rpdjx"]
+
+[resource]
+script = ExtResource("1_rpdjx")
+id = "alineamiento"
+display_name = "Alineamiento"
+description = "Convierte un robot en aliado durante 15 s: camina a la derecha atacando robots."
+cost = 8
+cooldown = 20.0
+effect = "align"
+duration = 15.0
+color = Color(0.35, 1, 0.55, 1)

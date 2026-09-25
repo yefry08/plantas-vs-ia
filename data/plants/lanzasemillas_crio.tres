@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PlantData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/plant_data.gd" id="1_cjiwt"]
+
+[resource]
+script = ExtResource("1_cjiwt")
+id = "lanzasemillas_crio"
+display_name = "Lanzasemillas Crio"
+description = "Semillas heladas: 20 de daño y ralentizan al robot un 50% durante 3 s."
+cost = 175
+damage_type = "ice"
+slow_factor = 0.5
+slow_time = 3.0

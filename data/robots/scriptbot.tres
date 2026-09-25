@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="RobotData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/robot_data.gd" id="1_1cc74"]
+
+[resource]
+script = ExtResource("1_1cc74")
+id = "scriptbot"
+display_name = "Scriptbot"
+description = "Un script con patas."
+abilities = "Básico y lento. Avanza y muerde tus plantas."
+weakness = "Cualquier planta de ataque."
+token_chance = 0.5
+params = {
+"shape": "box"
+}
+body_color = Color(0.62, 0.66, 0.7, 1)
+accent_color = Color(0.5, 0.55, 0.62, 1)

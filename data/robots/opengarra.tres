@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="RobotData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/robot_data.gd" id="1_ut48p"]
+
+[resource]
+script = ExtResource("1_ut48p")
+id = "opengarra"
+display_name = "OpenGarra"
+description = "Agente autónomo con garra. Hace tareas... tus plantas."
+abilities = "Cada 10 s arranca una planta cercana de su carril y te roba 1 token."
+weakness = "Botón de Apagado y Nuez Firewall baratas como cebo."
+tier = 3
+behavior = "claw"
+health = 500.0
+speed = 13.0
+token_reward = 3
+params = {
+"grab_interval": 10.0,
+"grab_range": 260.0,
+"shape": "claw",
+"steal": 1
+}
+body_color = Color(0.9, 0.45, 0.2, 1)
+accent_color = Color(0.75, 0.3, 0.15, 1)
+eye_color = Color(1, 0.25, 0.2, 1)

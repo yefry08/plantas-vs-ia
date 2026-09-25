@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PlantData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/plant_data.gd" id="1_3d4pg"]
+
+[resource]
+script = ExtResource("1_3d4pg")
+id = "nuez_firewall"
+display_name = "Nuez Firewall"
+description = "Muro con 4000 de vida. Bloquea a los robots mientras tus plantas disparan."
+cost = 50
+cooldown = 30.0
+health = 4000.0
+behavior = "wall"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PlantData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/plant_data.gd" id="1_13p25"]
+
+[resource]
+script = ExtResource("1_13p25")
+id = "girasolar_doble"
+display_name = "Girasolar Doble"
+description = "Dos cabezas solares: 50 de energía cada 24 s."
+cost = 150
+cooldown = 15.0
+behavior = "producer"
+produce_amount = 50

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="PlantData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/plant_data.gd" id="1_2qn46"]
+
+[resource]
+script = ExtResource("1_2qn46")
+id = "enredadera_captcha"
+display_name = "Enredadera Captcha"
+description = "Trampa: el primer robot que la pisa queda ralentizado al 50% durante 5 s."
+cost = 25
+cooldown = 20.0
+health = 100.0
+behavior = "trap"
+blocks_robots = false
+slow_factor = 0.5
+slow_time = 5.0

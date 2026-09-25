@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PlantData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/plant_data.gd" id="1_obx7a"]
+
+[resource]
+script = ExtResource("1_obx7a")
+id = "nuez_firewall_pro"
+display_name = "Nuez Firewall Pro"
+description = "Muro reforzado con 8000 de vida."
+cost = 125
+cooldown = 30.0
+health = 8000.0
+behavior = "wall"

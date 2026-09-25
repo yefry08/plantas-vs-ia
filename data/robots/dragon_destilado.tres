@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="RobotData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/robot_data.gd" id="1_rioc6"]
+
+[resource]
+script = ExtResource("1_rioc6")
+id = "dragon_destilado"
+display_name = "Dragón Destilado"
+description = "Barato, numeroso y aprende rápido."
+abilities = "Destila una habilidad de la última planta que lo dañó y la usa 5 s (disparo, coraza, prisa o regeneración)."
+weakness = "Rayos y explosiones antes de que destile."
+tier = 3
+behavior = "dragon"
+health = 170.0
+speed = 17.0
+bite_damage = 80.0
+token_chance = 0.5
+params = {
+"distill_time": 5.0,
+"shape": "dragon"
+}
+body_color = Color(0.85, 0.2, 0.18, 1)
+accent_color = Color(1, 0.78, 0.25, 1)
+eye_color = Color(1, 0.9, 0.2, 1)

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="PlantData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/plant_data.gd" id="1_b32bm"]
+
+[resource]
+script = ExtResource("1_b32bm")
+id = "bambu_pararrayos"
+display_name = "Bambú Pararrayos"
+description = "Rayo en cadena a 4 robots (30 de daño). Doble daño contra blindados y escudos."
+cost = 200
+cooldown = 10.0
+behavior = "lightning"
+damage = 30.0
+damage_type = "electric"
+fire_interval = 2.5
+chain_count = 4
+armored_bonus = 2.0

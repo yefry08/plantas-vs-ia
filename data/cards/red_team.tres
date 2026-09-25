@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CardData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/card_data.gd" id="1_vb2p6"]
+
+[resource]
+script = ExtResource("1_vb2p6")
+id = "red_team"
+display_name = "Red Team"
+description = "Revela habilidades, debilidades e ilusiones de los robots en pantalla y reduce su defensa 25% durante 10 s."
+cost = 5
+cooldown = 30.0
+needs_target = false
+effect = "reveal"
+power = 0.25
+color = Color(1, 0.3, 0.25, 1)

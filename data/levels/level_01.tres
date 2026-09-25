@@ -1,0 +1,105 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/level_data.gd" id="1_r1f35"]
+[ext_resource type="Script" path="res://scripts/data/wave_data.gd" id="2_55y67"]
+
+[sub_resource type="Resource" id="Resource_6jrhh"]
+script = ExtResource("2_55y67")
+duration = 22.0
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}]
+
+[sub_resource type="Resource" id="Resource_edcfl"]
+script = ExtResource("2_55y67")
+duration = 22.0
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}]
+
+[sub_resource type="Resource" id="Resource_vjtlv"]
+script = ExtResource("2_55y67")
+duration = 22.6
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}]
+
+[sub_resource type="Resource" id="Resource_y1woe"]
+script = ExtResource("2_55y67")
+duration = 27.8
+is_huge = true
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}]
+
+[resource]
+script = ExtResource("1_r1f35")
+display_name = "Primer brote"
+intro_text = "Un Scriptbot se acerca por el carril central."
+active_lanes = PackedInt32Array(2)
+start_sun = 150
+first_wave_delay = 24.0
+waves = Array[ExtResource("2_55y67")]([SubResource("Resource_6jrhh"), SubResource("Resource_edcfl"), SubResource("Resource_vjtlv"), SubResource("Resource_y1woe")])
+unlock_type = "plant"
+unlock_id = "girasolar"
+skip_seed_select = true
+tutorial_steps = [{
+"text": "¡Los robots IA quieren tu jardín! Haz clic en la carta Lanzasemillas (arriba).",
+"until": "select_plant"
+}, {
+"text": "Ahora haz clic en una casilla del carril iluminado para plantarla.",
+"until": "place_plant"
+}, {
+"text": "¡Bien! Haz clic en la Energía Solar que cae del cielo para recogerla.",
+"until": "collect_sun"
+}, {
+"text": "Con 100 de energía planta otro Lanzasemillas. Si un robot llega a tu casa, la Podadora de emergencia lo frena (una vez por carril).",
+"until": "time:10"
+}]
