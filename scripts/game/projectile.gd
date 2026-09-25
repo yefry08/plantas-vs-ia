@@ -29,11 +29,14 @@ func _process(delta: float) -> void:
 		if position.x < Grid.ORIGIN.x - 20.0:
 			queue_free()
 		return
+	var prev_x := position.x
 	position.x += speed * level.field_mult_at(position) * delta
 	for r in level.lanes.enemies_in_lane(row):
 		if hit.has(r):
 			continue
-		if r.hitbox.contains_x(r.position.x, position.x):
+		# Colisión "barrida": no atraviesa robots aunque el frame sea largo (velocidad x2, lag).
+		var hw: float = r.hitbox.half_width
+		if r.position.x - hw <= position.x and r.position.x + hw >= prev_x:
 			var src: Node = source if is_instance_valid(source) else null
 			r.take_damage(damage, dtype, src)
 			if slow_time > 0.0 and is_instance_valid(r) and not r.dead:

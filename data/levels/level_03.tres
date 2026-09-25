@@ -5,32 +5,22 @@
 
 [sub_resource type="Resource" id="Resource_7aiuv"]
 script = ExtResource("2_6nawd")
-duration = 22.6
+duration = 30.0
 groups = [{
 "count": 3,
 "interval": 0.6,
 "lane": -1,
 "robot": "spambot"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "scriptbot"
 }]
 
 [sub_resource type="Resource" id="Resource_hij7b"]
 script = ExtResource("2_6nawd")
-duration = 23.51
+duration = 30.52
 groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
 "robot": "scriptbot"
-}, {
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
 }, {
 "count": 1,
 "interval": 1.0,
@@ -40,18 +30,8 @@ groups = [{
 
 [sub_resource type="Resource" id="Resource_ilbil"]
 script = ExtResource("2_6nawd")
-duration = 24.42
+duration = 32.275
 groups = [{
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
-}, {
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
-}, {
 "count": 3,
 "interval": 0.6,
 "lane": -1,
@@ -65,22 +45,17 @@ groups = [{
 
 [sub_resource type="Resource" id="Resource_0bqj5"]
 script = ExtResource("2_6nawd")
-duration = 25.33
+duration = 33.4
 groups = [{
 "count": 3,
 "interval": 0.6,
 "lane": -1,
 "robot": "spambot"
 }, {
-"count": 3,
-"interval": 0.6,
+"count": 1,
+"interval": 1.0,
 "lane": -1,
-"robot": "spambot"
-}, {
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
+"robot": "scriptbot"
 }, {
 "count": 1,
 "interval": 1.0,
@@ -90,37 +65,27 @@ groups = [{
 
 [sub_resource type="Resource" id="Resource_ba1yj"]
 script = ExtResource("2_6nawd")
-duration = 26.240000000000002
+duration = 34.3
 groups = [{
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
 "robot": "scriptbot"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "scriptbot"
-}, {
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
-}, {
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
-}, {
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
 }]
 
 [sub_resource type="Resource" id="Resource_etu6v"]
 script = ExtResource("2_6nawd")
-duration = 35.6
+duration = 42.76
 is_huge = true
 groups = [{
 "count": 3,
@@ -128,20 +93,15 @@ groups = [{
 "lane": -1,
 "robot": "spambot"
 }, {
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
-}, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
 "robot": "scriptbot"
 }, {
-"count": 3,
-"interval": 0.6,
+"count": 1,
+"interval": 1.0,
 "lane": -1,
-"robot": "spambot"
+"robot": "scriptbot"
 }, {
 "count": 1,
 "interval": 1.0,
@@ -162,26 +122,6 @@ groups = [{
 "interval": 1.0,
 "lane": -1,
 "robot": "scriptbot"
-}, {
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
-}, {
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
-}, {
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
-}, {
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
 }]
 
 [resource]
@@ -190,8 +130,10 @@ number = 3
 display_name = "Tokens y aliados"
 intro_text = "Aparecen los Spambots. Gana tokens y llama a tu IA aliada."
 active_lanes = PackedInt32Array(0, 1, 2, 3, 4)
+start_sun = 75
 start_tokens = 1
-first_wave_delay = 18.0
+sky_sun_interval = 8.0
+first_wave_delay = 26.0
 waves = Array[ExtResource("2_6nawd")]([SubResource("Resource_7aiuv"), SubResource("Resource_hij7b"), SubResource("Resource_ilbil"), SubResource("Resource_0bqj5"), SubResource("Resource_ba1yj"), SubResource("Resource_etu6v")])
 unlock_type = "plant"
 unlock_id = "tokenizadora"

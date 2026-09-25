@@ -58,7 +58,7 @@ func _process(delta: float) -> void:
 		return
 	timer -= delta
 	since_wave += delta
-	var cleared: bool = wave_index >= 0 and queue.is_empty() and since_wave > 5.0 and level.lanes.real_enemy_count() == 0
+	var cleared: bool = wave_index >= 0 and queue.is_empty() and since_wave > maxf(8.0, data.waves[wave_index].duration * 0.5) and level.lanes.real_enemy_count() == 0
 	if timer <= 0.0 or cleared:
 		var nxt: WaveData = data.waves[wave_index + 1]
 		if nxt.is_huge:

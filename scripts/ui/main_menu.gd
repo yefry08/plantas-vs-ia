@@ -102,9 +102,9 @@ func _draw() -> void:
 	if GameState.robots.is_empty():
 		return
 	draw_rect(Rect2(0, 0, 1280, 720), Color(0.5, 0.75, 0.95))
-	for i in 12:
+	for i in 18:
 		var y := i * 30.0
-		draw_rect(Rect2(0, y, 1280, 30), Color(0.55, 0.8, 0.98).lerp(Color(0.85, 0.93, 1.0), i / 12.0))
+		draw_rect(Rect2(0, y, 1280, 30), Color(0.55, 0.8, 0.98).lerp(Color(0.88, 0.95, 1.0), i / 18.0))
 	Art.sun_icon(self, Vector2(1140, 90), 40, t * 0.3)
 	var hill := PackedVector2Array([Vector2(0, 520)])
 	for i in 33:

@@ -599,7 +599,8 @@ func _setup_autotest() -> void:
 	Engine.time_scale = float(GameState.autotest.get("speed", "4"))
 	shot_path = String(GameState.autotest.get("shot", ""))
 	shot_time = float(GameState.autotest.get("shot_at", "20"))
-	waves.skip_wait()
+	if String(GameState.autotest.get("mode", "chaos")) == "chaos":
+		waves.skip_wait()
 	print("AUTOTEST nivel %d (%s) oleadas=%d" % [data.number, data.display_name, waves.total_waves()])
 
 
@@ -636,6 +637,8 @@ func _autoplay(delta: float) -> void:
 				var target: Node = null if enemies.is_empty() or not cd.needs_target else enemies.pick_random()
 				if apply_card(cid, target, true):
 					auto_stats["card_" + cid] = int(auto_stats.get("card_" + cid, 0)) + 1
+		if boss != null and GameState.autotest.get("ending", "") == "aligned" and boss.phase == 3:
+			apply_card("alineamiento", boss, true)
 		if randf() < 0.04:
 			var all := lanes.all_plants()
 			if not all.is_empty():
@@ -674,12 +677,28 @@ func _fair_plant() -> void:
 		if s < weakest_score:
 			weakest_score = s
 			weakest = l
+	var urgent := false
+	for l in active_lanes:
+		if int(attackers[l]) == 0:
+			for e in lanes.enemies_in_lane(l):
+				if e.position.x < 950.0:
+					urgent = true
+	var total_attackers := 0
+	for l in active_lanes:
+		total_attackers += int(attackers[l])
 	var want: Array[String] = []
-	if producers < mini(active_lanes.size() * 2, 8) and weakest_score > -1.0:
-		want.append("producer")
-	want.append("attack")
-	if weakest_score < 0.0:
-		want.append("wall")
+	if urgent:
+		want.append("attack")
+	else:
+		if producers < mini(active_lanes.size() * 2, 8) and producers <= total_attackers + 4:
+			want.append("producer")
+		want.append("attack")
+		var ahead := false
+		for e in lanes.enemies_in_lane(weakest):
+			if e.position.x > Grid.col_x(5) + 60.0:
+				ahead = true
+		if weakest_score < 0.0 and ahead:
+			want.append("wall")
 	for kind in want:
 		for id in GameState.loadout_plants:
 			var pd: PlantData = GameState.plants[id]
@@ -706,6 +725,14 @@ func _fair_plant() -> void:
 func _auto_finish(result: String) -> void:
 	print("AUTOTEST FIN nivel %d: %s | t=%.1fs | oleada %d/%d | robots vivos=%d | stats=%s" % [
 		data.number, result, elapsed, waves.wave_index + 1, waves.total_waves(), lanes.real_enemy_count(), str(auto_stats)])
+	var board_desc := ""
+	for l in active_lanes:
+		var ids: Array = []
+		for p in lanes.plants_in_lane(l):
+			ids.append(String(p.data.id).substr(0, 4))
+		var m: Mower = mowers.get(l)
+		board_desc += "\n  carril %d [%s] podadora=%s enemigos=%d" % [l, ",".join(ids), m.state if m else "-", lanes.enemies_in_lane(l).size()]
+	print("  sol=%d tokens=%d%s" % [GameState.sun, GameState.tokens, board_desc])
 	auto = false
 	get_tree().paused = false
 	get_tree().quit()

@@ -5,7 +5,7 @@
 
 [sub_resource type="Resource" id="Resource_oko22"]
 script = ExtResource("2_045or")
-duration = 29.75
+duration = 31.645
 groups = [{
 "count": 1,
 "interval": 1.0,
@@ -15,32 +15,37 @@ groups = [{
 
 [sub_resource type="Resource" id="Resource_i6byv"]
 script = ExtResource("2_045or")
-duration = 31.83
+duration = 34.93
 groups = [{
-"count": 1,
-"interval": 1.0,
+"count": 2,
+"interval": 0.9,
 "lane": -1,
-"robot": "mythos"
-}]
-
-[sub_resource type="Resource" id="Resource_mhlau"]
-script = ExtResource("2_045or")
-duration = 33.91
-groups = [{
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "mythos"
+"robot": "dragon_destilado"
 }, {
 "count": 2,
 "interval": 0.9,
 "lane": -1,
 "robot": "dragon_destilado"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}]
+
+[sub_resource type="Resource" id="Resource_mhlau"]
+script = ExtResource("2_045or")
+duration = 39.115
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "mythos"
 }]
 
 [sub_resource type="Resource" id="Resource_0gjak"]
 script = ExtResource("2_045or")
-duration = 38.0
+duration = 50.0
 is_huge = true
 groups = [{
 "count": 1,
@@ -57,122 +62,6 @@ groups = [{
 "interval": 0.9,
 "lane": -1,
 "robot": "dragon_destilado"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "mythos"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "dragon_destilado"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "grokazo"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "grokazo"
-}]
-
-[sub_resource type="Resource" id="Resource_imcji"]
-script = ExtResource("2_045or")
-duration = 38.0
-groups = [{
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "grokazo"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "mythos"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "dragon_destilado"
-}]
-
-[sub_resource type="Resource" id="Resource_donhq"]
-script = ExtResource("2_045or")
-duration = 38.0
-groups = [{
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "grokazo"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "geminis_gemelo"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "dragon_destilado"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "captchabot"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "dragon_destilado"
-}]
-
-[sub_resource type="Resource" id="Resource_pkn70"]
-script = ExtResource("2_045or")
-duration = 38.0
-groups = [{
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "mythos"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "grokazo"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "dragon_destilado"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "captchabot"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "dragon_destilado"
-}]
-
-[sub_resource type="Resource" id="Resource_om2p2"]
-script = ExtResource("2_045or")
-duration = 38.0
-is_huge = true
-groups = [{
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "dragon_destilado"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "captchabot"
 }, {
 "count": 1,
 "interval": 1.0,
@@ -182,7 +71,78 @@ groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}]
+
+[sub_resource type="Resource" id="Resource_imcji"]
+script = ExtResource("2_045or")
+duration = 43.3
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "mythos"
+}]
+
+[sub_resource type="Resource" id="Resource_donhq"]
+script = ExtResource("2_045or")
+duration = 45.1
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grokazo"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grokazo"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}]
+
+[sub_resource type="Resource" id="Resource_pkn70"]
+script = ExtResource("2_045or")
+duration = 46.900000000000006
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
 "robot": "geminis_gemelo"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grokazo"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}]
+
+[sub_resource type="Resource" id="Resource_om2p2"]
+script = ExtResource("2_045or")
+duration = 50.0
+is_huge = true
+groups = [{
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
 }, {
 "count": 2,
 "interval": 0.9,
@@ -199,15 +159,10 @@ groups = [{
 "lane": -1,
 "robot": "mythos"
 }, {
-"count": 1,
-"interval": 1.0,
+"count": 2,
+"interval": 0.9,
 "lane": -1,
-"robot": "grokazo"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "captchabot"
+"robot": "dragon_destilado"
 }]
 
 [resource]
@@ -217,8 +172,10 @@ zone = 4
 display_name = "Cerrojo total"
 intro_text = "Mythos hackea tus mejores plantas."
 active_lanes = PackedInt32Array(0, 1, 2, 3, 4)
+start_sun = 150
 start_tokens = 4
-first_wave_delay = 18.0
+sky_sun_interval = 8.0
+first_wave_delay = 22.0
 waves = Array[ExtResource("2_045or")]([SubResource("Resource_oko22"), SubResource("Resource_i6byv"), SubResource("Resource_mhlau"), SubResource("Resource_0gjak"), SubResource("Resource_imcji"), SubResource("Resource_donhq"), SubResource("Resource_pkn70"), SubResource("Resource_om2p2")])
 unlock_type = "card"
 unlock_id = "red_team"

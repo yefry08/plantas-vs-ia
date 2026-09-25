@@ -5,12 +5,22 @@
 
 [sub_resource type="Resource" id="Resource_jbtmq"]
 script = ExtResource("2_tlryx")
-duration = 30.4
+duration = 31.888
 groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
 "robot": "astra"
+}]
+
+[sub_resource type="Resource" id="Resource_34rpi"]
+script = ExtResource("2_tlryx")
+duration = 35.371
+groups = [{
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qilin_eficiente"
 }, {
 "count": 4,
 "interval": 0.45,
@@ -18,39 +28,14 @@ groups = [{
 "robot": "qilin_eficiente"
 }]
 
-[sub_resource type="Resource" id="Resource_34rpi"]
-script = ExtResource("2_tlryx")
-duration = 32.61
-groups = [{
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "astra"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "razonador_serie_o"
-}]
-
 [sub_resource type="Resource" id="Resource_bgcpr"]
 script = ExtResource("2_tlryx")
-duration = 34.82
+duration = 39.799
 groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
 "robot": "astra"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "razonador_serie_o"
-}, {
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
 }, {
 "count": 3,
 "interval": 0.6,
@@ -60,19 +45,9 @@ groups = [{
 
 [sub_resource type="Resource" id="Resource_sonbf"]
 script = ExtResource("2_tlryx")
-duration = 38.0
+duration = 50.0
 is_huge = true
 groups = [{
-"count": 4,
-"interval": 0.45,
-"lane": -1,
-"robot": "qilin_eficiente"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "opengarra"
-}, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
@@ -81,17 +56,17 @@ groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "razonador_serie_o"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "razonador_serie_o"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
 "robot": "opengarra"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qilin_eficiente"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
 }, {
 "count": 3,
 "interval": 0.6,
@@ -101,57 +76,37 @@ groups = [{
 
 [sub_resource type="Resource" id="Resource_7pxh8"]
 script = ExtResource("2_tlryx")
-duration = 38.0
-groups = [{
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "astra"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "astra"
-}, {
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
-}, {
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
-}, {
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
-}]
-
-[sub_resource type="Resource" id="Resource_6ojgu"]
-script = ExtResource("2_tlryx")
-duration = 38.0
+duration = 44.2
 groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
 "robot": "opengarra"
 }, {
-"count": 1,
-"interval": 1.0,
+"count": 4,
+"interval": 0.45,
 "lane": -1,
-"robot": "astra"
+"robot": "qilin_eficiente"
 }, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qilin_eficiente"
+}]
+
+[sub_resource type="Resource" id="Resource_6ojgu"]
+script = ExtResource("2_tlryx")
+duration = 46.09
+groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
 "robot": "razonador_serie_o"
 }, {
-"count": 3,
-"interval": 0.6,
+"count": 1,
+"interval": 1.0,
 "lane": -1,
-"robot": "spambot"
+"robot": "opengarra"
 }, {
 "count": 3,
 "interval": 0.6,
@@ -161,13 +116,8 @@ groups = [{
 
 [sub_resource type="Resource" id="Resource_knhbc"]
 script = ExtResource("2_tlryx")
-duration = 38.0
+duration = 47.980000000000004
 groups = [{
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "astra"
-}, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
@@ -178,42 +128,17 @@ groups = [{
 "lane": -1,
 "robot": "razonador_serie_o"
 }, {
-"count": 4,
-"interval": 0.45,
-"lane": -1,
-"robot": "qilin_eficiente"
-}]
-
-[sub_resource type="Resource" id="Resource_6logm"]
-script = ExtResource("2_tlryx")
-duration = 38.0
-is_huge = true
-groups = [{
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "claude_fable"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "astra"
-}, {
 "count": 3,
 "interval": 0.6,
 "lane": -1,
 "robot": "spambot"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "astra"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "astra"
-}, {
+}]
+
+[sub_resource type="Resource" id="Resource_6logm"]
+script = ExtResource("2_tlryx")
+duration = 50.0
+is_huge = true
+groups = [{
 "count": 3,
 "interval": 0.6,
 "lane": -1,
@@ -229,10 +154,15 @@ groups = [{
 "lane": -1,
 "robot": "opengarra"
 }, {
-"count": 4,
-"interval": 0.45,
+"count": 1,
+"interval": 1.0,
 "lane": -1,
-"robot": "qilin_eficiente"
+"robot": "astra"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "razonador_serie_o"
 }, {
 "count": 3,
 "interval": 0.6,
@@ -247,8 +177,10 @@ zone = 4
 display_name = "Estrella fugaz"
 intro_text = "Astra se teletransporta y frena tus disparos."
 active_lanes = PackedInt32Array(0, 1, 2, 3, 4)
+start_sun = 150
 start_tokens = 5
-first_wave_delay = 18.0
+sky_sun_interval = 8.0
+first_wave_delay = 22.0
 waves = Array[ExtResource("2_tlryx")]([SubResource("Resource_jbtmq"), SubResource("Resource_34rpi"), SubResource("Resource_bgcpr"), SubResource("Resource_sonbf"), SubResource("Resource_7pxh8"), SubResource("Resource_6ojgu"), SubResource("Resource_knhbc"), SubResource("Resource_6logm")])
 unlock_type = "plant"
 unlock_id = "nuez_firewall_pro"

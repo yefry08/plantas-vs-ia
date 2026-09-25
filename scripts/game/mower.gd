@@ -27,11 +27,13 @@ func _process(delta: float) -> void:
 	t += delta
 	if state != "moving":
 		return
+	var prev_x := position.x
 	position.x += 560.0 * delta
 	for r in level.lanes.enemies_in_lane(row):
 		if hit.has(r):
 			continue
-		if abs(r.position.x - position.x) < r.hitbox.half_width + 24.0:
+		var reach: float = r.hitbox.half_width + 24.0
+		if r.position.x - reach <= position.x and r.position.x + reach >= prev_x:
 			hit.append(r)
 			r.hit_by_mower(self)
 	if position.x > Grid.VISIBLE_X + 60.0:

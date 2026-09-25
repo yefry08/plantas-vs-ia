@@ -69,6 +69,32 @@ func _ready() -> void:
 		_unlock_everything()
 	AudioManager.set_volume(float(progress.get("volume", 0.7)))
 	AudioManager.muted = bool(progress.get("muted", false))
+	_maybe_screen_capture()
+
+
+## Captura de pantallas de menú para revisión: -- --screen=level_select --out=res://x.png
+func _maybe_screen_capture() -> void:
+	var opts := {}
+	for arg in OS.get_cmdline_user_args():
+		if arg.begins_with("--") and arg.contains("="):
+			var kv := arg.substr(2).split("=", true, 1)
+			opts[kv[0]] = kv[1]
+	if not opts.has("screen"):
+		return
+	SaveManager.enabled = false
+	_unlock_everything()
+	progress["completed"] = [1, 2, 3, 4, 5, 6, 7]
+	current_level = int(opts.get("level", "12"))
+	pending_ending = String(opts.get("ending", ""))
+	auto_loadout()
+	var screen := String(opts["screen"])
+	await get_tree().process_frame
+	get_tree().change_scene_to_file("res://scenes/%s.tscn" % screen)
+	await get_tree().create_timer(float(opts.get("wait", "1.5"))).timeout
+	var img := get_viewport().get_texture().get_image()
+	if img != null:
+		img.save_png(String(opts.get("out", "res://screen.png")))
+	get_tree().quit()
 
 
 func _parse_args() -> void:

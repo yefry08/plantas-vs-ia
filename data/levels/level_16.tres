@@ -5,7 +5,7 @@
 
 [sub_resource type="Resource" id="Resource_e3dhl"]
 script = ExtResource("2_o1w5q")
-duration = 29.1
+duration = 31.402
 groups = [{
 "count": 1,
 "interval": 1.0,
@@ -15,183 +15,33 @@ groups = [{
 
 [sub_resource type="Resource" id="Resource_l80nm"]
 script = ExtResource("2_o1w5q")
-duration = 31.05
+duration = 34.489
 groups = [{
-"count": 4,
-"interval": 0.45,
-"lane": -1,
-"robot": "qilin_eficiente"
-}, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "razonador_serie_o"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "scriptbot"
-}, {
-"count": 4,
-"interval": 0.45,
-"lane": -1,
-"robot": "qilin_eficiente"
+"robot": "grokazo"
 }]
 
 [sub_resource type="Resource" id="Resource_yruab"]
 script = ExtResource("2_o1w5q")
-duration = 33.0
+duration = 38.431
 groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
 "robot": "claude_fable"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "captchabot"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "scriptbot"
 }]
 
 [sub_resource type="Resource" id="Resource_l4bhs"]
 script = ExtResource("2_o1w5q")
-duration = 38.0
+duration = 50.0
 is_huge = true
 groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "captchabot"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "scriptbot"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "claude_fable"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "scriptbot"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "captchabot"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "grokazo"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "captchabot"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "grokazo"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "scriptbot"
-}]
-
-[sub_resource type="Resource" id="Resource_yalut"]
-script = ExtResource("2_o1w5q")
-duration = 36.900000000000006
-groups = [{
-"count": 4,
-"interval": 0.45,
-"lane": -1,
-"robot": "qilin_eficiente"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "scriptbot"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "scriptbot"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "claude_fable"
-}, {
-"count": 4,
-"interval": 0.45,
-"lane": -1,
-"robot": "qilin_eficiente"
-}]
-
-[sub_resource type="Resource" id="Resource_60egd"]
-script = ExtResource("2_o1w5q")
-duration = 38.0
-groups = [{
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "dragon_destilado"
-}, {
-"count": 4,
-"interval": 0.45,
-"lane": -1,
-"robot": "qilin_eficiente"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "captchabot"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "claude_fable"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "captchabot"
-}]
-
-[sub_resource type="Resource" id="Resource_nlfe0"]
-script = ExtResource("2_o1w5q")
-duration = 38.0
-groups = [{
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "dragon_destilado"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "captchabot"
-}, {
-"count": 4,
-"interval": 0.45,
-"lane": -1,
-"robot": "qilin_eficiente"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "grokazo"
+"robot": "razonador_serie_o"
 }, {
 "count": 1,
 "interval": 1.0,
@@ -201,7 +51,102 @@ groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
+"robot": "grokazo"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}]
+
+[sub_resource type="Resource" id="Resource_yalut"]
+script = ExtResource("2_o1w5q")
+duration = 42.4
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
 "robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "dragon_destilado"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}]
+
+[sub_resource type="Resource" id="Resource_60egd"]
+script = ExtResource("2_o1w5q")
+duration = 44.11
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grokazo"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qilin_eficiente"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}]
+
+[sub_resource type="Resource" id="Resource_nlfe0"]
+script = ExtResource("2_o1w5q")
+duration = 45.81999999999999
+groups = [{
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qilin_eficiente"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qilin_eficiente"
 }, {
 "count": 2,
 "interval": 0.9,
@@ -211,33 +156,13 @@ groups = [{
 
 [sub_resource type="Resource" id="Resource_pr7fn"]
 script = ExtResource("2_o1w5q")
-duration = 38.0
+duration = 50.0
 is_huge = true
 groups = [{
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "dragon_destilado"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "captchabot"
-}, {
 "count": 4,
 "interval": 0.45,
 "lane": -1,
 "robot": "qilin_eficiente"
-}, {
-"count": 4,
-"interval": 0.45,
-"lane": -1,
-"robot": "qilin_eficiente"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "dragon_destilado"
 }, {
 "count": 1,
 "interval": 1.0,
@@ -249,30 +174,10 @@ groups = [{
 "lane": -1,
 "robot": "claude_fable"
 }, {
-"count": 4,
-"interval": 0.45,
-"lane": -1,
-"robot": "qilin_eficiente"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "razonador_serie_o"
-}, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
 "robot": "grokazo"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "dragon_destilado"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "scriptbot"
 }, {
 "count": 2,
 "interval": 0.9,
@@ -292,8 +197,10 @@ zone = 4
 display_name = "Había una vez"
 intro_text = "Claude Fable cuenta historias... con robots que no existen."
 active_lanes = PackedInt32Array(0, 1, 2, 3, 4)
+start_sun = 150
 start_tokens = 4
-first_wave_delay = 18.0
+sky_sun_interval = 8.0
+first_wave_delay = 22.0
 waves = Array[ExtResource("2_o1w5q")]([SubResource("Resource_e3dhl"), SubResource("Resource_l80nm"), SubResource("Resource_yruab"), SubResource("Resource_l4bhs"), SubResource("Resource_yalut"), SubResource("Resource_60egd"), SubResource("Resource_nlfe0"), SubResource("Resource_pr7fn")])
 unlock_type = "plant"
 unlock_id = "bambu_pararrayos"

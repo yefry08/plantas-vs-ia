@@ -3,3 +3,4 @@ build/
 *.tmp
 /android/
 shots/
+.claude/

@@ -46,7 +46,7 @@ const ROBOTS := [
 	{"id": "scriptbot", "display_name": "Scriptbot", "tier": 1, "behavior": "basic", "health": 200.0, "speed": 14.0, "token_reward": 1, "token_chance": 0.5,
 		"body_color": Color(0.62, 0.66, 0.7), "accent_color": Color(0.5, 0.55, 0.62), "eye_color": Color(0.3, 0.9, 1.0), "params": {"shape": "box"},
 		"description": "Un script con patas.", "abilities": "Básico y lento. Avanza y muerde tus plantas.", "weakness": "Cualquier planta de ataque."},
-	{"id": "spambot", "display_name": "Spambot", "tier": 1, "behavior": "basic", "health": 110.0, "speed": 30.0, "bite_damage": 60.0, "token_reward": 1, "token_chance": 0.25, "size": 0.85,
+	{"id": "spambot", "display_name": "Spambot", "tier": 1, "behavior": "basic", "health": 110.0, "speed": 24.0, "bite_damage": 60.0, "token_reward": 1, "token_chance": 0.25, "size": 0.85,
 		"body_color": Color(0.95, 0.5, 0.7), "accent_color": Color(0.85, 0.4, 0.6), "eye_color": Color(1.0, 0.95, 0.4), "params": {"shape": "spam"},
 		"description": "Llega sin que nadie lo pida.", "abilities": "Rápido y frágil. Llega en grupos.", "weakness": "Cactus Antivirus y Bambú Pararrayos."},
 	{"id": "captchabot", "display_name": "Bot de Captcha", "tier": 1, "behavior": "basic", "health": 200.0, "shield_health": 300.0, "speed": 14.0, "token_reward": 1, "token_chance": 0.8,
@@ -61,7 +61,7 @@ const ROBOTS := [
 	{"id": "dragon_destilado", "display_name": "Dragón Destilado", "tier": 3, "behavior": "dragon", "health": 170.0, "speed": 17.0, "bite_damage": 80.0, "token_reward": 1, "token_chance": 0.5,
 		"body_color": Color(0.85, 0.2, 0.18), "accent_color": Color(1.0, 0.78, 0.25), "eye_color": Color(1.0, 0.9, 0.2), "params": {"shape": "dragon", "distill_time": 5.0},
 		"description": "Barato, numeroso y aprende rápido.", "abilities": "Destila una habilidad de la última planta que lo dañó y la usa 5 s (disparo, coraza, prisa o regeneración).", "weakness": "Rayos y explosiones antes de que destile."},
-	{"id": "qilin_eficiente", "display_name": "Qilin Eficiente", "tier": 3, "behavior": "qilin", "health": 150.0, "speed": 20.0, "bite_damage": 60.0, "token_reward": 1, "token_chance": 0.3, "size": 0.9,
+	{"id": "qilin_eficiente", "display_name": "Qilin Eficiente", "tier": 3, "behavior": "qilin", "health": 150.0, "speed": 18.0, "bite_damage": 60.0, "token_reward": 1, "token_chance": 0.3, "size": 0.9,
 		"body_color": Color(0.2, 0.62, 0.6), "accent_color": Color(0.9, 0.75, 0.35), "eye_color": Color(1.0, 1.0, 0.8), "params": {"shape": "qilin", "stun_mult": 0.5, "pack_speed": 1.25},
 		"description": "La mitad de cómputo, el doble de manada.", "abilities": "Usa la mitad de cómputo: los aturdimientos le duran la mitad. Llega en oleadas muy densas y acelera en manada.", "weakness": "Cactus Antivirus (atraviesa la manada)."},
 	{"id": "razonador_serie_o", "display_name": "Razonador Serie-O", "tier": 3, "behavior": "reasoner", "health": 420.0, "speed": 13.0, "token_reward": 2,
@@ -83,7 +83,7 @@ const ROBOTS := [
 		"body_color": Color(0.3, 0.34, 0.42), "accent_color": Color(0.45, 0.5, 0.6), "eye_color": Color(1.0, 0.25, 0.25), "params": {"shape": "tank", "hack_interval": 8.0, "hack_time": 6.0},
 		"resistances": {"seed": 0.8}, "card_rules": {"autodestruccion": "immune"},
 		"description": "Tanque pesado de ciberseguridad.", "abilities": "Hackea y desactiva 6 s la planta más fuerte de su carril. Inmune a Autodestrucción. Blindado.", "weakness": "Bambú Pararrayos (doble daño a blindados), Mina Bug."},
-	{"id": "astra", "display_name": "Astra", "tier": 4, "behavior": "astra", "health": 520.0, "speed": 22.0, "token_reward": 4,
+	{"id": "astra", "display_name": "Astra", "tier": 4, "behavior": "astra", "health": 520.0, "speed": 20.0, "token_reward": 4,
 		"body_color": Color(0.95, 0.97, 1.0), "accent_color": Color(0.4, 0.85, 1.0), "eye_color": Color(0.2, 0.3, 0.5), "params": {"shape": "star", "tp_interval": 8.0, "tp_cols": 2, "field_time": 5.0, "field_mult": 0.5},
 		"card_rules": {"boton_apagado": "double_cost", "apagado_cadena": "double_cost"},
 		"description": "Veloz y estelar.", "abilities": "Se teletransporta 2 columnas cada 8 s y deja un campo que ralentiza tus disparos. Apagarla cuesta el doble.", "weakness": "Enredadera Captcha y Lanzasemillas Crio."},
@@ -107,7 +107,7 @@ const CARDS := [
 ]
 
 const COSTS := {
-	"scriptbot": 1.0, "spambot": 1.0, "captchabot": 2.0, "abrazobot": 3.0, "emojibot": 3.0,
+	"scriptbot": 1.0, "spambot": 1.5, "captchabot": 2.0, "abrazobot": 3.0, "emojibot": 3.0,
 	"dragon_destilado": 1.6, "qilin_eficiente": 2.0, "razonador_serie_o": 4.0, "grokazo": 4.0,
 	"geminis_gemelo": 6.0, "opengarra": 5.0, "claude_fable": 7.0, "mythos": 9.0, "astra": 6.0,
 }
@@ -121,24 +121,24 @@ const Z2 := ["scriptbot", "spambot", "captchabot", "abrazobot", "emojibot"]
 const LEVELS := [
 	[1, "Primer brote", "Un Scriptbot se acerca por el carril central.", [2], 4, ["scriptbot"], "scriptbot", 1.0, 0.5, 150, 0, "plant", "girasolar"],
 	[2, "Sol de mañana", "Más carriles, más robots. Los Girasolares te darán energía.", [1, 2, 3], 5, ["scriptbot"], "", 1.5, 0.6, 50, 0, "plant", "nuez_firewall"],
-	[3, "Tokens y aliados", "Aparecen los Spambots. Gana tokens y llama a tu IA aliada.", ALL_LANES, 6, ["scriptbot", "spambot"], "spambot", 2.0, 0.7, 50, 1, "plant", "tokenizadora"],
-	[4, "Muro de cartón", "Los Bots de Captcha traen escudos de cartón.", ALL_LANES, 7, Z1, "captchabot", 2.5, 0.8, 50, 2, "plant", "enredadera_captcha"],
-	[5, "Asalto al jardín", "Todos los bots simples a la vez.", ALL_LANES, 8, Z1, "", 3.0, 0.9, 50, 2, "card", "boton_apagado"],
-	[6, "Abrazos peligrosos", "El Abrazobot se forkea al morir.", ALL_LANES, 7, ["scriptbot", "spambot", "captchabot", "abrazobot"], "abrazobot", 3.0, 0.9, 50, 2, "plant", "mina_bug"],
-	[7, "Emociones mixtas", "El Emojibot cambia de humor... y de velocidad de mordida.", ALL_LANES, 7, ["scriptbot", "captchabot", "abrazobot", "emojibot"], "emojibot", 3.5, 1.0, 50, 2, "plant_slot", ""],
-	[8, "Fork infinito", "Muchos forks, poco tiempo.", ALL_LANES, 8, Z2, "", 4.0, 1.0, 50, 2, "plant", "cactus_antivirus"],
-	[9, "Pull request hostil", "Revisa bien tus defensas antes de aceptar cambios.", ALL_LANES, 8, Z2, "", 4.5, 1.1, 50, 3, "card_slot", ""],
-	[10, "Fusión de ramas", "Todo el repositorio contra tu jardín.", ALL_LANES, 9, Z2, "", 5.0, 1.2, 50, 3, "plant", "brotecito_solar"],
-	[11, "Destilación", "Dragones que copian y Qilins en manada.", ALL_LANES, 8, ["scriptbot", "spambot", "dragon_destilado", "qilin_eficiente"], "dragon_destilado", 5.0, 1.2, 50, 3, "plant", "hongo_emp"],
-	[12, "Pensamiento profundo", "El Razonador busca tu carril más débil.", ALL_LANES, 8, ["scriptbot", "captchabot", "dragon_destilado", "qilin_eficiente", "razonador_serie_o"], "razonador_serie_o", 5.5, 1.2, 50, 3, "card", "apagado_cadena"],
-	[13, "Sin filtro", "Grokazo hace lo que quiere.", ALL_LANES, 8, ["scriptbot", "captchabot", "dragon_destilado", "qilin_eficiente", "razonador_serie_o", "grokazo"], "grokazo", 6.0, 1.3, 50, 3, "plant", "lanzasemillas_crio"],
-	[14, "Doble personalidad", "Géminis se divide y se adapta a tu daño.", ALL_LANES, 8, ["captchabot", "emojibot", "dragon_destilado", "qilin_eficiente", "razonador_serie_o", "grokazo", "geminis_gemelo"], "geminis_gemelo", 6.5, 1.4, 50, 3, "plant_slot", ""],
-	[15, "Garra autónoma", "OpenGarra arranca plantas y roba tokens.", ALL_LANES, 9, ["captchabot", "dragon_destilado", "qilin_eficiente", "razonador_serie_o", "grokazo", "geminis_gemelo", "opengarra"], "opengarra", 7.0, 1.5, 50, 4, "plant", "doble_commit"],
-	[16, "Había una vez", "Claude Fable cuenta historias... con robots que no existen.", ALL_LANES, 8, ["scriptbot", "captchabot", "dragon_destilado", "qilin_eficiente", "razonador_serie_o", "grokazo", "claude_fable"], "claude_fable", 7.0, 1.5, 50, 4, "plant", "bambu_pararrayos"],
-	[17, "Cerrojo total", "Mythos hackea tus mejores plantas.", ALL_LANES, 8, ["captchabot", "emojibot", "dragon_destilado", "grokazo", "geminis_gemelo", "mythos"], "mythos", 7.5, 1.6, 50, 4, "card", "red_team"],
-	[18, "Estrella fugaz", "Astra se teletransporta y frena tus disparos.", ALL_LANES, 8, ["spambot", "qilin_eficiente", "razonador_serie_o", "opengarra", "claude_fable", "astra"], "astra", 8.0, 1.7, 50, 5, "plant", "nuez_firewall_pro"],
-	[19, "Frontera", "La élite al completo.", ALL_LANES, 9, ["abrazobot", "emojibot", "razonador_serie_o", "grokazo", "geminis_gemelo", "opengarra", "claude_fable", "mythos", "astra"], "", 9.0, 1.8, 50, 5, "card", "alineamiento"],
-	[20, "Antesala de la AGI", "Todo lo que la AGI ha creado viene a por ti.", ALL_LANES, 10, ["scriptbot", "spambot", "captchabot", "abrazobot", "emojibot", "dragon_destilado", "qilin_eficiente", "razonador_serie_o", "grokazo", "geminis_gemelo", "opengarra", "claude_fable", "mythos", "astra"], "", 10.0, 2.0, 50, 5, "plant", "girasolar_doble"],
+	[3, "Tokens y aliados", "Aparecen los Spambots. Gana tokens y llama a tu IA aliada.", ALL_LANES, 6, ["scriptbot", "spambot"], "spambot", 1.5, 0.5, 50, 1, "plant", "tokenizadora"],
+	[4, "Muro de cartón", "Los Bots de Captcha traen escudos de cartón.", ALL_LANES, 7, Z1, "captchabot", 1.8, 0.6, 50, 2, "plant", "enredadera_captcha"],
+	[5, "Asalto al jardín", "Todos los bots simples a la vez.", ALL_LANES, 8, Z1, "", 2.2, 0.65, 50, 2, "card", "boton_apagado"],
+	[6, "Abrazos peligrosos", "El Abrazobot se forkea al morir.", ALL_LANES, 7, ["scriptbot", "spambot", "captchabot", "abrazobot"], "abrazobot", 2.2, 0.7, 50, 2, "plant", "mina_bug"],
+	[7, "Emociones mixtas", "El Emojibot cambia de humor... y de velocidad de mordida.", ALL_LANES, 7, ["scriptbot", "captchabot", "abrazobot", "emojibot"], "emojibot", 2.5, 0.75, 50, 2, "plant_slot", ""],
+	[8, "Fork infinito", "Muchos forks, poco tiempo.", ALL_LANES, 8, Z2, "", 2.8, 0.8, 50, 2, "plant", "cactus_antivirus"],
+	[9, "Pull request hostil", "Revisa bien tus defensas antes de aceptar cambios.", ALL_LANES, 8, Z2, "", 3.2, 0.85, 50, 3, "card_slot", ""],
+	[10, "Fusión de ramas", "Todo el repositorio contra tu jardín.", ALL_LANES, 9, Z2, "", 3.5, 0.9, 50, 3, "plant", "brotecito_solar"],
+	[11, "Destilación", "Dragones que copian y Qilins en manada.", ALL_LANES, 8, ["scriptbot", "spambot", "dragon_destilado", "qilin_eficiente"], "dragon_destilado", 3.0, 0.8, 50, 3, "plant", "hongo_emp"],
+	[12, "Pensamiento profundo", "El Razonador busca tu carril más débil.", ALL_LANES, 8, ["scriptbot", "captchabot", "dragon_destilado", "qilin_eficiente", "razonador_serie_o"], "razonador_serie_o", 3.2, 0.8, 50, 3, "card", "apagado_cadena"],
+	[13, "Sin filtro", "Grokazo hace lo que quiere.", ALL_LANES, 8, ["scriptbot", "captchabot", "dragon_destilado", "qilin_eficiente", "razonador_serie_o", "grokazo"], "grokazo", 3.6, 0.85, 50, 3, "plant", "lanzasemillas_crio"],
+	[14, "Doble personalidad", "Géminis se divide y se adapta a tu daño.", ALL_LANES, 8, ["captchabot", "emojibot", "dragon_destilado", "qilin_eficiente", "razonador_serie_o", "grokazo", "geminis_gemelo"], "geminis_gemelo", 3.8, 0.9, 50, 3, "plant_slot", ""],
+	[15, "Garra autónoma", "OpenGarra arranca plantas y roba tokens.", ALL_LANES, 9, ["captchabot", "dragon_destilado", "qilin_eficiente", "razonador_serie_o", "grokazo", "geminis_gemelo", "opengarra"], "opengarra", 4.2, 0.95, 50, 4, "plant", "doble_commit"],
+	[16, "Había una vez", "Claude Fable cuenta historias... con robots que no existen.", ALL_LANES, 8, ["scriptbot", "captchabot", "dragon_destilado", "qilin_eficiente", "razonador_serie_o", "grokazo", "claude_fable"], "claude_fable", 4.2, 0.95, 50, 4, "plant", "bambu_pararrayos"],
+	[17, "Cerrojo total", "Mythos hackea tus mejores plantas.", ALL_LANES, 8, ["captchabot", "emojibot", "dragon_destilado", "grokazo", "geminis_gemelo", "mythos"], "mythos", 4.5, 1.0, 50, 4, "card", "red_team"],
+	[18, "Estrella fugaz", "Astra se teletransporta y frena tus disparos.", ALL_LANES, 8, ["spambot", "qilin_eficiente", "razonador_serie_o", "opengarra", "claude_fable", "astra"], "astra", 4.8, 1.05, 50, 5, "plant", "nuez_firewall_pro"],
+	[19, "Frontera", "La élite al completo.", ALL_LANES, 9, ["abrazobot", "emojibot", "razonador_serie_o", "grokazo", "geminis_gemelo", "opengarra", "claude_fable", "mythos", "astra"], "", 5.3, 1.15, 50, 5, "card", "alineamiento"],
+	[20, "Antesala de la AGI", "Todo lo que la AGI ha creado viene a por ti.", ALL_LANES, 10, ["scriptbot", "spambot", "captchabot", "abrazobot", "emojibot", "dragon_destilado", "qilin_eficiente", "razonador_serie_o", "grokazo", "geminis_gemelo", "opengarra", "claude_fable", "mythos", "astra"], "", 6.0, 1.25, 50, 5, "plant", "girasolar_doble"],
 ]
 
 const TUTORIALS := {
@@ -198,11 +198,12 @@ func _make_level(spec: Array) -> Resource:
 	ld.display_name = spec[1]
 	ld.intro_text = spec[2]
 	ld.active_lanes = PackedInt32Array(spec[3])
-	ld.start_sun = spec[9]
+	ld.start_sun = spec[9] if n <= 2 else 50 + 25 * ld.zone
 	ld.start_tokens = spec[10]
 	ld.unlock_type = spec[11]
 	ld.unlock_id = spec[12]
-	ld.first_wave_delay = 24.0 if n <= 2 else 18.0
+	ld.first_wave_delay = 26.0 if n <= 5 else 22.0
+	ld.sky_sun_interval = 8.0
 	ld.skip_seed_select = n <= 3
 	ld.tutorial_steps = TUTORIALS.get(n, [])
 	var rng := RandomNumberGenerator.new()
@@ -215,12 +216,12 @@ func _make_level(spec: Array) -> Resource:
 	var waves: Array[WaveData] = []
 	for w in wave_count:
 		var huge: bool = w == wave_count - 1 or (wave_count >= 7 and w == wave_count / 2 - 1)
-		var budget := base + inc * w
+		var budget := (base + inc * w) * minf(1.0, 0.45 + 0.25 * w)
 		if huge:
-			budget = budget * 2.0 + 1.0
+			budget = budget * 1.8 + 1.0
 		var wd = WaveDataScript.new()
 		wd.is_huge = huge
-		wd.duration = clampf(20.0 + budget * 1.3, 22.0, 38.0)
+		wd.duration = clampf(28.0 + budget * 1.8, 30.0, 50.0)
 		var groups: Array = []
 		if new_robot != "" and w <= 2 and w % 2 == 0:
 			groups.append(_group(new_robot))

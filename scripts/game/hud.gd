@@ -43,8 +43,8 @@ func setup(lvl: Node) -> void:
 	root.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(root)
 	_build_top_bar()
-	_build_messages()
 	_build_panels()
+	_build_messages()
 
 
 func _build_top_bar() -> void:
@@ -135,11 +135,11 @@ func _build_messages() -> void:
 
 func _build_panels() -> void:
 	tutorial_panel = UI.panel(Color(0.98, 0.95, 0.82, 0.96), 14, Color(0.5, 0.35, 0.15))
-	UI.place(tutorial_panel, Vector2(300, 128), Vector2(680, 60))
+	UI.place(tutorial_panel, Vector2(220, 128), Vector2(660, 60))
 	tutorial_panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	tutorial_label = UI.label("", 19, Color(0.2, 0.14, 0.05), 0, HORIZONTAL_ALIGNMENT_CENTER)
 	tutorial_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	tutorial_label.custom_minimum_size = Vector2(640, 0)
+	tutorial_label.custom_minimum_size = Vector2(620, 0)
 	tutorial_panel.add_child(tutorial_label)
 	tutorial_panel.visible = false
 	root.add_child(tutorial_panel)
