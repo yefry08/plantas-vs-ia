@@ -13,7 +13,7 @@ tier = 5
 behavior = "agi"
 health = 9000.0
 speed = 5.0
-bite_damage = 400.0
+bite_damage = 250.0
 token_reward = 0
 armored = true
 params = {
@@ -23,6 +23,8 @@ params = {
 "mower_damage": 1500.0,
 "resist_mult": 0.4,
 "shape": "agi",
+"summon_count": 1,
+"summon_intervals": [9.0, 11.0, 13.0],
 "upgrade_interval": 20.0
 }
 body_color = Color(0.1, 0.11, 0.16, 1)

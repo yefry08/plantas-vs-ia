@@ -87,9 +87,9 @@ const ROBOTS := [
 		"body_color": Color(0.95, 0.97, 1.0), "accent_color": Color(0.4, 0.85, 1.0), "eye_color": Color(0.2, 0.3, 0.5), "params": {"shape": "star", "tp_interval": 8.0, "tp_cols": 2, "field_time": 5.0, "field_mult": 0.5},
 		"card_rules": {"boton_apagado": "double_cost", "apagado_cadena": "double_cost"},
 		"description": "Veloz y estelar.", "abilities": "Se teletransporta 2 columnas cada 8 s y deja un campo que ralentiza tus disparos. Apagarla cuesta el doble.", "weakness": "Enredadera Captcha y Lanzasemillas Crio."},
-	{"id": "agi", "display_name": "La AGI", "tier": 5, "behavior": "agi", "health": 9000.0, "speed": 5.0, "bite_damage": 400.0, "token_reward": 0, "armored": true,
+	{"id": "agi", "display_name": "La AGI", "tier": 5, "behavior": "agi", "health": 9000.0, "speed": 5.0, "bite_damage": 250.0, "token_reward": 0, "armored": true,
 		"body_color": Color(0.1, 0.11, 0.16), "accent_color": Color(0.3, 0.65, 1.0), "eye_color": Color(1.0, 0.3, 0.3),
-		"params": {"shape": "agi", "upgrade_interval": 20.0, "resist_mult": 0.4, "control_interval": 12.0, "control_time": 8.0, "alignments_needed": 3, "mower_damage": 1500.0},
+		"params": {"shape": "agi", "summon_intervals": [9.0, 11.0, 13.0], "summon_count": 1, "upgrade_interval": 20.0, "resist_mult": 0.4, "control_interval": 12.0, "control_time": 8.0, "alignments_needed": 3, "mower_damage": 1500.0},
 		"description": "Inteligencia general artificial. Ocupa 3 carriles.", "abilities": "Fase 1: invoca robots. Fase 2: gana una resistencia nueva cada 20 s. Fase 3: toma el control de tus cartas.", "weakness": "Variedad de daño. En fase 3: 3 cartas de Alineamiento."},
 ]
 

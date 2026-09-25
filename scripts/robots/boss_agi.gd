@@ -71,7 +71,8 @@ func _behavior(delta: float) -> void:
 		_enter_phase(new_phase)
 	summon_timer -= delta
 	if summon_timer <= 0.0:
-		summon_timer = [7.0, 9.0, 11.0][phase - 1]
+		var intervals: Array = data.params.get("summon_intervals", [9.0, 11.0, 13.0])
+		summon_timer = float(intervals[phase - 1])
 		_summon()
 	if phase >= 2:
 		upgrade_timer -= delta
@@ -117,7 +118,7 @@ func _enemy_step(delta: float) -> void:
 
 func _summon() -> void:
 	var pool: Array = PHASE_POOLS[phase - 1]
-	var n := 2 if phase < 3 else 1 + randi() % 2
+	var n := int(data.params.get("summon_count", 1)) + (1 if randf() < 0.5 else 0)
 	for i in n:
 		level.spawn_robot(pool.pick_random(), level.random_active_lane(), Grid.SPAWN_X + randf() * 30.0)
 	beam = 1.0
