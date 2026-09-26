@@ -1,5 +1,7 @@
 # Plantas vs IA
 
+**Jugar en el navegador:** https://yefry08.github.io/plantas-vs-ia/
+
 Tower defense por carriles hecho en **Godot 4 (GDScript)**, jugable en el navegador.
 Las plantas defienden el jardín de oleadas de **robots IA** (todos son parodias originales,
 sin logos ni marcas). Una **IA aliada** te ayuda a cambio de **tokens** (moneda simbólica del juego).
