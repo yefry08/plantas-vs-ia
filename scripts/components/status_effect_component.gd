@@ -16,6 +16,11 @@ var reveal_bonus := 0.25
 ## Multiplicador de duración de aturdimientos (Qilin: 0.5).
 var stun_mult := 1.0
 var stun_immune_timer := 0.0
+## Plantas: controladas por bioarmas IA (se vuelven contra ti).
+var control_timer := 0.0
+var control_immune_timer := 0.0
+## Multiplicador de cadencia (habilidad "Atención total" del aliado).
+var haste_timer := 0.0
 
 
 func _process(delta: float) -> void:
@@ -25,6 +30,9 @@ func _process(delta: float) -> void:
 	hack_timer = max(0.0, hack_timer - delta)
 	reveal_timer = max(0.0, reveal_timer - delta)
 	stun_immune_timer = max(0.0, stun_immune_timer - delta)
+	control_timer = max(0.0, control_timer - delta)
+	control_immune_timer = max(0.0, control_immune_timer - delta)
+	haste_timer = max(0.0, haste_timer - delta)
 	if aligned_timer > 0.0:
 		aligned_timer -= delta
 		if aligned_timer <= 0.0:
@@ -81,3 +89,21 @@ func is_aligned() -> bool:
 
 func is_revealed() -> bool:
 	return reveal_timer > 0.0
+
+
+## Devuelve true si la planta quedó controlada.
+func apply_control(time: float) -> bool:
+	if control_immune_timer > 0.0:
+		return false
+	control_timer = max(control_timer, time)
+	return true
+
+
+func cure_control(immunity: float) -> void:
+	control_timer = 0.0
+	hack_timer = 0.0
+	control_immune_timer = max(control_immune_timer, immunity)
+
+
+func is_controlled() -> bool:
+	return control_timer > 0.0

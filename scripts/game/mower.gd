@@ -1,6 +1,6 @@
 class_name Mower
 extends Node2D
-## Podadora de emergencia: una por carril, se activa una sola vez.
+## Dron de emergencia: uno por carril, se activa una sola vez.
 
 var level: Node
 var row := 0
@@ -20,7 +20,7 @@ func trigger() -> void:
 		return
 	state = "moving"
 	AudioManager.play("mower")
-	level.fx.float_text(position + Vector2(40, -50), "¡Podadora de emergencia!", Color(1.0, 0.5, 0.4), 18)
+	level.fx.float_text(position + Vector2(40, -50), "¡Dron de emergencia!", Color(1.0, 0.5, 0.4), 18)
 
 
 func _process(delta: float) -> void:
@@ -43,4 +43,4 @@ func _process(delta: float) -> void:
 
 
 func _draw() -> void:
-	Art.mower(self, t, state == "moving")
+	Art.drone(self, t, state == "moving")

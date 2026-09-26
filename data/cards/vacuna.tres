@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/card_data.gd" id="1_t7kbf"]
+
+[resource]
+script = ExtResource("1_t7kbf")
+id = "vacuna"
+display_name = "Vacuna"
+description = "Cura a todas tus plantas controladas o hackeadas y las protege 10 s."
+cost = 4
+cooldown = 20.0
+needs_target = false
+effect = "cure"
+color = Color(0.45, 1, 0.6, 1)

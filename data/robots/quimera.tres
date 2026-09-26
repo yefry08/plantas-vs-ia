@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="RobotData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/robot_data.gd" id="1_y3k5g"]
+
+[resource]
+script = ExtResource("1_y3k5g")
+id = "quimera"
+display_name = "Quimera Bio"
+description = "La creación más peligrosa del Bio-Laboratorio."
+abilities = "Cada 12 s emite un pulso que controla todas las plantas en 3x3 durante 6 s. Blindada."
+weakness = "Bambú Pararrayos, Rosa Antídoto cerca de tus defensas."
+tier = 5
+behavior = "chimera"
+health = 1600.0
+speed = 9.0
+bite_damage = 150.0
+token_reward = 5
+armored = true
+size = 1.15
+params = {
+"control_time": 6.0,
+"pulse_interval": 12.0,
+"shape": "chimera"
+}
+body_color = Color(0.3, 0.45, 0.35, 1)
+accent_color = Color(0.5, 1, 0.3, 1)
+eye_color = Color(0.9, 0.2, 0.2, 1)

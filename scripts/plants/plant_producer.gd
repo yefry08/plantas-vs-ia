@@ -15,9 +15,12 @@ func _behavior(delta: float) -> void:
 		act_timer = data.produce_interval
 		glow = 1.0
 		var kind := "token" if data.behavior == "token" else "sun"
-		var from := position + Vector2(randf_range(-12, 12), -30)
-		var to := position + Vector2(randf_range(-26, 26), 22)
-		level.spawn_pickup(kind, data.produce_amount, from, to, true)
+		for i in data.produce_count:
+			var from := position + Vector2(0, -30)
+			var spread := (float(i) - (data.produce_count - 1) / 2.0) * 34.0
+			var to := position + Vector2(spread + randf_range(-10, 10), 26 + randf_range(-6, 6))
+			level.spawn_pickup(kind, data.produce_amount, from, to, true)
+		AudioManager.play("pop")
 
 
 func _draw_opts() -> Dictionary:

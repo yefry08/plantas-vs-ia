@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="RobotData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/robot_data.gd" id="1_2xxrv"]
+
+[resource]
+script = ExtResource("1_2xxrv")
+id = "claudio"
+display_name = "Claudio"
+description = "Robots de plástico crema y café, muy serviciales... con otros robots."
+abilities = "Los Claudios llegan en pareja y reparan a los robots cercanos cada 5 s."
+weakness = "Derríbalos primero: Mina Bug, Autodestrucción."
+tier = 4
+behavior = "healer"
+health = 350.0
+token_reward = 2
+params = {
+"heal_amount": 60.0,
+"heal_interval": 5.0,
+"heal_radius": 160.0,
+"shape": "claudio"
+}
+body_color = Color(0.94, 0.88, 0.76, 1)
+accent_color = Color(0.62, 0.42, 0.3, 1)
+eye_color = Color(0.98, 0.62, 0.35, 1)

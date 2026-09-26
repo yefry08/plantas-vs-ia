@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="RobotData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/robot_data.gd" id="1_walc0"]
+
+[resource]
+script = ExtResource("1_walc0")
+id = "cangrejo"
+display_name = "Cangrejo OpenGarra"
+description = "Pinza pequeña, prisa grande."
+abilities = "Rápido; camina de lado y cambia de carril de vez en cuando."
+weakness = "Cactus Antivirus y Hongo EMP."
+tier = 3
+behavior = "crab"
+health = 120.0
+speed = 22.0
+bite_damage = 70.0
+token_chance = 0.3
+size = 0.7
+params = {
+"shape": "crab"
+}
+body_color = Color(0.95, 0.42, 0.2, 1)
+accent_color = Color(0.85, 0.28, 0.14, 1)
+eye_color = Color(0.3, 0.15, 0.05, 1)

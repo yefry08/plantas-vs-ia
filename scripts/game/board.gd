@@ -7,7 +7,8 @@ const PALETTES := {
 	2: {"bg": Color(0.14, 0.17, 0.2), "house": Color(0.2, 0.24, 0.28), "a": Color(0.3, 0.55, 0.34), "b": Color(0.27, 0.5, 0.31), "street": Color(0.07, 0.09, 0.09), "dead": Color(0.2, 0.2, 0.22), "line": Color(0.5, 1.0, 0.6, 0.08)},
 	3: {"bg": Color(0.12, 0.14, 0.2), "house": Color(0.25, 0.28, 0.35), "a": Color(0.56, 0.61, 0.69), "b": Color(0.5, 0.55, 0.63), "street": Color(0.14, 0.15, 0.19), "dead": Color(0.28, 0.3, 0.35), "line": Color(0.3, 0.4, 0.6, 0.35)},
 	4: {"bg": Color(0.86, 0.88, 0.94), "house": Color(0.78, 0.8, 0.9), "a": Color(0.83, 0.85, 0.93), "b": Color(0.77, 0.79, 0.89), "street": Color(0.55, 0.5, 0.75), "dead": Color(0.6, 0.6, 0.68), "line": Color(0.55, 0.45, 0.85, 0.35)},
-	5: {"bg": Color(0.07, 0.03, 0.07), "house": Color(0.16, 0.08, 0.12), "a": Color(0.26, 0.12, 0.18), "b": Color(0.22, 0.1, 0.15), "street": Color(0.1, 0.02, 0.04), "dead": Color(0.12, 0.08, 0.1), "line": Color(1.0, 0.3, 0.4, 0.25)},
+	5: {"bg": Color(0.05, 0.09, 0.07), "house": Color(0.12, 0.2, 0.16), "a": Color(0.2, 0.32, 0.26), "b": Color(0.17, 0.28, 0.23), "street": Color(0.06, 0.1, 0.07), "dead": Color(0.1, 0.12, 0.1), "line": Color(0.5, 1.0, 0.3, 0.2)},
+	6: {"bg": Color(0.07, 0.03, 0.07), "house": Color(0.16, 0.08, 0.12), "a": Color(0.26, 0.12, 0.18), "b": Color(0.22, 0.1, 0.15), "street": Color(0.1, 0.02, 0.04), "dead": Color(0.12, 0.08, 0.1), "line": Color(1.0, 0.3, 0.4, 0.25)},
 }
 
 var zone := 1
@@ -76,6 +77,13 @@ func _draw_house(p: Dictionary) -> void:
 				draw_circle(Vector2(76, y + 48), 26, Color(0.7, 0.62, 0.95, 0.5))
 				draw_arc(Vector2(76, y + 48), 34, 0, TAU, 32, Color(0.55, 0.45, 0.85, 0.6), 2.0)
 		5:
+			for i in 5:
+				var y := 150.0 + i * 112.0
+				Art.rrect(self, Rect2(22, y, 28, 80), 10, Color(0.8, 0.95, 0.85, 0.5), Color(0.5, 0.8, 0.6), 2)
+				draw_rect(Rect2(26, y + 30, 20, 46), Color(0.5, 1.0, 0.3, 0.7))
+				Art.rrect(self, Rect2(70, y + 10, 28, 70), 10, Color(0.8, 0.95, 0.85, 0.5), Color(0.5, 0.8, 0.6), 2)
+				draw_rect(Rect2(74, y + 40, 20, 36), Color(0.7, 0.4, 1.0, 0.7))
+		6:
 			for i in 8:
 				var y := 130.0 + i * 76.0
 				draw_line(Vector2(0, y), Vector2(w, y + 30), Color(1.0, 0.25, 0.35, 0.25), 2.0)
@@ -101,6 +109,9 @@ func _draw_street(p: Dictionary, street: Rect2) -> void:
 			for i in 6:
 				draw_line(Vector2(street.position.x + i * 30, 120), Vector2(street.position.x + i * 30 + 60, 720), Color(1, 1, 1, 0.2), 6.0)
 		5:
+			for i in 14:
+				draw_circle(Vector2(street.position.x + fmod(i * 53.0, 150.0) + 10.0, 140.0 + i * 40.0), 6.0 + (i % 3) * 3.0, Color(0.5, 1.0, 0.3, 0.25))
+		6:
 			for i in 10:
 				var y := 130.0 + i * 60.0
 				draw_line(Vector2(street.position.x, y), Vector2(1280, y + 20), Color(1.0, 0.2, 0.3, 0.3), 2.0)

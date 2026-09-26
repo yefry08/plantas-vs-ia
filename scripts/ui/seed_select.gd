@@ -11,6 +11,8 @@ var card_grid: GridContainer
 var start_btn: Button
 var plant_title: Label
 var card_title: Label
+var ally_row: HBoxContainer
+var ally_info: Label
 
 
 func _ready() -> void:
@@ -24,6 +26,7 @@ func _ready() -> void:
 	add_child(zone)
 	_build_robot_list()
 	_build_picker()
+	_build_ally_picker()
 	_preselect()
 	_refresh()
 
@@ -44,13 +47,13 @@ func _level_robot_ids() -> Array[String]:
 
 func _build_robot_list() -> void:
 	var p := UI.panel(Color(0.08, 0.1, 0.14, 0.9))
-	UI.place(p, Vector2(30, 92), Vector2(440, 540))
+	UI.place(p, Vector2(30, 92), Vector2(440, 340))
 	add_child(p)
 	var vb := VBoxContainer.new()
 	p.add_child(vb)
 	vb.add_child(UI.label("Robots en este nivel", 20, Color(1.0, 0.7, 0.55), 4))
 	var scroll := ScrollContainer.new()
-	scroll.custom_minimum_size = Vector2(410, 480)
+	scroll.custom_minimum_size = Vector2(410, 280)
 	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
 	vb.add_child(scroll)
 	var list := VBoxContainer.new()
@@ -206,3 +209,39 @@ func _draw() -> void:
 	draw_rect(Rect2(0, 0, 1280, 720), Color(0.18, 0.24, 0.16))
 	for i in 12:
 		draw_rect(Rect2(0, i * 60.0, 1280, 30), Color(1, 1, 1, 0.02))
+
+
+func _build_ally_picker() -> void:
+	var p := UI.panel(Color(0.06, 0.16, 0.14, 0.92), 14, Color(0.4, 1.0, 0.7, 0.5))
+	UI.place(p, Vector2(30, 442), Vector2(440, 190))
+	add_child(p)
+	var vb := VBoxContainer.new()
+	vb.add_theme_constant_override("separation", 4)
+	p.add_child(vb)
+	vb.add_child(UI.label("Tu compañero de IA aliada", 18, Color(0.6, 1.0, 0.8), 4))
+	ally_row = HBoxContainer.new()
+	ally_row.add_theme_constant_override("separation", 8)
+	vb.add_child(ally_row)
+	ally_info = UI.label("", 12, Color(0.85, 1.0, 0.92), 0)
+	ally_info.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	ally_info.custom_minimum_size = Vector2(410, 0)
+	vb.add_child(ally_info)
+	var owned := GameState.unlocked_allies()
+	for id in GameState.ALLY_IDS:
+		var c := AllyChoice.new().setup(id, not owned.has(id))
+		c.chosen.connect(_on_ally_chosen)
+		ally_row.add_child(c)
+	_refresh_allies()
+
+
+func _on_ally_chosen(id: String) -> void:
+	GameState.set_ally(id)
+	AudioManager.play("click")
+	_refresh_allies()
+
+
+func _refresh_allies() -> void:
+	var a := GameState.selected_ally()
+	for c in ally_row.get_children():
+		c.selected = c.ally_id == a.id
+	ally_info.text = "%s — Pasiva: %s  ·  Tócalo en partida: %s (%s)" % [a.display_name, a.passive_text, a.active_name, a.active_text]

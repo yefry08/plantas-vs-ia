@@ -1,7 +1,7 @@
 class_name Level
 extends Node2D
 ## Escena de juego: construye el tablero, gestiona entrada, recursos,
-## cartas de IA aliada, podadoras, victoria/derrota y el modo autotest.
+## cartas de IA aliada, drones de emergencia, victoria/derrota y el modo autotest.
 
 signal selection_changed(kind: String, id: String)
 
@@ -30,6 +30,14 @@ var sky_timer := 5.0
 var state := "playing"
 var elapsed := 0.0
 var boss: Node = null
+var ally: AllyData
+var ally_cd := 0.0
+var ally_line_cd := 0.0
+var ally_passive_timer := 0.0
+var ally_check_timer := 1.0
+var idle_sun_time := 0.0
+var said_power_ready := false
+var said_tokens_at := -100.0
 
 var auto := false
 var auto_timer := 0.0
@@ -50,6 +58,9 @@ func _ready() -> void:
 		plant_cd[id] = 0.0
 	for id in GameState.loadout_cards:
 		card_cd[id] = 0.0
+	ally = GameState.selected_ally()
+	ally_cd = ally.active_cooldown * 0.5
+	ally_passive_timer = float(ally.params.get("passive_interval", 25.0))
 	waves.setup(self, data)
 	waves.wave_started.connect(_on_wave_started)
 	hud.setup(self)
@@ -57,6 +68,7 @@ func _ready() -> void:
 	hud.show_banner("Nivel %d: %s" % [data.number, data.display_name], 3.0, GameState.ZONE_NAMES[data.zone])
 	if data.intro_text != "" and data.tutorial_steps.is_empty():
 		hud.toast(data.intro_text, 5.0)
+	ally_say("greeting", true)
 	_setup_autotest()
 
 
@@ -126,10 +138,11 @@ func _process(delta: float) -> void:
 	if data.sky_sun_interval > 0.0:
 		sky_timer -= delta
 		if sky_timer <= 0.0:
-			sky_timer = data.sky_sun_interval * randf_range(0.85, 1.15)
+			sky_timer = data.sky_sun_interval * randf_range(0.85, 1.15) * float(ally.params.get("sky_mult", 1.0))
 			var x := randf_range(Grid.ORIGIN.x + 40.0, Grid.RIGHT_EDGE - 40.0)
 			var row: int = active_lanes[randi() % active_lanes.size()]
 			spawn_pickup("sun", data.sky_sun_amount, Vector2(x, 110), Vector2(x, Grid.lane_y(row) + 26.0))
+	_ally_process(delta)
 	if not data.is_boss and waves.finished and lanes.real_enemy_count() == 0:
 		_win()
 
@@ -335,6 +348,8 @@ func spawn_robot(id: String, row: int, x: float, opts: Dictionary = {}) -> Node:
 		r.make_mini(float(opts["mini"]))
 	if opts.has("illusion"):
 		r.make_illusion(float(opts["illusion"]))
+	if opts.has("summoned"):
+		r.no_reward = true
 	robots_layer.add_child(r)
 	lanes.add_robot(r)
 	if rd.behavior == "agi":
@@ -363,8 +378,9 @@ func spawn_projectile(plant: Node, pos: Vector2, row: int) -> void:
 	projectiles_layer.add_child(pr)
 
 
-func spawn_enemy_projectile(_robot: Node, pos: Vector2, row: int, dmg: float) -> void:
+func spawn_enemy_projectile(from: Node, pos: Vector2, row: int, dmg: float) -> void:
 	var pr := Projectile.new()
+	pr.source = from
 	pr.level = self
 	pr.row = row
 	pr.position = pos
@@ -410,6 +426,7 @@ func robot_reached_house(robot: Node) -> void:
 			continue
 		if m.state == "ready":
 			m.trigger()
+			ally_say("drone", true)
 			return
 		if m.state == "moving":
 			return
@@ -419,6 +436,7 @@ func robot_reached_house(robot: Node) -> void:
 
 func on_huge_wave_warning() -> void:
 	hud.show_banner("¡Una gran oleada de robots se acerca!", 3.2)
+	ally_say("huge", true)
 	AudioManager.play("siren")
 
 
@@ -462,7 +480,7 @@ func apply_card(id: String, target: Node, free := false) -> bool:
 		hud.flash_token_error()
 		return false
 	if not free:
-		card_cd[id] = cd.cooldown
+		card_cd[id] = cd.cooldown * float(ally.params.get("card_cd_mult", 1.0))
 	clear_selection()
 	hud.buddy.perform(cd)
 	AudioManager.play("card")
@@ -491,6 +509,8 @@ func apply_card(id: String, target: Node, free := false) -> bool:
 			for r in all:
 				r.on_card_reveal(cd.duration, cd.power)
 			hud.show_redteam(all, cd.duration)
+		"cure":
+			cure_all_plants(cd.duration)
 	GameState.card_used.emit(id)
 	return true
 
@@ -551,6 +571,7 @@ func _win(ending := "") -> void:
 	if ending != "":
 		GameState.pending_ending = ending
 	hud.show_win(unlock, ending)
+	ally_say("win", true)
 	if auto:
 		_auto_finish("victoria" + ("" if ending == "" else " (" + ending + ")"))
 
@@ -562,6 +583,7 @@ func _lose() -> void:
 	_freeze_world()
 	AudioManager.play("lose")
 	hud.show_lose()
+	ally_say("lose", true)
 	if auto:
 		_auto_finish("derrota")
 
@@ -621,6 +643,8 @@ func _autoplay(delta: float) -> void:
 	if auto_timer > 0.0:
 		return
 	auto_timer = 0.6
+	if ally_cd <= 0.0 and lanes.real_enemy_count() >= 3:
+		use_ally_power()
 	var mode := String(GameState.autotest.get("mode", "chaos"))
 	if mode == "chaos":
 		GameState.add_sun(60)
@@ -731,8 +755,127 @@ func _auto_finish(result: String) -> void:
 		for p in lanes.plants_in_lane(l):
 			ids.append(String(p.data.id).substr(0, 4))
 		var m: Mower = mowers.get(l)
-		board_desc += "\n  carril %d [%s] podadora=%s enemigos=%d" % [l, ",".join(ids), m.state if m else "-", lanes.enemies_in_lane(l).size()]
+		board_desc += "\n  carril %d [%s] dron=%s enemigos=%d" % [l, ",".join(ids), m.state if m else "-", lanes.enemies_in_lane(l).size()]
 	print("  sol=%d tokens=%d%s" % [GameState.sun, GameState.tokens, board_desc])
 	auto = false
 	get_tree().paused = false
 	get_tree().quit()
+
+
+# --- IA aliada (compañero elegido por el jugador) ----------------------------
+
+## Dice una frase del aliado. `key` busca en AllyData.lines; admite formato con args.
+func ally_say(key: String, force := false, args: Array = []) -> void:
+	if ally == null or hud == null:
+		return
+	if not force and ally_line_cd > 0.0:
+		return
+	var options: Variant = ally.lines.get(key, "")
+	var line := ""
+	if options is Array and not (options as Array).is_empty():
+		line = String((options as Array).pick_random())
+	elif options is String:
+		line = options
+	if line == "":
+		return
+	if not args.is_empty():
+		line = line % args
+	hud.buddy.say(line, 3.0)
+	ally_line_cd = 7.0
+
+
+func _ally_process(delta: float) -> void:
+	ally_cd = maxf(0.0, ally_cd - delta)
+	ally_line_cd = maxf(0.0, ally_line_cd - delta)
+	# Pasivas
+	match ally.id:
+		"llamita", "perplejo":
+			ally_passive_timer -= delta
+			if ally_passive_timer <= 0.0:
+				ally_passive_timer = float(ally.params.get("passive_interval", 25.0))
+				if ally.id == "llamita":
+					spawn_pickup("token", 1, Vector2(75, 600), Vector2(95, 560), true)
+				else:
+					for r in lanes.all_enemies():
+						r.on_card_reveal(float(ally.params.get("scan_time", 4.0)), 0.0)
+	# Comentarios según la situación (cada segundo)
+	ally_check_timer -= delta
+	if ally_check_timer > 0.0:
+		return
+	ally_check_timer = 1.0
+	if ally_cd <= 0.0 and not said_power_ready:
+		said_power_ready = true
+		ally_say("power_ready", false, [ally.active_name])
+		return
+	for l in active_lanes:
+		var defended := false
+		for p in lanes.plants_in_lane(l):
+			if p.data.behavior in ["shooter", "lightning", "emp"] and not p.status.is_controlled():
+				defended = true
+				break
+		if defended:
+			continue
+		for e in lanes.enemies_in_lane(l):
+			if not e.is_illusion and e.position.x < Grid.col_x(4):
+				ally_say("danger", false, [l + 1])
+				return
+	idle_sun_time = idle_sun_time + 1.0 if GameState.sun >= 250 else 0.0
+	if idle_sun_time >= 12.0:
+		idle_sun_time = 0.0
+		ally_say("idle_sun", false, [GameState.sun])
+		return
+	if elapsed - said_tokens_at > 30.0:
+		for cid in GameState.loadout_cards:
+			var cd: CardData = GameState.cards[cid]
+			if GameState.tokens >= cd.cost and float(card_cd.get(cid, 0.0)) <= 0.0 and lanes.real_enemy_count() >= 3:
+				said_tokens_at = elapsed
+				ally_say("tokens", false, [cd.display_name])
+				return
+
+
+## Habilidad activa del aliado (tocar al compañero en la esquina).
+func use_ally_power() -> void:
+	if state != "playing" or get_tree().paused:
+		return
+	if ally_cd > 0.0:
+		hud.buddy.say("%s se recarga: %ds" % [ally.active_name, ceili(ally_cd)], 1.8)
+		AudioManager.play("error")
+		return
+	ally_cd = ally.active_cooldown
+	said_power_ready = false
+	var p := ally.params
+	match ally.id:
+		"llamita":
+			GameState.add_tokens(int(p.get("tokens", 3)))
+			GameState.add_sun(int(p.get("sun", 50)))
+			fx.float_text(Vector2(150, 560), "+%d tokens  +%d sol" % [int(p.get("tokens", 3)), int(p.get("sun", 50))], Color(1.0, 0.9, 0.5), 20)
+		"mistralito":
+			var push := float(p.get("push", 120.0))
+			for r in lanes.all_enemies():
+				var amount := push * (0.25 if r.hitbox.half_width > 60.0 else 1.0)
+				r.position.x = minf(r.position.x + amount, Grid.SPAWN_X)
+				r.status.apply_slow(0.5, float(p.get("slow_time", 3.0)))
+			for l in active_lanes:
+				fx.beam(Vector2(Grid.ORIGIN.x, Grid.lane_y(l)), Vector2(Grid.RIGHT_EDGE, Grid.lane_y(l) - 20.0), Color(1.0, 0.75, 0.35))
+		"perplejo":
+			var all := lanes.all_enemies()
+			for r in all:
+				r.on_card_reveal(float(p.get("reveal_time", 10.0)), 0.25)
+			hud.show_redteam(all, float(p.get("reveal_time", 10.0)))
+			cure_all_plants(float(p.get("immunity", 6.0)))
+		_:
+			for pl in lanes.all_plants():
+				pl.status.haste_timer = float(p.get("haste_time", 8.0))
+				fx.spark(pl.position + Vector2(0, -30), Color(0.5, 0.8, 1.0))
+	hud.buddy.perform_power(ally.active_name)
+	AudioManager.play("card")
+
+
+func cure_all_plants(immunity: float) -> void:
+	for p in lanes.all_plants():
+		p.cure(immunity)
+	fx.ring(Vector2(660, 420), 520.0, Color(0.5, 1.0, 0.6))
+
+
+func on_plant_controlled(_plant: Node) -> void:
+	ally_say("controlled")

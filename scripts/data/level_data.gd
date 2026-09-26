@@ -16,6 +16,8 @@ extends Resource
 ## plant, card, plant_slot, card_slot o vacío.
 @export var unlock_type: String = ""
 @export var unlock_id: String = ""
+## Compañero de IA aliada extra que se desbloquea al completar el nivel.
+@export var bonus_ally: String = ""
 @export var skip_seed_select: bool = false
 @export var is_boss: bool = false
 ## Pasos del tutorial: { "text": "...", "until": "select_plant|place_plant|place:ID|collect_sun|tokens:N|card_used|shovel|time:N" }

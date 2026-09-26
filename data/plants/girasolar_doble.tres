@@ -6,8 +6,8 @@
 script = ExtResource("1_13p25")
 id = "girasolar_doble"
 display_name = "Girasolar Doble"
-description = "Dos cabezas solares: 50 de energía cada 24 s."
+description = "Dos cabezas solares: lanza 4 soles (100 de energía) cada 24 s."
 cost = 150
 cooldown = 15.0
 behavior = "producer"
-produce_amount = 50
+produce_count = 4

@@ -5,7 +5,7 @@
 
 [sub_resource type="Resource" id="Resource_6rc03"]
 script = ExtResource("2_hb14n")
-duration = 30.0
+duration = 30.0592
 groups = [{
 "count": 1,
 "interval": 1.0,
@@ -15,12 +15,37 @@ groups = [{
 
 [sub_resource type="Resource" id="Resource_d0j32"]
 script = ExtResource("2_hb14n")
-duration = 31.591
+duration = 32.1496
 groups = [{
 "count": 3,
 "interval": 0.6,
 "lane": -1,
 "robot": "spambot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}]
+
+[sub_resource type="Resource" id="Resource_0apti"]
+script = ExtResource("2_hb14n")
+duration = 34.916000000000004
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
 }, {
 "count": 1,
 "interval": 1.0,
@@ -28,24 +53,9 @@ groups = [{
 "robot": "scriptbot"
 }]
 
-[sub_resource type="Resource" id="Resource_0apti"]
-script = ExtResource("2_hb14n")
-duration = 33.985
-groups = [{
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "captchabot"
-}, {
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
-}]
-
 [sub_resource type="Resource" id="Resource_5r5cg"]
 script = ExtResource("2_hb14n")
-duration = 43.246
+duration = 45.137600000000006
 is_huge = true
 groups = [{
 "count": 1,
@@ -58,26 +68,11 @@ groups = [{
 "lane": -1,
 "robot": "spambot"
 }, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "captchabot"
-}, {
 "count": 3,
 "interval": 0.6,
 "lane": -1,
 "robot": "spambot"
 }, {
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
-}]
-
-[sub_resource type="Resource" id="Resource_q3eeg"]
-script = ExtResource("2_hb14n")
-duration = 36.64
-groups = [{
 "count": 3,
 "interval": 0.6,
 "lane": -1,
@@ -92,6 +87,41 @@ groups = [{
 "interval": 1.0,
 "lane": -1,
 "robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}]
+
+[sub_resource type="Resource" id="Resource_q3eeg"]
+script = ExtResource("2_hb14n")
+duration = 37.984
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
 }, {
 "count": 1,
 "interval": 1.0,
@@ -101,27 +131,27 @@ groups = [{
 
 [sub_resource type="Resource" id="Resource_c8ufq"]
 script = ExtResource("2_hb14n")
-duration = 37.81
+duration = 39.336
 groups = [{
-"count": 1,
-"interval": 1.0,
+"count": 3,
+"interval": 0.6,
 "lane": -1,
-"robot": "scriptbot"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "scriptbot"
+"robot": "spambot"
 }, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
 "robot": "captchabot"
 }, {
-"count": 1,
-"interval": 1.0,
+"count": 3,
+"interval": 0.6,
 "lane": -1,
-"robot": "scriptbot"
+"robot": "spambot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
 }, {
 "count": 1,
 "interval": 1.0,
@@ -131,12 +161,17 @@ groups = [{
 
 [sub_resource type="Resource" id="Resource_nbnpc"]
 script = ExtResource("2_hb14n")
-duration = 38.980000000000004
+duration = 40.688
 groups = [{
-"count": 3,
-"interval": 0.6,
+"count": 1,
+"interval": 1.0,
 "lane": -1,
-"robot": "spambot"
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
 }, {
 "count": 1,
 "interval": 1.0,
@@ -152,6 +187,11 @@ groups = [{
 "interval": 0.6,
 "lane": -1,
 "robot": "spambot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
 }]
 
 [sub_resource type="Resource" id="Resource_qtwck"]
@@ -159,15 +199,35 @@ script = ExtResource("2_hb14n")
 duration = 50.0
 is_huge = true
 groups = [{
-"count": 3,
-"interval": 0.6,
+"count": 1,
+"interval": 1.0,
 "lane": -1,
-"robot": "spambot"
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
 }, {
 "count": 3,
 "interval": 0.6,
 "lane": -1,
 "robot": "spambot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
 }, {
 "count": 3,
 "interval": 0.6,
@@ -178,6 +238,11 @@ groups = [{
 "interval": 1.0,
 "lane": -1,
 "robot": "scriptbot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
 }, {
 "count": 1,
 "interval": 1.0,
@@ -194,15 +259,10 @@ groups = [{
 "lane": -1,
 "robot": "spambot"
 }, {
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
-}, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "captchabot"
+"robot": "scriptbot"
 }]
 
 [resource]
@@ -218,3 +278,4 @@ first_wave_delay = 26.0
 waves = Array[ExtResource("2_hb14n")]([SubResource("Resource_6rc03"), SubResource("Resource_d0j32"), SubResource("Resource_0apti"), SubResource("Resource_5r5cg"), SubResource("Resource_q3eeg"), SubResource("Resource_c8ufq"), SubResource("Resource_nbnpc"), SubResource("Resource_qtwck")])
 unlock_type = "card"
 unlock_id = "boton_apagado"
+bonus_ally = "llamita"

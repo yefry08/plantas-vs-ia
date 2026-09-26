@@ -6,9 +6,11 @@ Tower defense por carriles hecho en **Godot 4 (GDScript)**, jugable en el navega
 Las plantas defienden el jardín de oleadas de **robots IA** (todos son parodias originales,
 sin logos ni marcas). Una **IA aliada** te ayuda a cambio de **tokens** (moneda simbólica del juego).
 
-- 5 carriles × 9 columnas, energía solar, podadora de emergencia por carril, pala, pausa y velocidad ×2.
-- 14 plantas, 15 robots (4 tiers + jefe), 5 cartas de IA aliada.
-- Campaña de 21 niveles en 4 zonas + el jefe final **La AGI** (3 fases, 2 finales).
+- 5 carriles × 9 columnas, energía solar, dron de emergencia por carril, pala, pausa y velocidad ×2.
+- 15 plantas, 20 robots, 6 cartas de IA aliada y 4 compañeros de IA para elegir.
+- Campaña de 24 niveles en 5 zonas + el jefe final **La AGI** (3 fases, 2 finales).
+- Robots parodia de las grandes IA: DeepFish, Qwin, TalkGPT, Grow, los Claudios, Fairytail, Legend, langostas y cangrejos OpenGarra...
+- Zona final **Bio-Laboratorio**: bioarmas IA que toman el control de tus plantas.
 - Arte 100 % procedural (formas vectoriales, caras tipo emoji dibujadas) y sonidos sintetizados: **cero assets de terceros**.
 - Todo el contenido es data-driven en archivos `.tres`.
 - Progreso guardado en `user://` (en web se guarda en IndexedDB del navegador).
@@ -36,6 +38,20 @@ Se puede jugar de principio a fin solo con ratón o con toque en móvil.
 | Apagado en Cadena | 6 | Apaga a todo su carril 8 s |
 | Alineamiento | 8 | El robot se vuelve aliado 15 s |
 | Red Team | 5 | Revela habilidades, debilidades e ilusiones; −25 % defensa 10 s |
+| Vacuna | 4 | Cura las plantas controladas o hackeadas y las protege 10 s |
+
+### Compañeros de IA aliada
+
+Se eligen en la pantalla de semillas. Cada uno tiene una pasiva y una habilidad que se activa **tocándolo** en la esquina (cuando brilla).
+
+| Compañero | Pasiva | Habilidad |
+|---|---|---|
+| Transformer | Cartas 25 % más rápidas | Atención total: plantas 50 % más rápidas 8 s |
+| Llamita Abierta | +1 token cada 25 s | Rebaño abierto: +3 tokens y +75 de energía |
+| Mistralito | Más sol del cielo | Ráfaga del norte: empuja a los robots hacia atrás |
+| Perplejo | Escanea robots cada 20 s | Búsqueda profunda: Red Team gratis + cura plantas |
+
+También comenta la partida: avisa de carriles en peligro, energía sin usar, cartas disponibles y plantas controladas.
 
 Resistencias: Mythos es inmune a Autodestrucción; apagar a Astra cuesta el doble; la AGI solo
 acepta Alineamiento en su fase 3 (3 cartas = final **"AGI alineada"**).
@@ -58,6 +74,7 @@ Todo el balance vive en `data/`:
 - `data/plants/*.tres` — coste, recarga, vida, daño, intervalos, efectos.
 - `data/robots/*.tres` — vida, escudo, velocidad, mordida, tokens, resistencias, reglas de cartas y `params` de cada habilidad.
 - `data/cards/*.tres` — coste en tokens, recarga, duración, potencia.
+- `data/allies/*.tres` — pasivas, habilidades, recargas y frases de cada compañero.
 - `data/levels/level_XX.tres` — carriles activos, energía/tokens iniciales, sol del cielo, oleadas (`WaveData`), premio y tutorial.
 
 Ábrelos en el Inspector de Godot o edítalos como texto.
@@ -77,10 +94,10 @@ godot --headless --path . -- --check-scripts
 godot --headless --path . -- --autotest=5 --time=300 --speed=8 --mode=fair
 
 # Final alternativo del jefe
-godot --headless --path . -- --autotest=21 --ending=aligned
+godot --headless --path . -- --autotest=24 --ending=aligned
 ```
 
-El modo autotest no toca tu partida guardada.
+El modo autotest va en silencio y no toca tu partida guardada.
 
 ## Exportar para web
 
@@ -134,5 +151,5 @@ Señales desacopladas en `GameState`: `robot_died`, `tokens_changed`, `sun_chang
 
 ## Créditos y aviso
 
-Juego original. Todos los robots son parodias con nombres propios; no se usa ningún logo,
-marca, sprite ni sonido de terceros. Los tokens son una moneda simbólica dentro del juego.
+Juego original. Todos los robots son parodias con nombres propios que evocan a las grandes IA
+por color y tema; no se copia ningún logo, marca, sprite ni sonido de terceros. Los tokens son una moneda simbólica dentro del juego.

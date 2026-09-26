@@ -5,17 +5,17 @@
 
 [sub_resource type="Resource" id="Resource_ln1ln"]
 script = ExtResource("2_7xo5u")
-duration = 30.268
+duration = 30.6208
 groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "scriptbot"
+"robot": "captchabot"
 }]
 
 [sub_resource type="Resource" id="Resource_576nm"]
 script = ExtResource("2_7xo5u")
-duration = 32.536
+duration = 33.2416
 groups = [{
 "count": 1,
 "interval": 1.0,
@@ -25,22 +25,27 @@ groups = [{
 
 [sub_resource type="Resource" id="Resource_qw5ne"]
 script = ExtResource("2_7xo5u")
-duration = 35.524
+duration = 36.6944
 groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
 "robot": "emojibot"
 }, {
-"count": 3,
-"interval": 0.6,
+"count": 1,
+"interval": 1.0,
 "lane": -1,
-"robot": "spambot"
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
 }]
 
 [sub_resource type="Resource" id="Resource_rwgih"]
 script = ExtResource("2_7xo5u")
-duration = 46.648
+duration = 49.068799999999996
 is_huge = true
 groups = [{
 "count": 3,
@@ -78,16 +83,6 @@ groups = [{
 "lane": -1,
 "robot": "emojibot"
 }, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "scriptbot"
-}]
-
-[sub_resource type="Resource" id="Resource_h6e0d"]
-script = ExtResource("2_7xo5u")
-duration = 38.8
-groups = [{
 "count": 3,
 "interval": 0.6,
 "lane": -1,
@@ -96,17 +91,17 @@ groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "abrazobot"
+"robot": "scriptbot"
 }, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "captchabot"
+"robot": "scriptbot"
 }]
 
-[sub_resource type="Resource" id="Resource_lwddb"]
+[sub_resource type="Resource" id="Resource_h6e0d"]
 script = ExtResource("2_7xo5u")
-duration = 40.24
+duration = 40.480000000000004
 groups = [{
 "count": 1,
 "interval": 1.0,
@@ -117,6 +112,41 @@ groups = [{
 "interval": 1.0,
 "lane": -1,
 "robot": "abrazobot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}]
+
+[sub_resource type="Resource" id="Resource_lwddb"]
+script = ExtResource("2_7xo5u")
+duration = 42.144
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "emojibot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
 }, {
 "count": 1,
 "interval": 1.0,
@@ -126,27 +156,37 @@ groups = [{
 
 [sub_resource type="Resource" id="Resource_ns06i"]
 script = ExtResource("2_7xo5u")
-duration = 41.68
+duration = 43.808
 groups = [{
-"count": 1,
-"interval": 1.0,
+"count": 3,
+"interval": 0.6,
 "lane": -1,
-"robot": "captchabot"
+"robot": "spambot"
 }, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
 "robot": "emojibot"
 }, {
-"count": 3,
-"interval": 0.6,
+"count": 1,
+"interval": 1.0,
 "lane": -1,
-"robot": "spambot"
+"robot": "emojibot"
 }, {
-"count": 3,
-"interval": 0.6,
+"count": 1,
+"interval": 1.0,
 "lane": -1,
-"robot": "spambot"
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
 }]
 
 [sub_resource type="Resource" id="Resource_501mi"]
@@ -157,7 +197,27 @@ groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
+"robot": "abrazobot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
 "robot": "emojibot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "abrazobot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
 }, {
 "count": 3,
 "interval": 0.6,
@@ -167,7 +227,12 @@ groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "emojibot"
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
 }, {
 "count": 1,
 "interval": 1.0,
@@ -177,12 +242,12 @@ groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "emojibot"
+"robot": "scriptbot"
 }, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "abrazobot"
+"robot": "scriptbot"
 }]
 
 [resource]

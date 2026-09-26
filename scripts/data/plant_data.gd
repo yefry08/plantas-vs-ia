@@ -23,6 +23,8 @@ extends Resource
 
 @export_group("Producción")
 @export var produce_amount: int = 25
+## Cuántos soles / tokens lanza por ciclo.
+@export var produce_count: int = 1
 @export var produce_interval: float = 24.0
 @export var first_produce_delay: float = 7.0
 

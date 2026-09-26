@@ -6,6 +6,7 @@
 script = ExtResource("1_i266g")
 id = "girasolar"
 display_name = "Girasolar"
-description = "Panel solar con pétalos: genera 25 de energía cada 24 s."
+description = "Panel solar con pétalos: lanza 2 soles (50 de energía) cada 24 s."
 cost = 50
 behavior = "producer"
+produce_count = 2

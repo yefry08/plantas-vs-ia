@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="AllyData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/ally_data.gd" id="1_p18bn"]
+
+[resource]
+script = ExtResource("1_p18bn")
+id = "transformer"
+display_name = "Transformer"
+description = "Un robot hecho de capas de atención. Presta atención a todo (literalmente)."
+passive_text = "Tus cartas se recargan 25% más rápido."
+active_name = "Atención total"
+active_text = "Todas tus plantas actúan 50% más rápido durante 8 s."
+params = {
+"card_cd_mult": 0.75,
+"haste_time": 8.0
+}
+color = Color(0.45, 0.62, 1, 1)
+lines = {
+"controlled": ["¡Una bioarma controla tu planta! Usa Vacuna o Rosa Antídoto."],
+"danger": ["¡Carril %d en peligro! Pon una planta de ataque.", "Mi atención apunta al carril %d: ¡sin defensa!"],
+"drone": ["¡Dron de emergencia en camino!"],
+"greeting": ["La atención es todo lo que necesitas. ¡Vamos!", "Capas cargadas. ¡A defender el jardín!"],
+"huge": ["¡Gran oleada! Mantén la atención."],
+"idle_sun": ["Tienes %d de energía. ¡Plántala!", "%d de sol sin usar... ¿planta algo?"],
+"lose": ["Recalculemos gradientes y probemos otra vez."],
+"power_ready": ["¡%s lista! Tócame para activarla."],
+"tokens": ["Tengo tokens para %s. ¡Úsala!"],
+"win": ["¡Victoria! Mis pesos están felices."]
+}

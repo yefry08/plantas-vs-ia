@@ -5,38 +5,33 @@
 
 [sub_resource type="Resource" id="Resource_vgm1h"]
 script = ExtResource("2_484nd")
-duration = 30.592
+duration = 30.9952
 groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "scriptbot"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "scriptbot"
+"robot": "captchabot"
 }]
 
 [sub_resource type="Resource" id="Resource_e5b6v"]
 script = ExtResource("2_484nd")
-duration = 33.103
+duration = 33.8968
 groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
 "robot": "emojibot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
 }]
 
 [sub_resource type="Resource" id="Resource_j1ovd"]
 script = ExtResource("2_484nd")
-duration = 36.379000000000005
+duration = 37.6824
 groups = [{
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
-}, {
 "count": 3,
 "interval": 0.6,
 "lane": -1,
@@ -46,21 +41,21 @@ groups = [{
 "interval": 1.0,
 "lane": -1,
 "robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "abrazobot"
 }]
 
 [sub_resource type="Resource" id="Resource_5rn86"]
 script = ExtResource("2_484nd")
-duration = 48.43
+duration = 50.0
 is_huge = true
 groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "abrazobot"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
 "robot": "scriptbot"
 }, {
 "count": 1,
@@ -73,40 +68,35 @@ groups = [{
 "lane": -1,
 "robot": "emojibot"
 }, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
 "count": 3,
 "interval": 0.6,
 "lane": -1,
 "robot": "spambot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
 }]
 
 [sub_resource type="Resource" id="Resource_da246"]
 script = ExtResource("2_484nd")
-duration = 39.879999999999995
-groups = [{
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "captchabot"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "captchabot"
-}, {
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
-}]
-
-[sub_resource type="Resource" id="Resource_fj82r"]
-script = ExtResource("2_484nd")
-duration = 41.41
+duration = 41.728
 groups = [{
 "count": 3,
 "interval": 0.6,
@@ -122,11 +112,16 @@ groups = [{
 "interval": 1.0,
 "lane": -1,
 "robot": "abrazobot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
 }]
 
-[sub_resource type="Resource" id="Resource_5fj72"]
+[sub_resource type="Resource" id="Resource_fj82r"]
 script = ExtResource("2_484nd")
-duration = 42.94
+duration = 43.496
 groups = [{
 "count": 1,
 "interval": 1.0,
@@ -138,6 +133,41 @@ groups = [{
 "lane": -1,
 "robot": "captchabot"
 }, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "emojibot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}]
+
+[sub_resource type="Resource" id="Resource_5fj72"]
+script = ExtResource("2_484nd")
+duration = 45.263999999999996
+groups = [{
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "abrazobot"
+}, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
@@ -146,12 +176,7 @@ groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "scriptbot"
-}, {
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
+"robot": "abrazobot"
 }]
 
 [sub_resource type="Resource" id="Resource_8gxvl"]
@@ -159,36 +184,6 @@ script = ExtResource("2_484nd")
 duration = 50.0
 is_huge = true
 groups = [{
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
-}, {
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "scriptbot"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "abrazobot"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "captchabot"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "abrazobot"
-}, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
@@ -198,6 +193,46 @@ groups = [{
 "interval": 1.0,
 "lane": -1,
 "robot": "emojibot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "abrazobot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "abrazobot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "emojibot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
 }, {
 "count": 1,
 "interval": 1.0,

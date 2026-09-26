@@ -5,77 +5,87 @@
 
 [sub_resource type="Resource" id="Resource_gwn3w"]
 script = ExtResource("2_1fopx")
-duration = 32.86
+duration = 36.64
 groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "emojibot"
+"robot": "grow"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
 }]
 
 [sub_resource type="Resource" id="Resource_jsrsm"]
 script = ExtResource("2_1fopx")
-duration = 37.135
+duration = 44.239999999999995
 groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "emojibot"
+"robot": "opengarra"
 }, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "captchabot"
+"robot": "opengarra"
 }]
 
 [sub_resource type="Resource" id="Resource_t30jk"]
 script = ExtResource("2_1fopx")
-duration = 42.535
+duration = 50.0
 groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "talkgpt"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "talkgpt"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "talkgpt"
+}, {
 "count": 2,
 "interval": 0.9,
 "lane": -1,
-"robot": "dragon_destilado"
+"robot": "deepfish"
 }, {
-"count": 1,
-"interval": 1.0,
+"count": 2,
+"interval": 0.9,
 "lane": -1,
-"robot": "razonador_serie_o"
+"robot": "deepfish"
 }, {
-"count": 1,
-"interval": 1.0,
+"count": 2,
+"interval": 0.9,
 "lane": -1,
-"robot": "captchabot"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "scriptbot"
+"robot": "deepfish"
 }]
 
 [sub_resource type="Resource" id="Resource_5apbb"]
 script = ExtResource("2_1fopx")
-duration = 45.55
+duration = 50.0
 groups = [{
-"count": 1,
-"interval": 1.0,
+"count": 2,
+"interval": 0.9,
 "lane": -1,
-"robot": "razonador_serie_o"
+"robot": "deepfish"
 }, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "emojibot"
-}, {
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
+"robot": "legend"
 }, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "scriptbot"
+"robot": "legend"
 }]
 
 [sub_resource type="Resource" id="Resource_y4whq"]
@@ -86,47 +96,102 @@ groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "grokazo"
+"robot": "grow"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "talkgpt"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "talkgpt"
 }, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
 "robot": "opengarra"
 }, {
+"count": 2,
+"interval": 1.2,
+"lane": -1,
+"robot": "claudio"
+}, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "mythos"
+"robot": "fairytail"
 }, {
 "count": 2,
 "interval": 0.9,
 "lane": -1,
-"robot": "dragon_destilado"
+"robot": "deepfish"
 }, {
-"count": 3,
-"interval": 0.6,
+"count": 1,
+"interval": 1.0,
 "lane": -1,
-"robot": "spambot"
+"robot": "talkgpt"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "talkgpt"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
 }]
 
 [sub_resource type="Resource" id="Resource_7euu5"]
 script = ExtResource("2_1fopx")
 duration = 50.0
 groups = [{
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "fairytail"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "talkgpt"
+}, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
 "robot": "geminis_gemelo"
 }, {
-"count": 1,
-"interval": 1.0,
+"count": 2,
+"interval": 1.2,
 "lane": -1,
-"robot": "grokazo"
+"robot": "claudio"
 }, {
-"count": 1,
-"interval": 1.0,
+"count": 2,
+"interval": 0.9,
 "lane": -1,
-"robot": "captchabot"
+"robot": "deepfish"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
 }]
 
 [sub_resource type="Resource" id="Resource_4eicn"]
@@ -136,32 +201,62 @@ groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "astra"
+"robot": "grow"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
 }, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "astra"
+"robot": "geminis_gemelo"
 }, {
-"count": 3,
-"interval": 0.6,
+"count": 2,
+"interval": 0.9,
 "lane": -1,
-"robot": "spambot"
+"robot": "deepfish"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "talkgpt"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "fairytail"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
 }]
 
 [sub_resource type="Resource" id="Resource_fmr8e"]
 script = ExtResource("2_1fopx")
 duration = 50.0
 groups = [{
-"count": 4,
-"interval": 0.45,
+"count": 2,
+"interval": 0.9,
 "lane": -1,
-"robot": "qilin_eficiente"
+"robot": "deepfish"
 }, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "captchabot"
+"robot": "talkgpt"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grow"
 }, {
 "count": 1,
 "interval": 1.0,
@@ -171,52 +266,67 @@ groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "emojibot"
+"robot": "opengarra"
 }, {
-"count": 3,
-"interval": 0.6,
+"count": 1,
+"interval": 1.0,
 "lane": -1,
-"robot": "spambot"
+"robot": "fairytail"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
 }]
 
 [sub_resource type="Resource" id="Resource_ybssx"]
 script = ExtResource("2_1fopx")
 duration = 50.0
 groups = [{
+"count": 2,
+"interval": 1.2,
+"lane": -1,
+"robot": "claudio"
+}, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "scriptbot"
+"robot": "talkgpt"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grow"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "geminis_gemelo"
 }, {
 "count": 2,
 "interval": 0.9,
 "lane": -1,
-"robot": "dragon_destilado"
+"robot": "deepfish"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
 }, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "astra"
+"robot": "opengarra"
 }, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "emojibot"
+"robot": "opengarra"
 }, {
-"count": 1,
-"interval": 1.0,
+"count": 2,
+"interval": 0.9,
 "lane": -1,
-"robot": "scriptbot"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "emojibot"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "scriptbot"
+"robot": "deepfish"
 }]
 
 [sub_resource type="Resource" id="Resource_vs475"]
@@ -224,68 +334,73 @@ script = ExtResource("2_1fopx")
 duration = 50.0
 is_huge = true
 groups = [{
-"count": 1,
-"interval": 1.0,
+"count": 2,
+"interval": 1.2,
 "lane": -1,
-"robot": "opengarra"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "opengarra"
-}, {
-"count": 4,
-"interval": 0.45,
-"lane": -1,
-"robot": "qilin_eficiente"
-}, {
-"count": 4,
-"interval": 0.45,
-"lane": -1,
-"robot": "qilin_eficiente"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "emojibot"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "captchabot"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "grokazo"
+"robot": "claudio"
 }, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
 "robot": "astra"
 }, {
-"count": 4,
-"interval": 0.45,
+"count": 1,
+"interval": 1.0,
 "lane": -1,
-"robot": "qilin_eficiente"
+"robot": "geminis_gemelo"
 }, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "scriptbot"
+"robot": "legend"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "talkgpt"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "legend"
+}, {
+"count": 2,
+"interval": 1.2,
+"lane": -1,
+"robot": "claudio"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "legend"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "astra"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "astra"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
 }]
 
 [resource]
 script = ExtResource("1_ek4gc")
 number = 20
 zone = 4
-display_name = "Antesala de la AGI"
-intro_text = "Todo lo que la AGI ha creado viene a por ti."
+display_name = "Frontera"
+intro_text = "La élite de las grandes IA al completo."
 active_lanes = PackedInt32Array(0, 1, 2, 3, 4)
 start_sun = 150
 start_tokens = 5
 sky_sun_interval = 8.0
 first_wave_delay = 22.0
 waves = Array[ExtResource("2_1fopx")]([SubResource("Resource_gwn3w"), SubResource("Resource_jsrsm"), SubResource("Resource_t30jk"), SubResource("Resource_5apbb"), SubResource("Resource_y4whq"), SubResource("Resource_7euu5"), SubResource("Resource_4eicn"), SubResource("Resource_fmr8e"), SubResource("Resource_ybssx"), SubResource("Resource_vs475")])
-unlock_type = "plant"
-unlock_id = "girasolar_doble"
+unlock_type = "card"
+unlock_id = "vacuna"

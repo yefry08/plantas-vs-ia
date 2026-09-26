@@ -1,0 +1,501 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/level_data.gd" id="1_sk3r3"]
+[ext_resource type="Script" path="res://scripts/data/wave_data.gd" id="2_p2d87"]
+
+[sub_resource type="Resource" id="Resource_w3s48"]
+script = ExtResource("2_p2d87")
+duration = 39.232
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "cordybot"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}]
+
+[sub_resource type="Resource" id="Resource_8jbo3"]
+script = ExtResource("2_p2d87")
+duration = 49.2576
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grow"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "cordybot"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}]
+
+[sub_resource type="Resource" id="Resource_b3tmt"]
+script = ExtResource("2_p2d87")
+duration = 50.0
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "cordybot"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "esporabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "cordybot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "cordybot"
+}]
+
+[sub_resource type="Resource" id="Resource_ff352"]
+script = ExtResource("2_p2d87")
+duration = 50.0
+is_huge = true
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "cordybot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "cordybot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "esporabot"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "cordybot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grow"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grow"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "esporabot"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "esporabot"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}]
+
+[sub_resource type="Resource" id="Resource_5kasn"]
+script = ExtResource("2_p2d87")
+duration = 50.0
+groups = [{
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 2,
+"interval": 1.2,
+"lane": -1,
+"robot": "claudio"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "cordybot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "cordybot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "esporabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "esporabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grow"
+}]
+
+[sub_resource type="Resource" id="Resource_gxjf3"]
+script = ExtResource("2_p2d87")
+duration = 50.0
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "cordybot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "esporabot"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grow"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "cordybot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "esporabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grow"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}]
+
+[sub_resource type="Resource" id="Resource_i23gv"]
+script = ExtResource("2_p2d87")
+duration = 50.0
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grow"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "cordybot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "cordybot"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "cordybot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "esporabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "cordybot"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}]
+
+[sub_resource type="Resource" id="Resource_p0qei"]
+script = ExtResource("2_p2d87")
+duration = 50.0
+groups = [{
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 2,
+"interval": 1.2,
+"lane": -1,
+"robot": "claudio"
+}, {
+"count": 2,
+"interval": 1.2,
+"lane": -1,
+"robot": "claudio"
+}, {
+"count": 2,
+"interval": 1.2,
+"lane": -1,
+"robot": "claudio"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "cordybot"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}, {
+"count": 2,
+"interval": 1.2,
+"lane": -1,
+"robot": "claudio"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grow"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grow"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}]
+
+[sub_resource type="Resource" id="Resource_f8sn1"]
+script = ExtResource("2_p2d87")
+duration = 50.0
+is_huge = true
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "cordybot"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "cordybot"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 2,
+"interval": 1.2,
+"lane": -1,
+"robot": "claudio"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "esporabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "esporabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "esporabot"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "cordybot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "cordybot"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "cordybot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "esporabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "esporabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grow"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "cordybot"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}]
+
+[resource]
+script = ExtResource("1_sk3r3")
+number = 22
+zone = 5
+display_name = "Infección"
+intro_text = "Los Cordybots infectan todo lo que muerden."
+active_lanes = PackedInt32Array(0, 1, 2, 3, 4)
+start_sun = 150
+start_tokens = 6
+sky_sun_interval = 8.0
+first_wave_delay = 22.0
+waves = Array[ExtResource("2_p2d87")]([SubResource("Resource_w3s48"), SubResource("Resource_8jbo3"), SubResource("Resource_b3tmt"), SubResource("Resource_ff352"), SubResource("Resource_5kasn"), SubResource("Resource_gxjf3"), SubResource("Resource_i23gv"), SubResource("Resource_p0qei"), SubResource("Resource_f8sn1")])
+unlock_type = "plant"
+unlock_id = "rosa_antidoto"

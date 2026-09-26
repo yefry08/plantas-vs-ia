@@ -5,73 +5,98 @@
 
 [sub_resource type="Resource" id="Resource_2dx14"]
 script = ExtResource("2_vpfw5")
-duration = 30.43
+duration = 32.32
 groups = [{
 "count": 2,
 "interval": 0.9,
 "lane": -1,
-"robot": "dragon_destilado"
+"robot": "deepfish"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
 }]
 
 [sub_resource type="Resource" id="Resource_g6778"]
 script = ExtResource("2_vpfw5")
-duration = 32.788
+duration = 36.512
 groups = [{
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}, {
 "count": 2,
 "interval": 0.9,
 "lane": -1,
-"robot": "dragon_destilado"
+"robot": "deepfish"
 }, {
-"count": 1,
-"interval": 1.0,
+"count": 2,
+"interval": 0.9,
 "lane": -1,
-"robot": "scriptbot"
+"robot": "deepfish"
 }]
 
 [sub_resource type="Resource" id="Resource_l1usy"]
 script = ExtResource("2_vpfw5")
-duration = 35.866
+duration = 41.983999999999995
 groups = [{
 "count": 2,
 "interval": 0.9,
 "lane": -1,
-"robot": "dragon_destilado"
+"robot": "deepfish"
 }, {
-"count": 2,
-"interval": 0.9,
+"count": 4,
+"interval": 0.45,
 "lane": -1,
-"robot": "dragon_destilado"
+"robot": "qwin"
 }, {
 "count": 3,
 "interval": 0.6,
 "lane": -1,
 "robot": "spambot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
 }]
 
 [sub_resource type="Resource" id="Resource_7j4ge"]
 script = ExtResource("2_vpfw5")
-duration = 47.29600000000001
+duration = 50.0
 is_huge = true
 groups = [{
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
 "count": 4,
 "interval": 0.45,
 "lane": -1,
-"robot": "qilin_eficiente"
-}, {
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
+"robot": "qwin"
 }, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
 "robot": "scriptbot"
 }, {
-"count": 3,
-"interval": 0.6,
+"count": 2,
+"interval": 0.9,
 "lane": -1,
-"robot": "spambot"
+"robot": "deepfish"
 }, {
 "count": 3,
 "interval": 0.6,
@@ -81,17 +106,47 @@ groups = [{
 "count": 2,
 "interval": 0.9,
 "lane": -1,
-"robot": "dragon_destilado"
+"robot": "deepfish"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
 }, {
 "count": 4,
 "interval": 0.45,
 "lane": -1,
-"robot": "qilin_eficiente"
+"robot": "qwin"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
 }]
 
 [sub_resource type="Resource" id="Resource_t8v8i"]
 script = ExtResource("2_vpfw5")
-duration = 39.16
+duration = 47.84
 groups = [{
 "count": 1,
 "interval": 1.0,
@@ -101,17 +156,37 @@ groups = [{
 "count": 2,
 "interval": 0.9,
 "lane": -1,
-"robot": "dragon_destilado"
+"robot": "deepfish"
 }, {
 "count": 3,
 "interval": 0.6,
 "lane": -1,
 "robot": "spambot"
 }, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
 "count": 2,
 "interval": 0.9,
 "lane": -1,
-"robot": "dragon_destilado"
+"robot": "deepfish"
 }, {
 "count": 1,
 "interval": 1.0,
@@ -121,67 +196,107 @@ groups = [{
 
 [sub_resource type="Resource" id="Resource_utf61"]
 script = ExtResource("2_vpfw5")
-duration = 40.6
+duration = 50.0
 groups = [{
 "count": 2,
 "interval": 0.9,
 "lane": -1,
-"robot": "dragon_destilado"
+"robot": "deepfish"
 }, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
 "robot": "scriptbot"
 }, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
 "count": 2,
 "interval": 0.9,
 "lane": -1,
-"robot": "dragon_destilado"
+"robot": "deepfish"
 }, {
 "count": 4,
 "interval": 0.45,
 "lane": -1,
-"robot": "qilin_eficiente"
+"robot": "qwin"
 }, {
-"count": 1,
-"interval": 1.0,
+"count": 4,
+"interval": 0.45,
 "lane": -1,
-"robot": "scriptbot"
-}]
-
-[sub_resource type="Resource" id="Resource_krkt7"]
-script = ExtResource("2_vpfw5")
-duration = 42.04
-groups = [{
+"robot": "qwin"
+}, {
 "count": 3,
 "interval": 0.6,
 "lane": -1,
 "robot": "spambot"
 }, {
-"count": 1,
-"interval": 1.0,
+"count": 3,
+"interval": 0.6,
 "lane": -1,
-"robot": "scriptbot"
+"robot": "spambot"
 }, {
 "count": 2,
 "interval": 0.9,
 "lane": -1,
-"robot": "dragon_destilado"
-}, {
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
-}, {
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
-}, {
+"robot": "deepfish"
+}]
+
+[sub_resource type="Resource" id="Resource_krkt7"]
+script = ExtResource("2_vpfw5")
+duration = 50.0
+groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
 "robot": "scriptbot"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
 }]
 
 [sub_resource type="Resource" id="Resource_ga4yp"]
@@ -189,31 +304,6 @@ script = ExtResource("2_vpfw5")
 duration = 50.0
 is_huge = true
 groups = [{
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "scriptbot"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "dragon_destilado"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "scriptbot"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "dragon_destilado"
-}, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
@@ -223,34 +313,109 @@ groups = [{
 "interval": 0.6,
 "lane": -1,
 "robot": "spambot"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "dragon_destilado"
 }, {
 "count": 4,
 "interval": 0.45,
 "lane": -1,
-"robot": "qilin_eficiente"
+"robot": "qwin"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
 }, {
 "count": 4,
 "interval": 0.45,
 "lane": -1,
-"robot": "qilin_eficiente"
+"robot": "qwin"
 }, {
 "count": 3,
 "interval": 0.6,
 "lane": -1,
 "robot": "spambot"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
 }]
 
 [resource]
 script = ExtResource("1_pktrl")
 number = 11
 zone = 3
-display_name = "Destilación"
-intro_text = "Dragones que copian y Qilins en manada."
+display_name = "Pesca profunda"
+intro_text = "Llegan los DeepFish (destilan tus plantas) y la manada morada de Qwin."
 active_lanes = PackedInt32Array(0, 1, 2, 3, 4)
 start_sun = 125
 start_tokens = 3

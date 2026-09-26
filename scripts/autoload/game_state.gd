@@ -12,22 +12,24 @@ signal pickup_collected(kind: String)
 const PLANT_IDS: Array[String] = [
 	"lanzasemillas", "girasolar", "nuez_firewall", "tokenizadora", "enredadera_captcha",
 	"mina_bug", "cactus_antivirus", "brotecito_solar", "hongo_emp", "lanzasemillas_crio",
-	"doble_commit", "bambu_pararrayos", "nuez_firewall_pro", "girasolar_doble",
+	"doble_commit", "bambu_pararrayos", "nuez_firewall_pro", "girasolar_doble", "rosa_antidoto",
 ]
 const ROBOT_IDS: Array[String] = [
 	"scriptbot", "spambot", "captchabot", "abrazobot", "emojibot",
-	"dragon_destilado", "qilin_eficiente", "razonador_serie_o", "grokazo", "geminis_gemelo",
-	"opengarra", "claude_fable", "mythos", "astra", "agi",
+	"deepfish", "qwin", "talkgpt", "grow", "geminis_gemelo",
+	"opengarra", "cangrejo", "claudio", "fairytail", "legend", "astra",
+	"esporabot", "cordybot", "quimera", "agi",
 ]
-const CARD_IDS: Array[String] = ["autodestruccion", "boton_apagado", "apagado_cadena", "alineamiento", "red_team"]
-const LEVEL_COUNT := 21
+const CARD_IDS: Array[String] = ["autodestruccion", "boton_apagado", "apagado_cadena", "alineamiento", "red_team", "vacuna"]
+const ALLY_IDS: Array[String] = ["transformer", "llamita", "mistralito", "perplejo"]
+const LEVEL_COUNT := 24
 const MAX_PLANT_SLOTS := 6
 const MAX_CARD_SLOTS := 2
 
-const ZONE_NAMES := ["", "Jardín Local", "Repositorio Abierto", "Centro de Datos", "Laboratorio Frontera", "Núcleo de la AGI"]
+const ZONE_NAMES := ["", "Jardín Local", "Repositorio Abierto", "Centro de Datos", "Laboratorio Frontera", "Bio-Laboratorio", "Núcleo de la AGI"]
 const DAMAGE_NAMES := {
 	"seed": "Semilla", "spike": "Espina", "ice": "Hielo", "electric": "Rayo", "emp": "EMP",
-	"explosion": "Explosión", "ally": "Aliado", "card": "Carta", "mower": "Podadora", "bite": "Mordida",
+	"explosion": "Explosión", "ally": "Aliado", "card": "Carta", "mower": "Dron", "bite": "Mordida",
 }
 
 const SCENE_MENU := "res://scenes/main_menu.tscn"
@@ -39,6 +41,7 @@ const SCENE_CREDITS := "res://scenes/credits.tscn"
 var plants: Dictionary = {}
 var robots: Dictionary = {}
 var cards: Dictionary = {}
+var allies: Dictionary = {}
 var levels: Array[LevelData] = []
 
 var sun := 0
@@ -69,6 +72,10 @@ func _ready() -> void:
 		_unlock_everything()
 	AudioManager.set_volume(float(progress.get("volume", 0.7)))
 	AudioManager.muted = bool(progress.get("muted", false))
+	# Las pruebas automáticas y capturas siempre van en silencio.
+	for arg in OS.get_cmdline_user_args():
+		if arg.begins_with("--autotest") or arg.begins_with("--screen"):
+			AudioManager.muted = true
 	_maybe_screen_capture()
 
 
@@ -114,6 +121,8 @@ func _load_catalog() -> void:
 		robots[id] = load("res://data/robots/%s.tres" % id)
 	for id in CARD_IDS:
 		cards[id] = load("res://data/cards/%s.tres" % id)
+	for id in ALLY_IDS:
+		allies[id] = load("res://data/allies/%s.tres" % id)
 	levels.clear()
 	for n in range(1, LEVEL_COUNT + 1):
 		levels.append(load("res://data/levels/level_%02d.tres" % n))
@@ -127,6 +136,8 @@ func _default_progress() -> Dictionary:
 		"cards": ["autodestruccion"],
 		"plant_slots": 4,
 		"card_slots": 1,
+		"allies": ["transformer"],
+		"ally": "transformer",
 		"endings": [],
 		"seen_robots": [],
 		"volume": 0.7,
@@ -140,6 +151,7 @@ func _unlock_everything() -> void:
 	progress["cards"] = CARD_IDS.duplicate()
 	progress["plant_slots"] = MAX_PLANT_SLOTS
 	progress["card_slots"] = MAX_CARD_SLOTS
+	progress["allies"] = ALLY_IDS.duplicate()
 
 
 func save() -> void:
@@ -188,6 +200,28 @@ func unlocked_cards() -> Array[String]:
 	return out
 
 
+func unlocked_allies() -> Array[String]:
+	var out: Array[String] = []
+	var owned: Array = progress.get("allies", ["transformer"])
+	for id in ALLY_IDS:
+		if owned.has(id):
+			out.append(id)
+	return out
+
+
+func selected_ally() -> AllyData:
+	var id := String(progress.get("ally", "transformer"))
+	if not unlocked_allies().has(id):
+		id = "transformer"
+	return allies[id]
+
+
+func set_ally(id: String) -> void:
+	if unlocked_allies().has(id):
+		progress["ally"] = id
+		save()
+
+
 func plant_slots() -> int:
 	return int(progress.get("plant_slots", 4))
 
@@ -228,10 +262,15 @@ func complete_level(n: int, ending := "") -> Dictionary:
 				_append_unique("plants", ld.unlock_id)
 			"card":
 				_append_unique("cards", ld.unlock_id)
+			"ally":
+				_append_unique("allies", ld.unlock_id)
 			"plant_slot":
 				progress["plant_slots"] = min(MAX_PLANT_SLOTS, plant_slots() + 1)
 			"card_slot":
 				progress["card_slots"] = min(MAX_CARD_SLOTS, card_slots() + 1)
+	if first_time and ld.bonus_ally != "" and not unlocked_allies().has(ld.bonus_ally):
+		_append_unique("allies", ld.bonus_ally)
+		result["bonus_ally"] = ld.bonus_ally
 	if ending != "":
 		_append_unique("endings", ending)
 	save()
@@ -331,6 +370,8 @@ func unlock_label(unlock: Dictionary) -> String:
 			return "+1 espacio de planta"
 		"card_slot":
 			return "+1 espacio de carta IA"
+		"ally":
+			return "IA aliada: " + (allies[unlock["id"]] as AllyData).display_name
 	return ""
 
 

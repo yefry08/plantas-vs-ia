@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PlantData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/plant_data.gd" id="1_iihb4"]
+
+[resource]
+script = ExtResource("1_iihb4")
+id = "rosa_antidoto"
+display_name = "Rosa Antídoto"
+description = "Cada 6 s cura a las plantas controladas o hackeadas en 3x3 y las protege 6 s."
+cooldown = 15.0
+behavior = "cleanser"
+fire_interval = 6.0
+stun_time = 6.0

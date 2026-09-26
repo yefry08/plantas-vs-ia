@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="RobotData" format=3]
 
-[ext_resource type="Script" path="res://scripts/data/robot_data.gd" id="1_ouj70"]
+[ext_resource type="Script" path="res://scripts/data/robot_data.gd" id="1_31u6p"]
 
 [resource]
-script = ExtResource("1_ouj70")
-id = "mythos"
-display_name = "Mythos"
-description = "Tanque pesado de ciberseguridad."
+script = ExtResource("1_31u6p")
+id = "legend"
+display_name = "Legend"
+description = "Tanque legendario de ciberseguridad."
 abilities = "Hackea y desactiva 6 s la planta más fuerte de su carril. Inmune a Autodestrucción. Blindado."
 weakness = "Bambú Pararrayos (doble daño a blindados), Mina Bug."
 tier = 4

@@ -1,0 +1,386 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/level_data.gd" id="1_sufxh"]
+[ext_resource type="Script" path="res://scripts/data/wave_data.gd" id="2_tanlb"]
+
+[sub_resource type="Resource" id="Resource_opw2b"]
+script = ExtResource("2_tanlb")
+duration = 40.168000000000006
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "quimera"
+}]
+
+[sub_resource type="Resource" id="Resource_1untf"]
+script = ExtResource("2_tanlb")
+duration = 50.0
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "astra"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grow"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "talkgpt"
+}]
+
+[sub_resource type="Resource" id="Resource_l1mgc"]
+script = ExtResource("2_tanlb")
+duration = 50.0
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "quimera"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "esporabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "fairytail"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "talkgpt"
+}]
+
+[sub_resource type="Resource" id="Resource_vebj8"]
+script = ExtResource("2_tanlb")
+duration = 50.0
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grow"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "quimera"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "legend"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "talkgpt"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "talkgpt"
+}]
+
+[sub_resource type="Resource" id="Resource_1yij5"]
+script = ExtResource("2_tanlb")
+duration = 50.0
+is_huge = true
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "esporabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "talkgpt"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "quimera"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "quimera"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "cordybot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grow"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grow"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "quimera"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "esporabot"
+}]
+
+[sub_resource type="Resource" id="Resource_javrt"]
+script = ExtResource("2_tanlb")
+duration = 50.0
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "fairytail"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grow"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "esporabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "quimera"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "talkgpt"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "talkgpt"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "talkgpt"
+}]
+
+[sub_resource type="Resource" id="Resource_xhadc"]
+script = ExtResource("2_tanlb")
+duration = 50.0
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "astra"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "quimera"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "cordybot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "cordybot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "esporabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grow"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "talkgpt"
+}]
+
+[sub_resource type="Resource" id="Resource_o7e1m"]
+script = ExtResource("2_tanlb")
+duration = 50.0
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "fairytail"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "cordybot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "talkgpt"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "talkgpt"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "talkgpt"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "esporabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "quimera"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "talkgpt"
+}]
+
+[sub_resource type="Resource" id="Resource_baf8k"]
+script = ExtResource("2_tanlb")
+duration = 50.0
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "esporabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "quimera"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "quimera"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "fairytail"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grow"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "legend"
+}]
+
+[sub_resource type="Resource" id="Resource_0baeb"]
+script = ExtResource("2_tanlb")
+duration = 50.0
+is_huge = true
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "quimera"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "astra"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "legend"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grow"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "quimera"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "cordybot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "fairytail"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "astra"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "fairytail"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "legend"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "fairytail"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "cordybot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "talkgpt"
+}]
+
+[resource]
+script = ExtResource("1_sufxh")
+number = 23
+zone = 5
+display_name = "La Quimera"
+intro_text = "La creación final del Bio-Laboratorio controla filas enteras de plantas."
+active_lanes = PackedInt32Array(0, 1, 2, 3, 4)
+start_sun = 150
+start_tokens = 6
+sky_sun_interval = 8.0
+first_wave_delay = 22.0
+waves = Array[ExtResource("2_tanlb")]([SubResource("Resource_opw2b"), SubResource("Resource_1untf"), SubResource("Resource_l1mgc"), SubResource("Resource_vebj8"), SubResource("Resource_1yij5"), SubResource("Resource_javrt"), SubResource("Resource_xhadc"), SubResource("Resource_o7e1m"), SubResource("Resource_baf8k"), SubResource("Resource_0baeb")])
+unlock_type = "ally"
+unlock_id = "perplejo"

@@ -1,8 +1,9 @@
 extends Robot
-## OpenGarra: agente autónomo; arranca una planta cercana cada cierto tiempo y roba tokens.
+## OpenGarra (langosta): agente autónomo; suelta cangrejos, arranca una planta cercana cada cierto tiempo y roba tokens.
 
 var grab_timer := 0.0
 var grab_anim := 0.0
+var crab_timer := 6.0
 
 
 func _init_behavior() -> void:
@@ -13,6 +14,13 @@ func _behavior(delta: float) -> void:
 	grab_anim = maxf(0.0, grab_anim - delta * 1.5)
 	if position.x > Grid.RIGHT_EDGE or is_aligned():
 		return
+	var spawn_id := String(data.params.get("spawn_id", ""))
+	if spawn_id != "":
+		crab_timer -= delta
+		if crab_timer <= 0.0:
+			crab_timer = float(data.params.get("spawn_interval", 12.0))
+			level.spawn_robot(spawn_id, lane, position.x + 30.0, {"summoned": true})
+			say("¡Sal, cangrejito!", 1.2)
 	grab_timer -= delta
 	if grab_timer > 0.0:
 		return

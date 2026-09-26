@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="RobotData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/robot_data.gd" id="1_d0n4v"]
+
+[resource]
+script = ExtResource("1_d0n4v")
+id = "esporabot"
+display_name = "Esporabot"
+description = "Bioarma IA: un hongo con procesador."
+abilities = "Lanza esporas que toman el control de una planta 8 s: dispara contra tus plantas y deja de bloquear."
+weakness = "Vacuna y Rosa Antídoto. Derríbalo de lejos."
+tier = 5
+behavior = "spore"
+health = 450.0
+speed = 13.0
+token_reward = 3
+params = {
+"control_time": 8.0,
+"shape": "spore",
+"spore_interval": 7.0,
+"spore_range": 520.0
+}
+body_color = Color(0.35, 0.6, 0.3, 1)
+accent_color = Color(0.55, 0.3, 0.75, 1)
+eye_color = Color(0.75, 1, 0.4, 1)

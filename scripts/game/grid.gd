@@ -10,9 +10,9 @@ const RIGHT_EDGE := 1110.0
 const SPAWN_X := 1235.0
 const VISIBLE_X := 1262.0
 const MOWER_X := 172.0
-## Un robot que cruza esta X activa la podadora del carril.
+## Un robot que cruza esta X activa el dron del carril.
 const HOUSE_X := 196.0
-## Si cruza esta X sin podadora disponible, se pierde el nivel.
+## Si cruza esta X sin dron disponible, se pierde el nivel.
 const LOSE_X := 128.0
 
 

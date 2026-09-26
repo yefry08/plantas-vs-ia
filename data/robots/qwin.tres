@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="RobotData" format=3]
 
-[ext_resource type="Script" path="res://scripts/data/robot_data.gd" id="1_8gabv"]
+[ext_resource type="Script" path="res://scripts/data/robot_data.gd" id="1_dsgf8"]
 
 [resource]
-script = ExtResource("1_8gabv")
-id = "qilin_eficiente"
-display_name = "Qilin Eficiente"
-description = "La mitad de cómputo, el doble de manada."
+script = ExtResource("1_dsgf8")
+id = "qwin"
+display_name = "Qwin Eficiente"
+description = "Morado, ligero y en manada."
 abilities = "Usa la mitad de cómputo: los aturdimientos le duran la mitad. Llega en oleadas muy densas y acelera en manada."
 weakness = "Cactus Antivirus (atraviesa la manada)."
 tier = 3
@@ -21,6 +21,6 @@ params = {
 "shape": "qilin",
 "stun_mult": 0.5
 }
-body_color = Color(0.2, 0.62, 0.6, 1)
-accent_color = Color(0.9, 0.75, 0.35, 1)
-eye_color = Color(1, 1, 0.8, 1)
+body_color = Color(0.5, 0.32, 0.88, 1)
+accent_color = Color(0.78, 0.62, 1, 1)
+eye_color = Color(1, 1, 0.85, 1)

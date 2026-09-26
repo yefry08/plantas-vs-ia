@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="AllyData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/ally_data.gd" id="1_6w2tg"]
+
+[resource]
+script = ExtResource("1_6w2tg")
+id = "llamita"
+display_name = "Llamita Abierta"
+description = "Una llama de código abierto, lanuda y generosa."
+passive_text = "Te trae 1 token cada 25 s."
+active_name = "Rebaño abierto"
+active_text = "+3 tokens y +75 de energía al instante."
+active_cooldown = 70.0
+params = {
+"passive_interval": 25.0,
+"sun": 75,
+"tokens": 3
+}
+color = Color(0.97, 0.92, 0.8, 1)
+lines = {
+"controlled": ["¡Esa planta ya no es nuestra! Vacúnala."],
+"danger": ["¡El carril %d está desprotegido!", "¡Cuidado, carril %d!"],
+"drone": ["¡Dron al rescate!"],
+"greeting": ["¡Beee-nvenido! Mis pesos son tuyos.", "Código abierto, corazón abierto. ¡Defendamos!"],
+"huge": ["¡Viene una estampida de robots!"],
+"idle_sun": ["¡%d de energía! Planta, planta."],
+"lose": ["Hagamos fork del intento y repitamos."],
+"power_ready": ["¡%s! Tócame y te comparto recursos."],
+"tokens": ["¡Tokens listos para %s!"],
+"win": ["¡Beee-lleza de victoria!"]
+}

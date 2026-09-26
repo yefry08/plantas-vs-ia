@@ -16,6 +16,9 @@ var collecting := false
 var fly_t := 0.0
 var fly_from := Vector2.ZERO
 var t := 0.0
+## Lanzamiento en arco (girasoles): 0..1, -1 = cae en línea recta.
+var arc := -1.0
+var arc_from := Vector2.ZERO
 
 
 func setup(lvl: Node, k: String, v: int, from: Vector2, to: Vector2, pop := false) -> void:
@@ -25,7 +28,8 @@ func setup(lvl: Node, k: String, v: int, from: Vector2, to: Vector2, pop := fals
 	position = from
 	target = to
 	if pop:
-		fall_speed = 140.0
+		arc = 0.0
+		arc_from = from
 	if kind == "token":
 		auto_collect = 2.5
 		life = 99.0
@@ -46,7 +50,11 @@ func _process(delta: float) -> void:
 			queue_free()
 		queue_redraw()
 		return
-	position = position.move_toward(target, fall_speed * delta)
+	if arc >= 0.0 and arc < 1.0:
+		arc = minf(1.0, arc + delta * 1.6)
+		position = arc_from.lerp(target, arc) + Vector2(0, -70.0 * sin(arc * PI))
+	else:
+		position = position.move_toward(target, fall_speed * delta)
 	life -= delta
 	if auto_collect >= 0.0:
 		auto_collect -= delta

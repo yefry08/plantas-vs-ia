@@ -28,6 +28,7 @@ var intro_timer := 0.0
 var redteam_panel: PanelContainer
 var redteam_label: Label
 var redteam_timer := 0.0
+var tutorial_timer := 0.0
 var pause_overlay: Control
 var end_overlay: Control
 var speed_button: Button
@@ -112,6 +113,7 @@ func _build_top_bar() -> void:
 
 	buddy = AllyBuddy.new()
 	UI.place(buddy, Vector2(0, 590), Vector2(150, 128))
+	buddy.setup(level, level.ally)
 	root.add_child(buddy)
 
 	boss_bar = BossBar.new()
@@ -192,6 +194,11 @@ func _process(delta: float) -> void:
 	if toast_timer > 0.0:
 		toast_timer -= real_delta
 		toast_label.modulate.a = clampf(toast_timer * 2.0, 0.0, 1.0)
+	if tutorial_timer > 0.0:
+		tutorial_timer -= real_delta
+		tutorial_panel.modulate.a = clampf(tutorial_timer * 1.5, 0.0, 1.0)
+		if tutorial_timer <= 0.0:
+			tutorial_panel.visible = false
 	if intro_timer > 0.0 and not get_tree().paused:
 		intro_timer -= real_delta
 		if intro_timer <= 0.0:
@@ -255,6 +262,8 @@ func show_tutorial(text: String) -> void:
 	tutorial_label.text = text
 	tutorial_panel.visible = true
 	tutorial_panel.reset_size()
+	tutorial_panel.modulate.a = 1.0
+	tutorial_timer = 9.0
 
 
 func hide_tutorial() -> void:
@@ -353,7 +362,10 @@ func show_win(unlock: Dictionary, ending := "") -> void:
 		sub = "La AGI decidió cuidar el jardín contigo."
 	end_overlay = _overlay(title, sub)
 	var box: VBoxContainer = end_overlay.get_node("Box")
-	if not unlock.is_empty():
+	if unlock.has("bonus_ally"):
+		var ad: AllyData = GameState.allies[unlock["bonus_ally"]]
+		box.add_child(UI.label("¡Nuevo compañero de IA: %s!" % ad.display_name, 22, Color(0.6, 1.0, 0.8), 5, HORIZONTAL_ALIGNMENT_CENTER))
+	if unlock.has("type"):
 		var portrait := RobotPortrait.new()
 		portrait.custom_minimum_size = Vector2(220, 110)
 		portrait.scale_factor = 1.1

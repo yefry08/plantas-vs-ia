@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="AllyData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/ally_data.gd" id="1_7onbk"]
+
+[resource]
+script = ExtResource("1_7onbk")
+id = "perplejo"
+display_name = "Perplejo"
+description = "Un colibrí buscador que siempre cita sus fuentes."
+passive_text = "Escanea a los robots cada 20 s y revela sus datos."
+active_name = "Búsqueda profunda"
+active_text = "Red Team gratis y cura todas tus plantas controladas."
+active_cooldown = 50.0
+params = {
+"immunity": 6.0,
+"passive_interval": 20.0,
+"reveal_time": 10.0,
+"scan_time": 4.0
+}
+color = Color(0.3, 0.8, 0.8, 1)
+lines = {
+"controlled": ["Detecto una planta controlada. Recomiendo Vacuna."],
+"danger": ["Fuente: el carril %d. Está en peligro."],
+"drone": ["Dron desplegado [1]."],
+"greeting": ["Según mis fuentes, hoy ganamos.", "Búsqueda iniciada: cómo defender un jardín."],
+"huge": ["Alerta: gran oleada entrante."],
+"idle_sun": ["Dato: tienes %d de energía sin usar."],
+"lose": ["Consulta fallida. Reintentemos."],
+"power_ready": ["%s disponible. Tócame."],
+"tokens": ["Resultados: %s está disponible."],
+"win": ["Conclusión verificada: ¡victoria!"]
+}

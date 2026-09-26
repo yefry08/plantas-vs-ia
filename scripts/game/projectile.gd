@@ -21,6 +21,8 @@ func _process(delta: float) -> void:
 	if hostile:
 		position.x -= speed * delta
 		for p in level.lanes.plants_in_lane(row):
+			if p == source:
+				continue
 			if abs(p.position.x - position.x) < 30.0:
 				p.take_damage(damage, "bite", null)
 				level.fx.spark(position, Color(1.0, 0.4, 0.3))

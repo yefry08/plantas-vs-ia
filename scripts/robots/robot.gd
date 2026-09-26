@@ -18,6 +18,11 @@ const BEHAVIOR_SCRIPTS := {
 	"fable": "res://scripts/robots/robot_fable.gd",
 	"mythos": "res://scripts/robots/robot_mythos.gd",
 	"astra": "res://scripts/robots/robot_astra.gd",
+	"healer": "res://scripts/robots/robot_healer.gd",
+	"crab": "res://scripts/robots/robot_crab.gd",
+	"spore": "res://scripts/robots/robot_spore.gd",
+	"cordy": "res://scripts/robots/robot_cordy.gd",
+	"chimera": "res://scripts/robots/robot_chimera.gd",
 	"agi": "res://scripts/robots/boss_agi.gd",
 }
 
@@ -145,6 +150,11 @@ func _on_death() -> void:
 	pass
 
 
+## Virtual: se llama tras cada mordisco a una planta o aliado.
+func _on_bite(_target: Node) -> void:
+	pass
+
+
 func _custom_damage_mult(_dtype: String) -> float:
 	return 1.0
 
@@ -194,6 +204,7 @@ func _enemy_step(delta: float) -> void:
 		if bite_timer <= 0.0:
 			bite_timer = 0.5 / attack_mult
 			blocker.take_damage(data.bite_damage * 0.5, "bite", self)
+			_on_bite(blocker)
 			AudioManager.play("chomp")
 	else:
 		position.x -= current_speed() * delta

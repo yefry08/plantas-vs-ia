@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="RobotData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/robot_data.gd" id="1_fh5w6"]
+
+[resource]
+script = ExtResource("1_fh5w6")
+id = "cordybot"
+display_name = "Cordybot"
+description = "Bioarma IA con tallos de hongo parásito."
+abilities = "Su mordisco infecta: la planta mordida queda controlada 10 s."
+weakness = "No lo dejes llegar: EMP, Crio y minas."
+tier = 5
+behavior = "cordy"
+health = 600.0
+speed = 12.0
+token_reward = 3
+params = {
+"control_time": 10.0,
+"shape": "cordy"
+}
+body_color = Color(0.45, 0.55, 0.4, 1)
+accent_color = Color(0.95, 0.55, 0.2, 1)
+eye_color = Color(0.9, 1, 0.5, 1)

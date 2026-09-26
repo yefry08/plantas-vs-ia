@@ -5,7 +5,7 @@
 
 [sub_resource type="Resource" id="Resource_sehm2"]
 script = ExtResource("2_5kttt")
-duration = 31.078
+duration = 33.472
 groups = [{
 "count": 1,
 "interval": 1.0,
@@ -15,27 +15,37 @@ groups = [{
 
 [sub_resource type="Resource" id="Resource_w47rq"]
 script = ExtResource("2_5kttt")
-duration = 33.922
-groups = [{
-"count": 4,
-"interval": 0.45,
-"lane": -1,
-"robot": "qilin_eficiente"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "dragon_destilado"
-}]
-
-[sub_resource type="Resource" id="Resource_gcqu2"]
-script = ExtResource("2_5kttt")
-duration = 37.576
+duration = 38.528
 groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
 "robot": "geminis_gemelo"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}]
+
+[sub_resource type="Resource" id="Resource_gcqu2"]
+script = ExtResource("2_5kttt")
+duration = 45.024
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "geminis_gemelo"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "emojibot"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
 }]
 
 [sub_resource type="Resource" id="Resource_fm5p5"]
@@ -48,101 +58,55 @@ groups = [{
 "lane": -1,
 "robot": "geminis_gemelo"
 }, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "geminis_gemelo"
+"robot": "emojibot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "talkgpt"
 }, {
 "count": 2,
 "interval": 0.9,
 "lane": -1,
-"robot": "dragon_destilado"
+"robot": "deepfish"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grow"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "emojibot"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
 }]
 
 [sub_resource type="Resource" id="Resource_gf10t"]
 script = ExtResource("2_5kttt")
-duration = 41.32
-groups = [{
-"count": 4,
-"interval": 0.45,
-"lane": -1,
-"robot": "qilin_eficiente"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "grokazo"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "dragon_destilado"
-}]
-
-[sub_resource type="Resource" id="Resource_0sde4"]
-script = ExtResource("2_5kttt")
-duration = 42.94
-groups = [{
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "dragon_destilado"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "grokazo"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "emojibot"
-}]
-
-[sub_resource type="Resource" id="Resource_6clwk"]
-script = ExtResource("2_5kttt")
-duration = 44.56
-groups = [{
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "razonador_serie_o"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "grokazo"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "dragon_destilado"
-}]
-
-[sub_resource type="Resource" id="Resource_ydsts"]
-script = ExtResource("2_5kttt")
 duration = 50.0
-is_huge = true
 groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "razonador_serie_o"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "dragon_destilado"
+"robot": "talkgpt"
 }, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "emojibot"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "geminis_gemelo"
+"robot": "grow"
 }, {
 "count": 1,
 "interval": 1.0,
@@ -152,12 +116,143 @@ groups = [{
 "count": 2,
 "interval": 0.9,
 "lane": -1,
-"robot": "dragon_destilado"
+"robot": "deepfish"
 }, {
 "count": 2,
 "interval": 0.9,
 "lane": -1,
-"robot": "dragon_destilado"
+"robot": "deepfish"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}]
+
+[sub_resource type="Resource" id="Resource_0sde4"]
+script = ExtResource("2_5kttt")
+duration = 50.0
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "geminis_gemelo"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "geminis_gemelo"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}]
+
+[sub_resource type="Resource" id="Resource_6clwk"]
+script = ExtResource("2_5kttt")
+duration = 50.0
+groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "geminis_gemelo"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "emojibot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grow"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}]
+
+[sub_resource type="Resource" id="Resource_ydsts"]
+script = ExtResource("2_5kttt")
+duration = 50.0
+is_huge = true
+groups = [{
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "emojibot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "geminis_gemelo"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "geminis_gemelo"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grow"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "geminis_gemelo"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "grow"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
 }]
 
 [resource]

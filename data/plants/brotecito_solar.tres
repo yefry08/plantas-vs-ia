@@ -6,9 +6,10 @@
 script = ExtResource("1_f0ytm")
 id = "brotecito_solar"
 display_name = "Brotecito Solar"
-description = "Girasolar pequeño y barato: 15 de energía cada 24 s."
+description = "Girasolar pequeño y barato: lanza 2 soles de 15 cada 24 s."
 cost = 25
 health = 200.0
 behavior = "producer"
 produce_amount = 15
+produce_count = 2
 first_produce_delay = 6.0

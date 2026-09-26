@@ -15,7 +15,7 @@ groups = [{
 
 [sub_resource type="Resource" id="Resource_fqbei"]
 script = ExtResource("2_aib7a")
-duration = 30.646
+duration = 30.352
 groups = [{
 "count": 1,
 "interval": 1.0,
@@ -30,7 +30,7 @@ groups = [{
 
 [sub_resource type="Resource" id="Resource_6wkqx"]
 script = ExtResource("2_aib7a")
-duration = 32.617
+duration = 32.104
 groups = [{
 "count": 1,
 "interval": 1.0,
@@ -50,7 +50,7 @@ groups = [{
 
 [sub_resource type="Resource" id="Resource_xg06x"]
 script = ExtResource("2_aib7a")
-duration = 33.94
+duration = 33.28
 groups = [{
 "count": 1,
 "interval": 1.0,
@@ -70,7 +70,7 @@ groups = [{
 
 [sub_resource type="Resource" id="Resource_bsgu1"]
 script = ExtResource("2_aib7a")
-duration = 42.436
+duration = 40.832
 is_huge = true
 groups = [{
 "count": 1,
@@ -127,9 +127,9 @@ unlock_type = "plant"
 unlock_id = "nuez_firewall"
 skip_seed_select = true
 tutorial_steps = [{
-"text": "Planta Girasolares: generan energía extra cada 24 s. ¡Planta varios al principio!",
+"text": "Planta Girasolares: lanzan 2 soles cada 24 s. ¡Planta varios al principio!",
 "until": "place:girasolar"
 }, {
-"text": "Más energía = más defensas. Recoge la energía que sueltan. Si te equivocas, usa la pala para quitar plantas.",
+"text": "Tu compañero de IA (abajo a la izquierda) te dará consejos. Cuando brille, ¡tócalo para usar su poder!",
 "until": "time:10"
 }]

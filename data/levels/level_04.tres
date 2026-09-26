@@ -15,17 +15,22 @@ groups = [{
 
 [sub_resource type="Resource" id="Resource_om1gp"]
 script = ExtResource("2_ic28n")
-duration = 31.024
+duration = 31.4944
 groups = [{
 "count": 3,
 "interval": 0.6,
 "lane": -1,
 "robot": "spambot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
 }]
 
 [sub_resource type="Resource" id="Resource_nfk8x"]
 script = ExtResource("2_ic28n")
-duration = 39.034
+duration = 40.2704
 is_huge = true
 groups = [{
 "count": 1,
@@ -33,10 +38,10 @@ groups = [{
 "lane": -1,
 "robot": "captchabot"
 }, {
-"count": 3,
-"interval": 0.6,
+"count": 1,
+"interval": 1.0,
 "lane": -1,
-"robot": "spambot"
+"robot": "captchabot"
 }, {
 "count": 1,
 "interval": 1.0,
@@ -46,12 +51,12 @@ groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "scriptbot"
+"robot": "captchabot"
 }]
 
 [sub_resource type="Resource" id="Resource_e3sg4"]
 script = ExtResource("2_ic28n")
-duration = 34.48
+duration = 35.488
 groups = [{
 "count": 1,
 "interval": 1.0,
@@ -61,12 +66,17 @@ groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "captchabot"
+"robot": "scriptbot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
 }]
 
 [sub_resource type="Resource" id="Resource_fopq4"]
 script = ExtResource("2_ic28n")
-duration = 35.56
+duration = 36.736000000000004
 groups = [{
 "count": 1,
 "interval": 1.0,
@@ -78,21 +88,31 @@ groups = [{
 "lane": -1,
 "robot": "spambot"
 }, {
-"count": 1,
-"interval": 1.0,
+"count": 3,
+"interval": 0.6,
 "lane": -1,
-"robot": "scriptbot"
+"robot": "spambot"
 }, {
-"count": 1,
-"interval": 1.0,
+"count": 3,
+"interval": 0.6,
 "lane": -1,
-"robot": "scriptbot"
+"robot": "spambot"
 }]
 
 [sub_resource type="Resource" id="Resource_v0rku"]
 script = ExtResource("2_ic28n")
-duration = 36.64
+duration = 37.984
 groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
 "count": 3,
 "interval": 0.6,
 "lane": -1,
@@ -103,36 +123,36 @@ groups = [{
 "lane": -1,
 "robot": "spambot"
 }, {
-"count": 1,
-"interval": 1.0,
+"count": 3,
+"interval": 0.6,
 "lane": -1,
-"robot": "scriptbot"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "scriptbot"
+"robot": "spambot"
 }]
 
 [sub_resource type="Resource" id="Resource_mgs8d"]
 script = ExtResource("2_ic28n")
-duration = 47.296
+duration = 49.8176
 is_huge = true
 groups = [{
-"count": 3,
-"interval": 0.6,
+"count": 1,
+"interval": 1.0,
 "lane": -1,
-"robot": "spambot"
-}, {
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
+"robot": "captchabot"
 }, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
 "robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
 }, {
 "count": 1,
 "interval": 1.0,

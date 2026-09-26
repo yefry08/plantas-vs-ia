@@ -134,6 +134,8 @@ static func _col(c: Color, o: Dictionary) -> Color:
 	if bool(o.get("hacked", false)):
 		var g := (c.r + c.g + c.b) / 3.0
 		out = c.lerp(Color(g, g, g * 1.05), 0.7)
+	if bool(o.get("controlled", false)):
+		out = out.lerp(Color(0.62, 0.25, 0.85), 0.55)
 	if float(o.get("flash", 0.0)) > 0.0:
 		out = out.lerp(Color.WHITE, 0.55)
 	return out
@@ -224,6 +226,17 @@ static func plant(ci: CanvasItem, id: String, t: float, o: Dictionary = {}) -> v
 			_bamboo(ci, t, o)
 		"mina_bug":
 			_mine(ci, t, o)
+		"rosa_antidoto":
+			shadow(ci, Vector2(0, 38), 22)
+			_stem(ci, Vector2(0, 38), Vector2(0, -8), o)
+			var c := Vector2(sin(t * 1.5) * 1.5, -16)
+			for i in 6:
+				var a := t * 0.3 + TAU * float(i) / 6.0
+				fill_ellipse(ci, c + Vector2(cos(a), sin(a)) * 14.0, 13, 9, _col(Color(0.92, 0.25, 0.4), o), a)
+			ci.draw_circle(c, 13, _col(Color(0.75, 0.12, 0.28), o))
+			ci.draw_arc(c, 8, 0.5, 5.5, 10, _col(Color(1.0, 0.5, 0.6), o), 2.0)
+			ci.draw_rect(Rect2(c + Vector2(-2.5, -8), Vector2(5, 16)), Color(0.95, 1.0, 0.95))
+			ci.draw_rect(Rect2(c + Vector2(-8, -2.5), Vector2(16, 5)), Color(0.95, 1.0, 0.95))
 		_:
 			ci.draw_circle(Vector2.ZERO, 30, Color.MAGENTA)
 
@@ -481,6 +494,24 @@ static func robot(ci: CanvasItem, rd: RobotData, t: float, o: Dictionary) -> voi
 			_bot_tank(ci, body, acc, eye, t, walking)
 		"star":
 			_bot_star(ci, body, acc, eye, step, t, walking)
+		"fish":
+			ArtParody.fish(ci, body, acc, eye, step, t)
+		"stripes":
+			ArtParody.stripes(ci, body, acc, eye, step, t, bool(o.get("thinking", false)))
+		"rocket":
+			ArtParody.rocket(ci, body, acc, eye, step, t, walking)
+		"lobster":
+			ArtParody.lobster(ci, body, acc, eye, step, t, float(o.get("grab", 0.0)))
+		"crab":
+			ArtParody.crab(ci, body, acc, eye, step, t)
+		"claudio":
+			ArtParody.claudio(ci, body, acc, eye, step, t)
+		"spore":
+			ArtParody.spore(ci, body, acc, eye, step, t)
+		"cordy":
+			ArtParody.cordy(ci, body, acc, eye, step, t)
+		"chimera":
+			ArtParody.chimera(ci, body, acc, eye, step, t)
 		_:
 			_bot_box(ci, body, acc, eye, step, t)
 
@@ -710,7 +741,7 @@ static func _bot_star(ci: CanvasItem, body: Color, acc: Color, eye: Color, step:
 	ci.draw_circle(c + Vector2(3, 0), 2.6, INK)
 
 
-# --- Cartas de IA, aliado y podadora ------------------------------------------
+# --- Cartas de IA, aliado y dron ------------------------------------------
 
 static func card_icon(ci: CanvasItem, id: String, c: Vector2, s: float) -> void:
 	match id:
@@ -734,6 +765,17 @@ static func card_icon(ci: CanvasItem, id: String, c: Vector2, s: float) -> void:
 			ci.draw_circle(c + Vector2(-5, -5) * s, 2.5 * s, INK)
 			ci.draw_circle(c + Vector2(5, -5) * s, 2.5 * s, INK)
 			ci.draw_arc(c + Vector2(0, 0) * s, 5.0 * s, PI * 0.15, PI * 0.85, 8, INK, 2.0 * s)
+		"vacuna":
+			var r := -0.7
+			var d := Vector2(cos(r), sin(r))
+			var n := Vector2(-d.y, d.x)
+			var a := c - d * 14.0 * s
+			var b := c + d * 10.0 * s
+			poly(ci, [a + n * 6.0 * s, b + n * 6.0 * s, b - n * 6.0 * s, a - n * 6.0 * s], Color(0.9, 0.97, 1.0))
+			poly(ci, [a + n * 4.0 * s, c + n * 4.0 * s, c - n * 4.0 * s, a - n * 4.0 * s], Color(0.4, 1.0, 0.55))
+			ci.draw_line(b, b + d * 12.0 * s, Color(0.8, 0.85, 0.9), 2.0 * s)
+			ci.draw_line(a - n * 9.0 * s, a + n * 9.0 * s, Color(0.7, 0.75, 0.8), 3.0 * s)
+			ci.draw_line(a, a - d * 7.0 * s, Color(0.7, 0.75, 0.8), 3.0 * s)
 		"red_team":
 			ci.draw_arc(c + Vector2(-3, -3) * s, 12.0 * s, 0, TAU, 20, Color(0.95, 0.25, 0.2), 4.0 * s, true)
 			ci.draw_line(c + Vector2(6, 6) * s, c + Vector2(16, 16) * s, Color(0.95, 0.25, 0.2), 5.0 * s)
@@ -760,16 +802,21 @@ static func buddy(ci: CanvasItem, c: Vector2, s: float, t: float, excited: float
 	heart(ci, p + Vector2(0, -40) * s, 0.55 * s * (1.0 + excited * 0.5), Color(1.0, 0.4, 0.5))
 
 
-static func mower(ci: CanvasItem, t: float, moving: bool) -> void:
-	shadow(ci, Vector2(0, 16), 26)
-	ci.draw_line(Vector2(10, -10), Vector2(26, -34), Color(0.3, 0.3, 0.32), 4.0)
-	ci.draw_line(Vector2(20, -34), Vector2(32, -34), Color(0.3, 0.3, 0.32), 4.0)
-	rrect(ci, Rect2(-26, -14, 44, 24), 6, Color(0.85, 0.2, 0.18), SOFT_INK)
-	ci.draw_rect(Rect2(-22, -10, 14, 8), Color(0.2, 0.25, 0.3))
-	ci.draw_circle(Vector2(-18, -6), 2, Color(0.4, 1.0, 0.9))
-	ci.draw_circle(Vector2(-12, -6), 2, Color(0.4, 1.0, 0.9))
-	var spin := t * 30.0 if moving else 0.0
-	for x in [-16.0, 10.0]:
-		ci.draw_circle(Vector2(x, 12), 7, Color(0.15, 0.15, 0.16))
-		ci.draw_line(Vector2(x, 12), Vector2(x, 12) + Vector2(5, 0).rotated(spin), Color(0.6, 0.6, 0.6), 2.0)
-	ci.draw_line(Vector2(-30, -8), Vector2(-30, 10), Color(0.75, 0.78, 0.8), 4.0)
+static func drone(ci: CanvasItem, t: float, moving: bool) -> void:
+	var bob := sin(t * (9.0 if moving else 3.0)) * 3.0
+	var c := Vector2(0, -16 + bob)
+	shadow(ci, Vector2(0, 18), 20.0 - bob)
+	if moving:
+		poly(ci, [c + Vector2(-4, 6), c + Vector2(4, 6), Vector2(26, 18), Vector2(-26, 18)], Color(1.0, 0.25, 0.2, 0.28))
+	for sx in [-1.0, 1.0]:
+		var hub: Vector2 = c + Vector2(24.0 * float(sx), -8)
+		ci.draw_line(c + Vector2(10.0 * float(sx), -2), hub, Color(0.3, 0.32, 0.36), 3.0)
+		ci.draw_line(hub, hub + Vector2(0, -5), Color(0.3, 0.32, 0.36), 2.0)
+		var spin := absf(sin(t * 40.0 + float(sx))) * 16.0 + 3.0
+		fill_ellipse(ci, hub + Vector2(0, -6), spin, 2.5, Color(0.75, 0.8, 0.85, 0.75))
+	rrect(ci, Rect2(c + Vector2(-18, -8), Vector2(36, 16)), 7, Color(0.95, 0.96, 0.98), SOFT_INK)
+	ci.draw_rect(Rect2(c + Vector2(-18, -1), Vector2(36, 3)), Color(1.0, 0.45, 0.15))
+	ci.draw_circle(c + Vector2(-10, 3), 5, Color(0.12, 0.14, 0.18))
+	ci.draw_circle(c + Vector2(-10, 3), 2.5, Color(1.0, 0.3, 0.25) if moving else Color(0.3, 1.0, 0.9))
+	ci.draw_line(c + Vector2(6, 8), c + Vector2(4, 14), Color(0.3, 0.32, 0.36), 2.0)
+	ci.draw_line(c + Vector2(14, 8), c + Vector2(16, 14), Color(0.3, 0.32, 0.36), 2.0)

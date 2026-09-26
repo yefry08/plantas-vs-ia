@@ -9,9 +9,9 @@ display_name = "La AGI"
 description = "Inteligencia general artificial. Ocupa 3 carriles."
 abilities = "Fase 1: invoca robots. Fase 2: gana una resistencia nueva cada 20 s. Fase 3: toma el control de tus cartas."
 weakness = "Variedad de daño. En fase 3: 3 cartas de Alineamiento."
-tier = 5
+tier = 6
 behavior = "agi"
-health = 9000.0
+health = 15000.0
 speed = 5.0
 bite_damage = 250.0
 token_reward = 0
@@ -23,8 +23,8 @@ params = {
 "mower_damage": 1500.0,
 "resist_mult": 0.4,
 "shape": "agi",
-"summon_count": 1,
-"summon_intervals": [9.0, 11.0, 13.0],
+"summon_count": 2,
+"summon_intervals": [7.0, 9.0, 11.0],
 "upgrade_interval": 20.0
 }
 body_color = Color(0.1, 0.11, 0.16, 1)

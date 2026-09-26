@@ -117,10 +117,10 @@ func _draw() -> void:
 	for i in plants.size():
 		draw_set_transform(Vector2(90 + i * 85, 600 + (i % 2) * 30), 0.0, Vector2(1.1, 1.1))
 		Art.plant(self, plants[i], t + i)
-	var bots := ["scriptbot", "abrazobot", "razonador_serie_o", "mythos"]
+	var bots := ["scriptbot", "deepfish", "talkgpt", "claudio", "legend"]
 	for i in bots.size():
 		var rd: RobotData = GameState.robots[bots[i]]
-		var x := 900.0 + i * 95.0 - fmod(t * 12.0, 30.0)
+		var x := 830.0 + i * 95.0 - fmod(t * 12.0, 30.0)
 		draw_set_transform(Vector2(x, 600 + (i % 2) * 34), 0.0, Vector2(rd.size, rd.size))
 		Art.robot(self, rd, t + i, {"walk": true, "shield": 1.0, "expr": "hug" if bots[i] == "abrazobot" else "happy"})
 	draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)

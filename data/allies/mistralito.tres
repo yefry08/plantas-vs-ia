@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="AllyData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/ally_data.gd" id="1_274d7"]
+
+[resource]
+script = ExtResource("1_274d7")
+id = "mistralito"
+display_name = "Mistralito"
+description = "Un vientecillo naranja muy rápido."
+passive_text = "El sol cae del cielo 20% más seguido."
+active_name = "Ráfaga del norte"
+active_text = "Empuja a todos los robots hacia atrás y los ralentiza 3 s."
+active_cooldown = 55.0
+params = {
+"push": 120.0,
+"sky_mult": 0.8,
+"slow_time": 3.0
+}
+color = Color(1, 0.65, 0.25, 1)
+lines = {
+"controlled": ["¡Esporas en el aire! Cura tus plantas."],
+"danger": ["¡Carril %d sin defensa! ¡Sopla, digo, planta!"],
+"drone": ["¡Dron en el aire!"],
+"greeting": ["¡Viento a favor! Defendamos el jardín.", "Soplando con fuerza. ¡Allá vamos!"],
+"huge": ["¡Se acerca una tormenta de robots!"],
+"idle_sun": ["¡%d de sol acumulado!"],
+"lose": ["Cambió el viento. ¡Otra vez!"],
+"power_ready": ["¡%s preparada! Tócame."],
+"tokens": ["El viento dice: usa %s."],
+"win": ["¡Victoria con viento de cola!"]
+}
