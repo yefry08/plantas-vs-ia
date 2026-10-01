@@ -72,10 +72,12 @@ func _ready() -> void:
 		_unlock_everything()
 	AudioManager.set_volume(float(progress.get("volume", 0.7)))
 	AudioManager.muted = bool(progress.get("muted", false))
+	AudioManager.music_muted = bool(progress.get("music_muted", false))
 	# Las pruebas automáticas y capturas siempre van en silencio.
 	for arg in OS.get_cmdline_user_args():
 		if arg.begins_with("--autotest") or arg.begins_with("--screen"):
 			AudioManager.muted = true
+			AudioManager.music_muted = true
 	_maybe_screen_capture()
 
 
@@ -142,6 +144,7 @@ func _default_progress() -> Dictionary:
 		"seen_robots": [],
 		"volume": 0.7,
 		"muted": false,
+		"music_muted": false,
 	}
 
 

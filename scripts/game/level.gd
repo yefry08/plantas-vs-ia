@@ -52,6 +52,7 @@ func _ready() -> void:
 	active_lanes = data.active_lanes
 	Engine.time_scale = 1.0
 	_build()
+	AudioManager.play_music("boss" if data.is_boss else ("bio" if data.zone == 5 else "battle"))
 	GameState.set_sun(data.start_sun)
 	GameState.set_tokens(data.start_tokens)
 	for id in GameState.loadout_plants:

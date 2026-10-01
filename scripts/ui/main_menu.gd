@@ -3,11 +3,13 @@ extends Control
 
 var t := 0.0
 var sound_btn: Button
+var music_btn: Button
 var confirm_reset := false
 var reset_btn: Button
 
 
 func _ready() -> void:
+	AudioManager.play_music("menu")
 	if not GameState.autotest.is_empty():
 		_start_autotest.call_deferred()
 		return
@@ -20,7 +22,7 @@ func _ready() -> void:
 
 	var box := VBoxContainer.new()
 	box.add_theme_constant_override("separation", 12)
-	UI.place(box, Vector2(490, 230), Vector2(300, 330))
+	UI.place(box, Vector2(490, 210), Vector2(300, 400))
 	add_child(box)
 	var play := UI.button("Jugar", UI.GREEN, 28, Vector2(260, 64))
 	play.pressed.connect(func(): GameState.goto(GameState.SCENE_LEVEL_SELECT))
@@ -31,6 +33,9 @@ func _ready() -> void:
 	sound_btn = UI.button("", Color(0.3, 0.45, 0.5))
 	sound_btn.pressed.connect(_toggle_sound)
 	box.add_child(sound_btn)
+	music_btn = UI.button("", Color(0.4, 0.35, 0.55))
+	music_btn.pressed.connect(_toggle_music)
+	box.add_child(music_btn)
 	reset_btn = UI.button("Borrar progreso", Color(0.55, 0.28, 0.22), 18, Vector2(220, 44))
 	reset_btn.pressed.connect(_on_reset)
 	box.add_child(reset_btn)
@@ -82,6 +87,14 @@ func _toggle_sound() -> void:
 
 func _update_sound() -> void:
 	sound_btn.text = "Sonido: " + ("NO" if AudioManager.muted else "SÍ")
+	music_btn.text = "Música: " + ("NO" if AudioManager.music_muted else "SÍ")
+
+
+func _toggle_music() -> void:
+	AudioManager.set_music_muted(not AudioManager.music_muted)
+	GameState.progress["music_muted"] = AudioManager.music_muted
+	GameState.save()
+	_update_sound()
 
 
 func _on_reset() -> void:

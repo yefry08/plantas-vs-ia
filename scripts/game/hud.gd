@@ -333,11 +333,22 @@ func show_pause(on: bool) -> void:
 		sound_button = UI.button(_sound_text(), Color(0.3, 0.4, 0.55))
 		sound_button.pressed.connect(_toggle_sound)
 		box.add_child(sound_button)
+		var mb := UI.button(_music_text(), Color(0.4, 0.35, 0.55))
+		mb.pressed.connect(func():
+			AudioManager.set_music_muted(not AudioManager.music_muted)
+			GameState.progress["music_muted"] = AudioManager.music_muted
+			GameState.save()
+			mb.text = _music_text())
+		box.add_child(mb)
 		var b3 := UI.button("Salir al mapa", Color(0.55, 0.25, 0.2))
 		b3.pressed.connect(func(): GameState.goto(GameState.SCENE_LEVEL_SELECT))
 		box.add_child(b3)
 	if pause_overlay:
 		pause_overlay.visible = on
+
+
+func _music_text() -> String:
+	return "Música: " + ("NO" if AudioManager.music_muted else "SÍ")
 
 
 func _sound_text() -> String:

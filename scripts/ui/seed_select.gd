@@ -16,6 +16,7 @@ var ally_info: Label
 
 
 func _ready() -> void:
+	AudioManager.play_music("menu")
 	ld = GameState.get_level(GameState.current_level)
 	var title := UI.label("Nivel %d: %s" % [ld.number, ld.display_name], 34, Color(1.0, 0.92, 0.5), 8)
 	UI.place(title, Vector2(30, 14), Vector2(900, 44))

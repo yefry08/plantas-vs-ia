@@ -11,7 +11,7 @@ sin logos ni marcas). Una **IA aliada** te ayuda a cambio de **tokens** (moneda 
 - Campaña de 24 niveles en 5 zonas + el jefe final **La AGI** (3 fases, 2 finales).
 - Robots parodia de las grandes IA: DeepFish, Qwin, TalkGPT, Grow, los Claudios, Fairytail, Legend, langostas y cangrejos OpenGarra...
 - Zona final **Bio-Laboratorio**: bioarmas IA que toman el control de tus plantas.
-- Arte 100 % procedural (formas vectoriales, caras tipo emoji dibujadas) y sonidos sintetizados: **cero assets de terceros**.
+- Arte 100 % procedural (formas vectoriales, caras tipo emoji dibujadas), música original compuesta por código (`tools/generate_music.gd`) y efectos suaves sintetizados: **cero assets de terceros**.
 - Todo el contenido es data-driven en archivos `.tres`.
 - Progreso guardado en `user://` (en web se guarda en IndexedDB del navegador).
 

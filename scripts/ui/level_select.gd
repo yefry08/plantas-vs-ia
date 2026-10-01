@@ -6,6 +6,7 @@ const ZONE_LEVELS := [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10], [11, 12, 13, 14, 15], [
 
 
 func _ready() -> void:
+	AudioManager.play_music("menu")
 	var title := UI.label("Campaña", 46, Color(1.0, 0.92, 0.5), 10, HORIZONTAL_ALIGNMENT_CENTER)
 	UI.place(title, Vector2(0, 16), Vector2(1280, 60))
 	add_child(title)

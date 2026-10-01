@@ -7,6 +7,7 @@ var ending := ""
 
 
 func _ready() -> void:
+	AudioManager.play_music("menu")
 	ending = GameState.pending_ending
 	GameState.pending_ending = ""
 	var title := "Créditos"
