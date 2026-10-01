@@ -5,22 +5,22 @@
 
 [sub_resource type="Resource" id="Resource_2dx14"]
 script = ExtResource("2_vpfw5")
-duration = 32.32
+duration = 33.4
 groups = [{
 "count": 2,
 "interval": 0.9,
 "lane": -1,
 "robot": "deepfish"
 }, {
-"count": 1,
-"interval": 1.0,
+"count": 2,
+"interval": 0.9,
 "lane": -1,
-"robot": "scriptbot"
+"robot": "deepfish"
 }]
 
 [sub_resource type="Resource" id="Resource_g6778"]
 script = ExtResource("2_vpfw5")
-duration = 36.512
+duration = 38.64
 groups = [{
 "count": 4,
 "interval": 0.45,
@@ -36,21 +36,21 @@ groups = [{
 "interval": 0.9,
 "lane": -1,
 "robot": "deepfish"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
 }]
 
 [sub_resource type="Resource" id="Resource_l1usy"]
 script = ExtResource("2_vpfw5")
-duration = 41.983999999999995
+duration = 45.480000000000004
 groups = [{
 "count": 2,
 "interval": 0.9,
 "lane": -1,
 "robot": "deepfish"
-}, {
-"count": 4,
-"interval": 0.45,
-"lane": -1,
-"robot": "qwin"
 }, {
 "count": 3,
 "interval": 0.6,
@@ -67,10 +67,20 @@ groups = [{
 "lane": -1,
 "robot": "spambot"
 }, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
 "count": 2,
 "interval": 0.9,
 "lane": -1,
 "robot": "deepfish"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
 }]
 
 [sub_resource type="Resource" id="Resource_7j4ge"]
@@ -78,16 +88,6 @@ script = ExtResource("2_vpfw5")
 duration = 50.0
 is_huge = true
 groups = [{
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "deepfish"
-}, {
-"count": 4,
-"interval": 0.45,
-"lane": -1,
-"robot": "qwin"
-}, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
@@ -137,6 +137,36 @@ groups = [{
 "interval": 0.9,
 "lane": -1,
 "robot": "deepfish"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
 }, {
 "count": 3,
 "interval": 0.6,
@@ -146,7 +176,7 @@ groups = [{
 
 [sub_resource type="Resource" id="Resource_t8v8i"]
 script = ExtResource("2_vpfw5")
-duration = 47.84
+duration = 50.0
 groups = [{
 "count": 1,
 "interval": 1.0,
@@ -158,15 +188,35 @@ groups = [{
 "lane": -1,
 "robot": "deepfish"
 }, {
-"count": 3,
-"interval": 0.6,
+"count": 1,
+"interval": 1.0,
 "lane": -1,
-"robot": "spambot"
+"robot": "scriptbot"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
 }, {
 "count": 3,
 "interval": 0.6,
 "lane": -1,
 "robot": "spambot"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
 }, {
 "count": 4,
 "interval": 0.45,
@@ -177,16 +227,6 @@ groups = [{
 "interval": 0.6,
 "lane": -1,
 "robot": "spambot"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "scriptbot"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "deepfish"
 }, {
 "count": 1,
 "interval": 1.0,
@@ -198,50 +238,60 @@ groups = [{
 script = ExtResource("2_vpfw5")
 duration = 50.0
 groups = [{
-"count": 2,
-"interval": 0.9,
+"count": 3,
+"interval": 0.6,
 "lane": -1,
-"robot": "deepfish"
+"robot": "spambot"
 }, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
 "robot": "scriptbot"
 }, {
-"count": 3,
-"interval": 0.6,
+"count": 4,
+"interval": 0.45,
 "lane": -1,
-"robot": "spambot"
+"robot": "qwin"
 }, {
 "count": 2,
 "interval": 0.9,
 "lane": -1,
 "robot": "deepfish"
 }, {
-"count": 4,
-"interval": 0.45,
+"count": 2,
+"interval": 0.9,
 "lane": -1,
-"robot": "qwin"
-}, {
-"count": 4,
-"interval": 0.45,
-"lane": -1,
-"robot": "qwin"
-}, {
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
-}, {
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
+"robot": "deepfish"
 }, {
 "count": 2,
 "interval": 0.9,
 "lane": -1,
 "robot": "deepfish"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
 }]
 
 [sub_resource type="Resource" id="Resource_krkt7"]
@@ -253,36 +303,6 @@ groups = [{
 "lane": -1,
 "robot": "scriptbot"
 }, {
-"count": 4,
-"interval": 0.45,
-"lane": -1,
-"robot": "qwin"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "deepfish"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "deepfish"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "deepfish"
-}, {
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
-}, {
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
-}, {
 "count": 3,
 "interval": 0.6,
 "lane": -1,
@@ -293,10 +313,50 @@ groups = [{
 "lane": -1,
 "robot": "qwin"
 }, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}, {
 "count": 2,
 "interval": 0.9,
 "lane": -1,
 "robot": "deepfish"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
 }]
 
 [sub_resource type="Resource" id="Resource_ga4yp"]
@@ -309,6 +369,91 @@ groups = [{
 "lane": -1,
 "robot": "scriptbot"
 }, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
 "count": 3,
 "interval": 0.6,
 "lane": -1,
@@ -319,95 +464,35 @@ groups = [{
 "lane": -1,
 "robot": "qwin"
 }, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "scriptbot"
-}, {
-"count": 4,
-"interval": 0.45,
-"lane": -1,
-"robot": "qwin"
-}, {
 "count": 3,
 "interval": 0.6,
 "lane": -1,
 "robot": "spambot"
 }, {
-"count": 4,
-"interval": 0.45,
+"count": 2,
+"interval": 0.9,
 "lane": -1,
-"robot": "qwin"
+"robot": "deepfish"
 }, {
 "count": 2,
 "interval": 0.9,
 "lane": -1,
 "robot": "deepfish"
 }, {
-"count": 4,
-"interval": 0.45,
-"lane": -1,
-"robot": "qwin"
-}, {
 "count": 2,
 "interval": 0.9,
 "lane": -1,
 "robot": "deepfish"
-}, {
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
 }, {
 "count": 4,
 "interval": 0.45,
 "lane": -1,
 "robot": "qwin"
 }, {
-"count": 1,
-"interval": 1.0,
+"count": 4,
+"interval": 0.45,
 "lane": -1,
-"robot": "scriptbot"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "deepfish"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "scriptbot"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "deepfish"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "deepfish"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "deepfish"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "scriptbot"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "deepfish"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "deepfish"
+"robot": "qwin"
 }]
 
 [resource]

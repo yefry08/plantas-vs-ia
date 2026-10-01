@@ -237,3 +237,45 @@ static func ally(ci: CanvasItem, id: String, c: Vector2, s: float, t: float, exc
 				ci.draw_rect(Rect2(p + Vector2(-14 + i * 11, 18) * s, Vector2(6, 4) * s), Color(0.9, 0.3, 0.3))
 	if excited > 0.0:
 		Art.heart(ci, p + Vector2(0, -52) * s, 0.55 * s * (1.0 + excited * 0.5), Color(1.0, 0.4, 0.5))
+
+
+## Musa: agente personal que compra cosas por ti (parodia, sin logo).
+static func musa(ci: CanvasItem, body: Color, acc: Color, eye: Color, step: float, t: float) -> void:
+	Art._legs(ci, step, acc.darkened(0.2), 20.0)
+	Art.rrect(ci, Rect2(-20, -12, 40, 32), 14, body, SOFT_INK)
+	Art.rrect(ci, Rect2(-20, 4, 40, 16), 8, acc)
+	# Bolsa de compras
+	var sw := sin(t * 4.0) * 3.0
+	ci.draw_line(Vector2(16, -4), Vector2(28, 6 + sw), body.darkened(0.2), 4.0)
+	Art.rrect(ci, Rect2(20, 6 + sw, 18, 18), 3, Color(1.0, 0.6, 0.2))
+	ci.draw_arc(Vector2(29, 7 + sw), 5, PI, TAU, 8, Color(0.6, 0.35, 0.1), 2.0)
+	# Móvil en la otra mano
+	ci.draw_line(Vector2(-18, -4), Vector2(-32, -10 + step), body.darkened(0.2), 4.0)
+	Art.rrect(ci, Rect2(-40, -24 + step, 10, 16), 2, Color(0.12, 0.12, 0.16))
+	ci.draw_rect(Rect2(-38, -22 + step, 6, 11), Color(0.5, 0.8, 1.0))
+	var c := Vector2(0, -34)
+	ci.draw_circle(c, 20, body.lightened(0.15))
+	Art.rrect(ci, Rect2(c + Vector2(-15, -9), Vector2(30, 18)), 9, Color(0.08, 0.1, 0.2))
+	ci.draw_arc(c + Vector2(-6, 0), 4, PI * 1.1, PI * 1.9, 8, eye, 2.5)
+	ci.draw_arc(c + Vector2(6, 0), 4, PI * 1.1, PI * 1.9, 8, eye, 2.5)
+	ci.draw_arc(c + Vector2(0, 3), 4, PI * 0.15, PI * 0.85, 6, eye, 2.0)
+
+
+## Dotz: agente "siempre encendido" con su propio mini-ordenador.
+static func dot(ci: CanvasItem, body: Color, acc: Color, eye: Color, step: float, t: float) -> void:
+	for k in 2:
+		ci.draw_line(Vector2(-8 + k * 16, 12), Vector2(-10 + k * 16 + (step if k == 0 else -step), 34), body.lightened(0.3), 3.0)
+	var bob := sin(t * 8.0) * 2.0
+	var c := Vector2(0, -4 + bob)
+	ci.draw_circle(c, 22, body)
+	ci.draw_arc(c, 22, 0, TAU, 28, acc, 2.0, true)
+	for i in 3:
+		var on := int(t * 3.0) % 3 == i
+		ci.draw_circle(c + Vector2(-9 + i * 9, 0), 3.5, eye if on else acc)
+	# Mini portátil
+	var lp := c + Vector2(-34, 6)
+	Art.poly(ci, [lp + Vector2(-10, 0), lp + Vector2(10, 0), lp + Vector2(12, 4), lp + Vector2(-12, 4)], Color(0.7, 0.72, 0.78))
+	Art.poly(ci, [lp + Vector2(-9, 0), lp + Vector2(-7, -13), lp + Vector2(9, -13), lp + Vector2(9, 0)], Color(0.2, 0.22, 0.28))
+	ci.draw_rect(Rect2(lp + Vector2(-6, -11), Vector2(13, 9)), Color(0.4, 0.9, 1.0, 0.8))
+	ci.draw_line(c + Vector2(0, -22), c + Vector2(0, -30), acc, 2.0)
+	ci.draw_circle(c + Vector2(0, -32), 3.5, eye if fmod(t, 1.0) < 0.6 else acc)

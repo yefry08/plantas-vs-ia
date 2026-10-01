@@ -7,9 +7,9 @@ Las plantas defienden el jardín de oleadas de **robots IA** (todos son parodias
 sin logos ni marcas). Una **IA aliada** te ayuda a cambio de **tokens** (moneda simbólica del juego).
 
 - 5 carriles × 9 columnas, energía solar, dron de emergencia por carril, pala, pausa y velocidad ×2.
-- 15 plantas, 20 robots, 6 cartas de IA aliada y 4 compañeros de IA para elegir.
+- 15 plantas, 22 robots, 6 cartas de IA aliada y 4 compañeros de IA para elegir.
 - Campaña de 24 niveles en 5 zonas + el jefe final **La AGI** (3 fases, 2 finales).
-- Robots parodia de las grandes IA: DeepFish, Qwin, TalkGPT, Grow, los Claudios, Fairytail, Legend, langostas y cangrejos OpenGarra...
+- Robots parodia de las grandes IA: DeepFish, Qwin, TalkGPT, Grow, los Claudios, Fairytail, Legend, Musa, Dotz, langostas y cangrejos OpenGarra...
 - Zona final **Bio-Laboratorio**: bioarmas IA que toman el control de tus plantas.
 - Arte 100 % procedural (formas vectoriales, caras tipo emoji dibujadas), música original compuesta por código (`tools/generate_music.gd`) y efectos suaves sintetizados: **cero assets de terceros**.
 - Todo el contenido es data-driven en archivos `.tres`.

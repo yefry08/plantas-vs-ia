@@ -5,43 +5,28 @@
 
 [sub_resource type="Resource" id="Resource_a7517"]
 script = ExtResource("2_y2l0f")
-duration = 35.632
+duration = 37.54
 groups = [{
-"count": 1,
-"interval": 1.0,
+"count": 3,
+"interval": 0.5,
 "lane": -1,
-"robot": "astra"
+"robot": "dotz"
+}, {
+"count": 3,
+"interval": 0.5,
+"lane": -1,
+"robot": "dotz"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
 }]
 
 [sub_resource type="Resource" id="Resource_u82jr"]
 script = ExtResource("2_y2l0f")
-duration = 42.44799999999999
+duration = 46.06
 groups = [{
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "talkgpt"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "opengarra"
-}]
-
-[sub_resource type="Resource" id="Resource_dvmhi"]
-script = ExtResource("2_y2l0f")
-duration = 50.0
-groups = [{
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "astra"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "talkgpt"
-}, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
@@ -51,6 +36,61 @@ groups = [{
 "interval": 0.6,
 "lane": -1,
 "robot": "spambot"
+}, {
+"count": 3,
+"interval": 0.5,
+"lane": -1,
+"robot": "dotz"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}]
+
+[sub_resource type="Resource" id="Resource_dvmhi"]
+script = ExtResource("2_y2l0f")
+duration = 50.0
+groups = [{
+"count": 3,
+"interval": 0.5,
+"lane": -1,
+"robot": "dotz"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "astra"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 3,
+"interval": 0.5,
+"lane": -1,
+"robot": "dotz"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}, {
+"count": 3,
+"interval": 0.5,
+"lane": -1,
+"robot": "dotz"
 }]
 
 [sub_resource type="Resource" id="Resource_odrb0"]
@@ -61,7 +101,27 @@ groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "astra"
+"robot": "opengarra"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "talkgpt"
+}, {
+"count": 3,
+"interval": 0.5,
+"lane": -1,
+"robot": "dotz"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "fairytail"
 }, {
 "count": 1,
 "interval": 1.0,
@@ -73,30 +133,25 @@ groups = [{
 "lane": -1,
 "robot": "claudio"
 }, {
-"count": 2,
-"interval": 1.2,
+"count": 3,
+"interval": 0.6,
 "lane": -1,
-"robot": "claudio"
-}, {
-"count": 4,
-"interval": 0.45,
-"lane": -1,
-"robot": "qwin"
+"robot": "spambot"
 }, {
 "count": 3,
 "interval": 0.6,
 "lane": -1,
 "robot": "spambot"
 }, {
-"count": 2,
-"interval": 1.2,
-"lane": -1,
-"robot": "claudio"
-}, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
 "robot": "astra"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
 }]
 
 [sub_resource type="Resource" id="Resource_vxn8h"]
@@ -106,28 +161,38 @@ groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "fairytail"
+"robot": "opengarra"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "astra"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "astra"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "astra"
 }, {
 "count": 4,
 "interval": 0.45,
 "lane": -1,
 "robot": "qwin"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "fairytail"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "talkgpt"
 }]
 
 [sub_resource type="Resource" id="Resource_n47ah"]
 script = ExtResource("2_y2l0f")
 duration = 50.0
 groups = [{
+"count": 3,
+"interval": 0.5,
+"lane": -1,
+"robot": "dotz"
+}, {
 "count": 2,
 "interval": 1.2,
 "lane": -1,
@@ -136,12 +201,12 @@ groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "opengarra"
+"robot": "fairytail"
 }, {
-"count": 3,
-"interval": 0.6,
+"count": 1,
+"interval": 1.0,
 "lane": -1,
-"robot": "spambot"
+"robot": "fairytail"
 }, {
 "count": 1,
 "interval": 1.0,
@@ -152,16 +217,6 @@ groups = [{
 "interval": 0.6,
 "lane": -1,
 "robot": "spambot"
-}, {
-"count": 4,
-"interval": 0.45,
-"lane": -1,
-"robot": "qwin"
-}, {
-"count": 4,
-"interval": 0.45,
-"lane": -1,
-"robot": "qwin"
 }]
 
 [sub_resource type="Resource" id="Resource_0wb1d"]
@@ -171,32 +226,52 @@ groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
+"robot": "talkgpt"
+}, {
+"count": 3,
+"interval": 0.5,
+"lane": -1,
+"robot": "dotz"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}, {
+"count": 2,
+"interval": 1.2,
+"lane": -1,
+"robot": "claudio"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
 "robot": "astra"
 }, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "opengarra"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "opengarra"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "astra"
+"robot": "talkgpt"
 }, {
 "count": 3,
-"interval": 0.6,
+"interval": 0.5,
 "lane": -1,
-"robot": "spambot"
+"robot": "dotz"
 }, {
 "count": 3,
-"interval": 0.6,
+"interval": 0.5,
 "lane": -1,
-"robot": "spambot"
+"robot": "dotz"
 }]
 
 [sub_resource type="Resource" id="Resource_nt5gn"]
@@ -206,27 +281,37 @@ groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "astra"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "astra"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
 "robot": "fairytail"
+}, {
+"count": 2,
+"interval": 1.2,
+"lane": -1,
+"robot": "claudio"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "astra"
+}, {
+"count": 3,
+"interval": 0.5,
+"lane": -1,
+"robot": "dotz"
 }, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
 "robot": "opengarra"
 }, {
-"count": 3,
-"interval": 0.6,
+"count": 4,
+"interval": 0.45,
 "lane": -1,
-"robot": "spambot"
+"robot": "qwin"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "astra"
 }, {
 "count": 3,
 "interval": 0.6,
@@ -239,20 +324,25 @@ script = ExtResource("2_y2l0f")
 duration = 50.0
 is_huge = true
 groups = [{
-"count": 3,
-"interval": 0.6,
+"count": 4,
+"interval": 0.45,
 "lane": -1,
-"robot": "spambot"
+"robot": "qwin"
 }, {
 "count": 3,
-"interval": 0.6,
+"interval": 0.5,
 "lane": -1,
-"robot": "spambot"
+"robot": "dotz"
 }, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "astra"
+"robot": "opengarra"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "opengarra"
 }, {
 "count": 1,
 "interval": 1.0,
@@ -264,6 +354,11 @@ groups = [{
 "lane": -1,
 "robot": "fairytail"
 }, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "talkgpt"
+}, {
 "count": 3,
 "interval": 0.6,
 "lane": -1,
@@ -274,35 +369,50 @@ groups = [{
 "lane": -1,
 "robot": "opengarra"
 }, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "astra"
-}, {
 "count": 3,
 "interval": 0.6,
 "lane": -1,
 "robot": "spambot"
 }, {
-"count": 3,
-"interval": 0.6,
+"count": 4,
+"interval": 0.45,
 "lane": -1,
-"robot": "spambot"
+"robot": "qwin"
 }, {
-"count": 1,
-"interval": 1.0,
+"count": 2,
+"interval": 1.2,
 "lane": -1,
-"robot": "astra"
+"robot": "claudio"
 }, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
 "robot": "fairytail"
 }, {
-"count": 2,
-"interval": 1.2,
+"count": 4,
+"interval": 0.45,
 "lane": -1,
-"robot": "claudio"
+"robot": "qwin"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "astra"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "talkgpt"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
 }, {
 "count": 3,
 "interval": 0.6,
@@ -314,8 +424,8 @@ groups = [{
 script = ExtResource("1_l4akr")
 number = 19
 zone = 4
-display_name = "Estrella fugaz"
-intro_text = "Astra se teletransporta y frena tus disparos."
+display_name = "Siempre encendidos"
+intro_text = "Los Dotz no se apagan nunca... y se multiplican. Astra te frena los disparos."
 active_lanes = PackedInt32Array(0, 1, 2, 3, 4)
 start_sun = 150
 start_tokens = 5

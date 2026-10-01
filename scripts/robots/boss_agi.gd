@@ -7,7 +7,7 @@ extends Robot
 const PHASE_POOLS := [
 	["scriptbot", "spambot", "captchabot", "abrazobot", "emojibot", "deepfish", "qwin"],
 	["captchabot", "emojibot", "talkgpt", "grow", "geminis_gemelo", "opengarra", "deepfish", "claudio"],
-	["spambot", "qwin", "fairytail", "legend", "astra", "grow", "esporabot", "cordybot"],
+	["spambot", "qwin", "fairytail", "legend", "astra", "grow", "esporabot", "cordybot", "musa", "dotz"],
 ]
 const RESIST_TYPES: Array[String] = ["seed", "spike", "ice", "electric", "emp", "explosion"]
 const PHASE_COLORS := [Color(0.3, 0.65, 1.0), Color(0.78, 0.4, 1.0), Color(1.0, 0.3, 0.3)]

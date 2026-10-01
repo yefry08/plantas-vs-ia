@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="RobotData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/robot_data.gd" id="1_rnld1"]
+
+[resource]
+script = ExtResource("1_rnld1")
+id = "dotz"
+display_name = "Dotz"
+description = "Agentes siempre encendidos, cada uno con su propio ordenador."
+abilities = "Siempre encendidos: inmunes a los apagados y el EMP les dura la mitad. Cada uno se asigna nuevos Dotz hasta formar un enjambre de 8."
+weakness = "Cactus Antivirus, Bambú Pararrayos y Hongo EMP contra el enjambre."
+tier = 4
+behavior = "dots"
+health = 140.0
+speed = 18.0
+bite_damage = 70.0
+token_chance = 0.35
+size = 0.7
+card_rules = {
+"apagado_cadena": "immune",
+"boton_apagado": "immune"
+}
+params = {
+"shape": "dot",
+"spawn_interval": 12.0,
+"stun_mult": 0.5,
+"swarm_cap": 8
+}
+body_color = Color(0.1, 0.1, 0.12, 1)
+accent_color = Color(0.95, 0.95, 0.97, 1)
+eye_color = Color(0.45, 0.95, 1, 1)

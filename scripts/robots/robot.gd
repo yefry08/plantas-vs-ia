@@ -23,6 +23,8 @@ const BEHAVIOR_SCRIPTS := {
 	"spore": "res://scripts/robots/robot_spore.gd",
 	"cordy": "res://scripts/robots/robot_cordy.gd",
 	"chimera": "res://scripts/robots/robot_chimera.gd",
+	"musa": "res://scripts/robots/robot_musa.gd",
+	"dots": "res://scripts/robots/robot_dots.gd",
 	"agi": "res://scripts/robots/boss_agi.gd",
 }
 
@@ -393,7 +395,10 @@ func _draw_overlays() -> void:
 	if status.is_revealed():
 		var label := data.display_name + ("  (ILUSIÓN)" if is_illusion else "")
 		Art.text_c(self, 0, top - 20, label, 13, Color(1.0, 0.55, 0.5), 4)
-		Art.text_c(self, 0, top - 6, "Débil: " + data.weakness, 11, Color(1.0, 0.9, 0.85), 3)
+		var weak := data.weakness.get_slice(",", 0).get_slice("(", 0).strip_edges()
+		if weak.length() > 26:
+			weak = weak.substr(0, 25) + "…"
+		Art.text_c(self, 0, top - 6, "Débil: " + weak, 11, Color(1.0, 0.9, 0.85), 3)
 	if bubble_timer > 0.0 and bubble_text != "":
 		_draw_bubble(bubble_text, Vector2(0, top - 34))
 

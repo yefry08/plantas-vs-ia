@@ -5,7 +5,7 @@
 
 [sub_resource type="Resource" id="Resource_t0hhw"]
 script = ExtResource("2_cnbn7")
-duration = 34.048
+duration = 35.56
 groups = [{
 "count": 1,
 "interval": 1.0,
@@ -15,17 +15,17 @@ groups = [{
 
 [sub_resource type="Resource" id="Resource_wyd5e"]
 script = ExtResource("2_cnbn7")
-duration = 39.536
+duration = 42.42
 groups = [{
 "count": 4,
 "interval": 0.45,
 "lane": -1,
 "robot": "qwin"
 }, {
-"count": 4,
-"interval": 0.45,
+"count": 1,
+"interval": 1.0,
 "lane": -1,
-"robot": "qwin"
+"robot": "grow"
 }, {
 "count": 2,
 "interval": 0.7,
@@ -40,7 +40,7 @@ groups = [{
 
 [sub_resource type="Resource" id="Resource_qhk78"]
 script = ExtResource("2_cnbn7")
-duration = 46.544
+duration = 50.0
 groups = [{
 "count": 1,
 "interval": 1.0,
@@ -52,10 +52,10 @@ groups = [{
 "lane": -1,
 "robot": "talkgpt"
 }, {
-"count": 2,
-"interval": 0.7,
+"count": 1,
+"interval": 1.0,
 "lane": -1,
-"robot": "cangrejo"
+"robot": "talkgpt"
 }, {
 "count": 2,
 "interval": 0.7,
@@ -73,6 +73,11 @@ script = ExtResource("2_cnbn7")
 duration = 50.0
 is_huge = true
 groups = [{
+"count": 2,
+"interval": 0.7,
+"lane": -1,
+"robot": "cangrejo"
+}, {
 "count": 4,
 "interval": 0.45,
 "lane": -1,
@@ -109,25 +114,20 @@ groups = [{
 "robot": "opengarra"
 }, {
 "count": 2,
-"interval": 0.7,
+"interval": 0.9,
 "lane": -1,
-"robot": "cangrejo"
+"robot": "deepfish"
 }, {
-"count": 2,
-"interval": 0.7,
+"count": 1,
+"interval": 1.0,
 "lane": -1,
-"robot": "cangrejo"
+"robot": "opengarra"
 }]
 
 [sub_resource type="Resource" id="Resource_2bqak"]
 script = ExtResource("2_cnbn7")
 duration = 50.0
 groups = [{
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "deepfish"
-}, {
 "count": 2,
 "interval": 0.9,
 "lane": -1,
@@ -151,7 +151,12 @@ groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "talkgpt"
+"robot": "opengarra"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "opengarra"
 }, {
 "count": 2,
 "interval": 0.7,
@@ -178,26 +183,26 @@ groups = [{
 "lane": -1,
 "robot": "geminis_gemelo"
 }, {
-"count": 4,
-"interval": 0.45,
+"count": 1,
+"interval": 1.0,
 "lane": -1,
-"robot": "qwin"
+"robot": "opengarra"
 }, {
 "count": 2,
 "interval": 0.7,
 "lane": -1,
 "robot": "cangrejo"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
 }]
 
 [sub_resource type="Resource" id="Resource_3k2yf"]
 script = ExtResource("2_cnbn7")
 duration = 50.0
 groups = [{
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "opengarra"
-}, {
 "count": 4,
 "interval": 0.45,
 "lane": -1,
@@ -212,6 +217,21 @@ groups = [{
 "interval": 1.0,
 "lane": -1,
 "robot": "opengarra"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "geminis_gemelo"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
 }, {
 "count": 4,
 "interval": 0.45,
@@ -223,10 +243,10 @@ groups = [{
 "lane": -1,
 "robot": "cangrejo"
 }, {
-"count": 4,
-"interval": 0.45,
+"count": 1,
+"interval": 1.0,
 "lane": -1,
-"robot": "qwin"
+"robot": "captchabot"
 }, {
 "count": 2,
 "interval": 0.7,
@@ -238,21 +258,6 @@ groups = [{
 script = ExtResource("2_cnbn7")
 duration = 50.0
 groups = [{
-"count": 4,
-"interval": 0.45,
-"lane": -1,
-"robot": "qwin"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "deepfish"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "opengarra"
-}, {
 "count": 2,
 "interval": 0.7,
 "lane": -1,
@@ -273,15 +278,25 @@ groups = [{
 "lane": -1,
 "robot": "cangrejo"
 }, {
-"count": 2,
-"interval": 0.9,
+"count": 1,
+"interval": 1.0,
 "lane": -1,
-"robot": "deepfish"
+"robot": "geminis_gemelo"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "opengarra"
 }, {
 "count": 2,
 "interval": 0.7,
 "lane": -1,
 "robot": "cangrejo"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "talkgpt"
 }]
 
 [sub_resource type="Resource" id="Resource_rstci"]
@@ -289,21 +304,6 @@ script = ExtResource("2_cnbn7")
 duration = 50.0
 is_huge = true
 groups = [{
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "opengarra"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "deepfish"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "opengarra"
-}, {
 "count": 4,
 "interval": 0.45,
 "lane": -1,
@@ -348,6 +348,41 @@ groups = [{
 "interval": 1.0,
 "lane": -1,
 "robot": "grow"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "opengarra"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "opengarra"
+}, {
+"count": 4,
+"interval": 0.45,
+"lane": -1,
+"robot": "qwin"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "opengarra"
 }, {
 "count": 2,
 "interval": 0.7,

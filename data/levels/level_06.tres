@@ -5,7 +5,7 @@
 
 [sub_resource type="Resource" id="Resource_ownyq"]
 script = ExtResource("2_5n4gw")
-duration = 30.0592
+duration = 30.8512
 groups = [{
 "count": 1,
 "interval": 1.0,
@@ -15,7 +15,7 @@ groups = [{
 
 [sub_resource type="Resource" id="Resource_j58ml"]
 script = ExtResource("2_5n4gw")
-duration = 32.2224
+duration = 33.8464
 groups = [{
 "count": 1,
 "interval": 1.0,
@@ -25,19 +25,19 @@ groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "scriptbot"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "scriptbot"
+"robot": "abrazobot"
 }]
 
 [sub_resource type="Resource" id="Resource_mx0om"]
 script = ExtResource("2_5n4gw")
-duration = 42.40448
+duration = 47.32928
 is_huge = true
 groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "abrazobot"
+}, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
@@ -56,7 +56,7 @@ groups = [{
 
 [sub_resource type="Resource" id="Resource_v1xfl"]
 script = ExtResource("2_5n4gw")
-duration = 36.944
+duration = 40.384
 groups = [{
 "count": 1,
 "interval": 1.0,
@@ -71,17 +71,17 @@ groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "scriptbot"
+"robot": "captchabot"
 }, {
-"count": 1,
-"interval": 1.0,
+"count": 3,
+"interval": 0.6,
 "lane": -1,
-"robot": "scriptbot"
+"robot": "spambot"
 }]
 
 [sub_resource type="Resource" id="Resource_4thxl"]
 script = ExtResource("2_5n4gw")
-duration = 38.4
+duration = 42.4
 groups = [{
 "count": 1,
 "interval": 1.0,
@@ -101,13 +101,23 @@ groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "captchabot"
+"robot": "abrazobot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
 }]
 
 [sub_resource type="Resource" id="Resource_sxtdp"]
 script = ExtResource("2_5n4gw")
-duration = 39.856
+duration = 44.416
 groups = [{
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
@@ -121,7 +131,17 @@ groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "abrazobot"
+"robot": "scriptbot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
 }]
 
 [sub_resource type="Resource" id="Resource_v33gp"]
@@ -129,26 +149,6 @@ script = ExtResource("2_5n4gw")
 duration = 50.0
 is_huge = true
 groups = [{
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "scriptbot"
-}, {
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
-}, {
-"count": 3,
-"interval": 0.6,
-"lane": -1,
-"robot": "spambot"
-}, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
@@ -169,6 +169,21 @@ groups = [{
 "lane": -1,
 "robot": "spambot"
 }, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
 "count": 3,
 "interval": 0.6,
 "lane": -1,
@@ -177,7 +192,27 @@ groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
+"robot": "abrazobot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
 "robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
+"count": 3,
+"interval": 0.6,
+"lane": -1,
+"robot": "spambot"
 }]
 
 [resource]

@@ -17,7 +17,7 @@ const PLANT_IDS: Array[String] = [
 const ROBOT_IDS: Array[String] = [
 	"scriptbot", "spambot", "captchabot", "abrazobot", "emojibot",
 	"deepfish", "qwin", "talkgpt", "grow", "geminis_gemelo",
-	"opengarra", "cangrejo", "claudio", "fairytail", "legend", "astra",
+	"opengarra", "cangrejo", "claudio", "fairytail", "legend", "astra", "musa", "dotz",
 	"esporabot", "cordybot", "quimera", "agi",
 ]
 const CARD_IDS: Array[String] = ["autodestruccion", "boton_apagado", "apagado_cadena", "alineamiento", "red_team", "vacuna"]

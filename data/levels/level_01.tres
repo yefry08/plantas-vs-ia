@@ -15,8 +15,13 @@ groups = [{
 
 [sub_resource type="Resource" id="Resource_edcfl"]
 script = ExtResource("2_55y67")
-duration = 30.0
+duration = 30.184
 groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
@@ -25,8 +30,13 @@ groups = [{
 
 [sub_resource type="Resource" id="Resource_vjtlv"]
 script = ExtResource("2_55y67")
-duration = 31.04
+duration = 31.951999999999998
 groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
@@ -40,9 +50,14 @@ groups = [{
 
 [sub_resource type="Resource" id="Resource_y1woe"]
 script = ExtResource("2_55y67")
-duration = 36.8
+duration = 38.96
 is_huge = true
 groups = [{
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "scriptbot"
+}, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,

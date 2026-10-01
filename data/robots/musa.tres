@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="RobotData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/robot_data.gd" id="1_edem4"]
+
+[resource]
+script = ExtResource("1_edem4")
+id = "musa"
+display_name = "Musa"
+description = "Agente personal que hace tus recados... con tu energía."
+abilities = "Cada 9 s te quita 50 de energía para 'hacer compras' y le llega un robot a domicilio. Apagarla cuesta el doble."
+weakness = "Derríbala rápido: Mina Bug, Autodestrucción, Bambú."
+tier = 4
+behavior = "musa"
+health = 650.0
+speed = 13.0
+token_reward = 4
+card_rules = {
+"boton_apagado": "double_cost"
+}
+params = {
+"catalog": ["spambot", "cangrejo", "deepfish"],
+"shape": "musa",
+"shop_interval": 9.0,
+"steal_sun": 50
+}
+body_color = Color(0.25, 0.45, 0.95, 1)
+accent_color = Color(0.58, 0.32, 0.92, 1)
+eye_color = Color(0.6, 1, 0.9, 1)

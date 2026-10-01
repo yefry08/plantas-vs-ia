@@ -12,8 +12,8 @@ const WaveDataScript := preload("res://scripts/data/wave_data.gd")
 const LevelDataScript := preload("res://scripts/data/level_data.gd")
 const AllyDataScript := preload("res://scripts/data/ally_data.gd")
 
-## Con los girasoles lanzando más sol, las oleadas escalan: x1.3 (zonas 1-2), x2 (3-4), x2.6 (Bio-Lab).
-const BUDGET_SCALE := 2.0
+## Escala de dificultad de las oleadas: x1.3 (tutorial), x1.8 (zonas 1-2), x2.5 (3-4), x3.25 (Bio-Lab).
+const BUDGET_SCALE := 2.5
 
 const PLANTS := [
 	{"id": "lanzasemillas", "display_name": "Lanzasemillas", "cost": 100, "cooldown": 7.5, "behavior": "shooter", "damage": 20.0, "damage_type": "seed", "fire_interval": 1.4,
@@ -99,6 +99,14 @@ const ROBOTS := [
 		"body_color": Color(0.95, 0.97, 1.0), "accent_color": Color(0.4, 0.85, 1.0), "eye_color": Color(0.2, 0.3, 0.5), "params": {"shape": "star", "tp_interval": 8.0, "tp_cols": 2, "field_time": 5.0, "field_mult": 0.5},
 		"card_rules": {"boton_apagado": "double_cost", "apagado_cadena": "double_cost"},
 		"description": "Veloz y estelar.", "abilities": "Se teletransporta 2 columnas cada 8 s y deja un campo que ralentiza tus disparos. Apagarla cuesta el doble.", "weakness": "Enredadera Captcha y Lanzasemillas Crio."},
+	{"id": "musa", "display_name": "Musa", "tier": 4, "behavior": "musa", "health": 650.0, "speed": 13.0, "token_reward": 4,
+		"body_color": Color(0.25, 0.45, 0.95), "accent_color": Color(0.58, 0.32, 0.92), "eye_color": Color(0.6, 1.0, 0.9), "params": {"shape": "musa", "shop_interval": 9.0, "steal_sun": 50, "catalog": ["spambot", "cangrejo", "deepfish"]},
+		"card_rules": {"boton_apagado": "double_cost"},
+		"description": "Agente personal que hace tus recados... con tu energía.", "abilities": "Cada 9 s te quita 50 de energía para 'hacer compras' y le llega un robot a domicilio. Apagarla cuesta el doble.", "weakness": "Derríbala rápido: Mina Bug, Autodestrucción, Bambú."},
+	{"id": "dotz", "display_name": "Dotz", "tier": 4, "behavior": "dots", "health": 140.0, "speed": 18.0, "bite_damage": 70.0, "token_reward": 1, "token_chance": 0.35, "size": 0.7,
+		"body_color": Color(0.1, 0.1, 0.12), "accent_color": Color(0.95, 0.95, 0.97), "eye_color": Color(0.45, 0.95, 1.0), "params": {"shape": "dot", "spawn_interval": 12.0, "swarm_cap": 8, "stun_mult": 0.5},
+		"card_rules": {"boton_apagado": "immune", "apagado_cadena": "immune"},
+		"description": "Agentes siempre encendidos, cada uno con su propio ordenador.", "abilities": "Siempre encendidos: inmunes a los apagados y el EMP les dura la mitad. Cada uno se asigna nuevos Dotz hasta formar un enjambre de 8.", "weakness": "Cactus Antivirus, Bambú Pararrayos y Hongo EMP contra el enjambre."},
 	{"id": "esporabot", "display_name": "Esporabot", "tier": 5, "behavior": "spore", "health": 450.0, "speed": 13.0, "token_reward": 3,
 		"body_color": Color(0.35, 0.6, 0.3), "accent_color": Color(0.55, 0.3, 0.75), "eye_color": Color(0.75, 1.0, 0.4), "params": {"shape": "spore", "spore_interval": 7.0, "spore_range": 520.0, "control_time": 8.0},
 		"description": "Bioarma IA: un hongo con procesador.", "abilities": "Lanza esporas que toman el control de una planta 8 s: dispara contra tus plantas y deja de bloquear.", "weakness": "Vacuna y Rosa Antídoto. Derríbalo de lejos."},
@@ -108,7 +116,7 @@ const ROBOTS := [
 	{"id": "quimera", "display_name": "Quimera Bio", "tier": 5, "behavior": "chimera", "health": 1600.0, "speed": 9.0, "bite_damage": 150.0, "token_reward": 5, "armored": true, "size": 1.15,
 		"body_color": Color(0.3, 0.45, 0.35), "accent_color": Color(0.5, 1.0, 0.3), "eye_color": Color(0.9, 0.2, 0.2), "params": {"shape": "chimera", "pulse_interval": 12.0, "control_time": 6.0},
 		"description": "La creación más peligrosa del Bio-Laboratorio.", "abilities": "Cada 12 s emite un pulso que controla todas las plantas en 3x3 durante 6 s. Blindada.", "weakness": "Bambú Pararrayos, Rosa Antídoto cerca de tus defensas."},
-	{"id": "agi", "display_name": "La AGI", "tier": 6, "behavior": "agi", "health": 15000.0, "speed": 5.0, "bite_damage": 250.0, "token_reward": 0, "armored": true,
+	{"id": "agi", "display_name": "La AGI", "tier": 6, "behavior": "agi", "health": 18000.0, "speed": 5.0, "bite_damage": 250.0, "token_reward": 0, "armored": true,
 		"body_color": Color(0.1, 0.11, 0.16), "accent_color": Color(0.3, 0.65, 1.0), "eye_color": Color(1.0, 0.3, 0.3),
 		"params": {"shape": "agi", "summon_intervals": [7.0, 9.0, 11.0], "summon_count": 2, "upgrade_interval": 20.0, "resist_mult": 0.4, "control_interval": 12.0, "control_time": 8.0, "alignments_needed": 3, "mower_damage": 1500.0},
 		"description": "Inteligencia general artificial. Ocupa 3 carriles.", "abilities": "Fase 1: invoca robots. Fase 2: gana una resistencia nueva cada 20 s. Fase 3: toma el control de tus cartas.", "weakness": "Variedad de daño. En fase 3: 3 cartas de Alineamiento."},
@@ -200,9 +208,9 @@ const COSTS := {
 	"scriptbot": 1.0, "spambot": 1.5, "captchabot": 2.0, "abrazobot": 3.0, "emojibot": 3.0,
 	"deepfish": 1.6, "qwin": 2.0, "talkgpt": 4.0, "grow": 4.0, "geminis_gemelo": 6.0,
 	"opengarra": 5.0, "cangrejo": 1.0, "claudio": 3.5, "fairytail": 7.0, "legend": 9.0, "astra": 6.0,
-	"esporabot": 5.0, "cordybot": 5.0, "quimera": 10.0,
+	"esporabot": 5.0, "cordybot": 5.0, "quimera": 10.0, "musa": 6.0, "dotz": 2.5,
 }
-const GROUP_SIZE := {"spambot": [3, 0.6], "qwin": [4, 0.45], "deepfish": [2, 0.9], "cangrejo": [2, 0.7], "claudio": [2, 1.2]}
+const GROUP_SIZE := {"spambot": [3, 0.6], "qwin": [4, 0.45], "deepfish": [2, 0.9], "cangrejo": [2, 0.7], "claudio": [2, 1.2], "dotz": [3, 0.5]}
 
 const ALL_LANES := [0, 1, 2, 3, 4]
 const Z1 := ["scriptbot", "spambot", "captchabot"]
@@ -229,12 +237,12 @@ const LEVELS := [
 	[15, "Marea de langostas", "Las langostas OpenGarra arrancan plantas y sueltan cangrejos.", ALL_LANES, 9, Z3, "opengarra", 4.2, 0.95, 50, 4, "plant", "doble_commit", ""],
 	[16, "Los Claudios", "Robots de plástico crema que reparan a los demás. ¡Qué amables!", ALL_LANES, 8, ["captchabot", "deepfish", "talkgpt", "grow", "claudio"], "claudio", 4.2, 0.95, 50, 4, "plant", "bambu_pararrayos", ""],
 	[17, "Érase una vez", "Fairytail cuenta historias... con robots que no existen.", ALL_LANES, 8, ["deepfish", "qwin", "talkgpt", "grow", "claudio", "fairytail"], "fairytail", 4.5, 1.0, 50, 4, "card", "red_team", ""],
-	[18, "Leyenda", "Legend hackea tus mejores plantas.", ALL_LANES, 8, ["captchabot", "emojibot", "deepfish", "grow", "geminis_gemelo", "claudio", "legend"], "legend", 4.8, 1.05, 50, 5, "plant", "nuez_firewall_pro", ""],
-	[19, "Estrella fugaz", "Astra se teletransporta y frena tus disparos.", ALL_LANES, 9, ["spambot", "qwin", "talkgpt", "opengarra", "fairytail", "claudio", "astra"], "astra", 5.3, 1.15, 50, 5, "card", "alineamiento", ""],
-	[20, "Frontera", "La élite de las grandes IA al completo.", ALL_LANES, 10, Z4, "", 6.0, 1.25, 50, 5, "card", "vacuna", ""],
+	[18, "Leyenda", "Legend hackea tus mejores plantas.", ALL_LANES, 8, ["captchabot", "emojibot", "deepfish", "grow", "geminis_gemelo", "claudio", "astra", "legend"], "legend", 4.8, 1.05, 50, 5, "plant", "nuez_firewall_pro", ""],
+	[19, "Siempre encendidos", "Los Dotz no se apagan nunca... y se multiplican. Astra te frena los disparos.", ALL_LANES, 9, ["spambot", "qwin", "talkgpt", "opengarra", "fairytail", "claudio", "astra", "dotz"], "dotz", 5.3, 1.15, 50, 5, "card", "alineamiento", ""],
+	[20, "Agentes personales", "Musa hace compras con tu energía. Toda la élite de las grandes IA.", ALL_LANES, 10, Z4 + ["dotz", "musa"], "musa", 6.0, 1.25, 50, 5, "card", "vacuna", ""],
 	[21, "Laboratorio de esporas", "Bioarmas IA: los Esporabots toman el control de tus plantas.", ALL_LANES, 9, ["spambot", "captchabot", "deepfish", "qwin", "talkgpt", "esporabot"], "esporabot", 5.5, 1.2, 50, 6, "plant", "girasolar_doble", ""],
-	[22, "Infección", "Los Cordybots infectan todo lo que muerden.", ALL_LANES, 9, ["deepfish", "qwin", "grow", "claudio", "esporabot", "cordybot"], "cordybot", 6.0, 1.3, 50, 6, "plant", "rosa_antidoto", ""],
-	[23, "La Quimera", "La creación final del Bio-Laboratorio controla filas enteras de plantas.", ALL_LANES, 10, ["talkgpt", "grow", "fairytail", "legend", "astra", "esporabot", "cordybot", "quimera"], "quimera", 6.5, 1.35, 50, 6, "ally", "perplejo", ""],
+	[22, "Infección", "Los Cordybots infectan todo lo que muerden.", ALL_LANES, 9, ["deepfish", "qwin", "grow", "claudio", "dotz", "esporabot", "cordybot"], "cordybot", 6.0, 1.3, 50, 6, "plant", "rosa_antidoto", ""],
+	[23, "La Quimera", "La creación final del Bio-Laboratorio controla filas enteras de plantas.", ALL_LANES, 10, ["talkgpt", "grow", "fairytail", "legend", "astra", "musa", "dotz", "esporabot", "cordybot", "quimera"], "quimera", 6.5, 1.35, 50, 6, "ally", "perplejo", ""],
 ]
 
 const TUTORIALS := {
@@ -312,13 +320,13 @@ func _make_level(spec: Array) -> Resource:
 	var wave_count: int = spec[4]
 	var pool: Array = spec[5]
 	var new_robot: String = spec[6]
-	var scale := 1.0
+	var scale := 1.3
 	if n >= 21:
 		scale = BUDGET_SCALE * 1.3
 	elif n >= 11:
 		scale = BUDGET_SCALE
 	elif n >= 3:
-		scale = 1.3
+		scale = 1.8
 	var base: float = float(spec[7]) * scale
 	var inc: float = float(spec[8]) * scale
 	var waves: Array[WaveData] = []

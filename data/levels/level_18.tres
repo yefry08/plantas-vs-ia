@@ -5,7 +5,7 @@
 
 [sub_resource type="Resource" id="Resource_jbtmq"]
 script = ExtResource("2_tlryx")
-duration = 34.912
+duration = 36.64
 groups = [{
 "count": 1,
 "interval": 1.0,
@@ -15,32 +15,32 @@ groups = [{
 
 [sub_resource type="Resource" id="Resource_34rpi"]
 script = ExtResource("2_tlryx")
-duration = 41.104
+duration = 44.379999999999995
 groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "emojibot"
+"robot": "geminis_gemelo"
 }, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
 "robot": "grow"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "deepfish"
 }]
 
 [sub_resource type="Resource" id="Resource_bgcpr"]
 script = ExtResource("2_tlryx")
-duration = 48.976
+duration = 50.0
 groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
 "robot": "legend"
+}, {
+"count": 2,
+"interval": 1.2,
+"lane": -1,
+"robot": "claudio"
 }, {
 "count": 1,
 "interval": 1.0,
@@ -61,12 +61,7 @@ groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "captchabot"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "captchabot"
+"robot": "emojibot"
 }, {
 "count": 1,
 "interval": 1.0,
@@ -76,7 +71,12 @@ groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "grow"
+"robot": "astra"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "geminis_gemelo"
 }, {
 "count": 1,
 "interval": 1.0,
@@ -86,17 +86,12 @@ groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "emojibot"
+"robot": "geminis_gemelo"
 }, {
-"count": 2,
-"interval": 0.9,
+"count": 1,
+"interval": 1.0,
 "lane": -1,
-"robot": "deepfish"
-}, {
-"count": 2,
-"interval": 1.2,
-"lane": -1,
-"robot": "claudio"
+"robot": "captchabot"
 }, {
 "count": 2,
 "interval": 0.9,
@@ -108,15 +103,10 @@ groups = [{
 script = ExtResource("2_tlryx")
 duration = 50.0
 groups = [{
-"count": 2,
-"interval": 0.9,
+"count": 1,
+"interval": 1.0,
 "lane": -1,
-"robot": "deepfish"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "deepfish"
+"robot": "legend"
 }, {
 "count": 2,
 "interval": 0.9,
@@ -126,27 +116,7 @@ groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "captchabot"
-}, {
-"count": 2,
-"interval": 1.2,
-"lane": -1,
-"robot": "claudio"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "deepfish"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "deepfish"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "captchabot"
+"robot": "legend"
 }, {
 "count": 1,
 "interval": 1.0,
@@ -158,6 +128,11 @@ groups = [{
 script = ExtResource("2_tlryx")
 duration = 50.0
 groups = [{
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
+}, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
@@ -166,27 +141,22 @@ groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
+"robot": "geminis_gemelo"
+}, {
+"count": 2,
+"interval": 1.2,
+"lane": -1,
+"robot": "claudio"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "emojibot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
 "robot": "captchabot"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "deepfish"
-}, {
-"count": 2,
-"interval": 1.2,
-"lane": -1,
-"robot": "claudio"
-}, {
-"count": 2,
-"interval": 1.2,
-"lane": -1,
-"robot": "claudio"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "deepfish"
 }]
 
 [sub_resource type="Resource" id="Resource_knhbc"]
@@ -196,12 +166,12 @@ groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "grow"
+"robot": "geminis_gemelo"
 }, {
-"count": 2,
-"interval": 1.2,
+"count": 1,
+"interval": 1.0,
 "lane": -1,
-"robot": "claudio"
+"robot": "legend"
 }, {
 "count": 1,
 "interval": 1.0,
@@ -211,17 +181,7 @@ groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "grow"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "captchabot"
-}, {
-"count": 2,
-"interval": 0.9,
-"lane": -1,
-"robot": "deepfish"
+"robot": "geminis_gemelo"
 }, {
 "count": 2,
 "interval": 0.9,
@@ -234,25 +194,45 @@ script = ExtResource("2_tlryx")
 duration = 50.0
 is_huge = true
 groups = [{
-"count": 1,
-"interval": 1.0,
+"count": 2,
+"interval": 1.2,
 "lane": -1,
-"robot": "legend"
+"robot": "claudio"
 }, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "grow"
+"robot": "geminis_gemelo"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "captchabot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "emojibot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "emojibot"
+}, {
+"count": 1,
+"interval": 1.0,
+"lane": -1,
+"robot": "astra"
 }, {
 "count": 2,
 "interval": 0.9,
 "lane": -1,
 "robot": "deepfish"
-}, {
-"count": 2,
-"interval": 1.2,
-"lane": -1,
-"robot": "claudio"
 }, {
 "count": 1,
 "interval": 1.0,
@@ -260,24 +240,19 @@ groups = [{
 "robot": "emojibot"
 }, {
 "count": 2,
-"interval": 1.2,
+"interval": 0.9,
 "lane": -1,
-"robot": "claudio"
+"robot": "deepfish"
+}, {
+"count": 2,
+"interval": 0.9,
+"lane": -1,
+"robot": "deepfish"
 }, {
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "geminis_gemelo"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "geminis_gemelo"
-}, {
-"count": 1,
-"interval": 1.0,
-"lane": -1,
-"robot": "captchabot"
+"robot": "legend"
 }, {
 "count": 2,
 "interval": 1.2,
@@ -287,7 +262,12 @@ groups = [{
 "count": 1,
 "interval": 1.0,
 "lane": -1,
-"robot": "captchabot"
+"robot": "astra"
+}, {
+"count": 2,
+"interval": 1.2,
+"lane": -1,
+"robot": "claudio"
 }, {
 "count": 2,
 "interval": 0.9,

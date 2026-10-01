@@ -512,6 +512,10 @@ static func robot(ci: CanvasItem, rd: RobotData, t: float, o: Dictionary) -> voi
 			ArtParody.cordy(ci, body, acc, eye, step, t)
 		"chimera":
 			ArtParody.chimera(ci, body, acc, eye, step, t)
+		"musa":
+			ArtParody.musa(ci, body, acc, eye, step, t)
+		"dot":
+			ArtParody.dot(ci, body, acc, eye, step, t)
 		_:
 			_bot_box(ci, body, acc, eye, step, t)
 
